@@ -1,30 +1,37 @@
 /**
  * Yacht & Catamaran Rental - Stylesheet
- * Modern, responsive design with CSS variables
+ * Premium nautical design inspired by vip-sail.ru
  */
 
 /* ===== CSS Variables ===== */
 :root {
-  /* Colors */
-  --color-primary: #0A3D62;
-  --color-primary-light: #1E5F8A;
-  --color-primary-dark: #062842;
-  --color-secondary: #F39C12;
-  --color-secondary-light: #F5B041;
-  --color-accent: #00B4D8;
+  /* Primary Colors - Deep Navy */
+  --color-primary: #1a3a5c;
+  --color-primary-light: #2a5a8c;
+  --color-primary-dark: #0d2340;
+
+  /* Accent Colors - Gold */
+  --color-accent: #c9a227;
+  --color-accent-light: #dbb84a;
+  --color-accent-dark: #a68820;
+
+  /* Secondary - Light Blue */
+  --color-secondary: #4a90b8;
+  --color-secondary-light: #6ab0d8;
 
   /* Neutral Colors */
   --color-white: #FFFFFF;
-  --color-off-white: #F8FAFC;
-  --color-gray-100: #F1F5F9;
-  --color-gray-200: #E2E8F0;
-  --color-gray-300: #CBD5E1;
-  --color-gray-400: #94A3B8;
-  --color-gray-500: #64748B;
+  --color-off-white: #f5f7fa;
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
   --color-gray-600: #475569;
   --color-gray-700: #334155;
-  --color-gray-800: #1E293B;
-  --color-gray-900: #0F172A;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
 
   /* Typography */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -40,6 +47,7 @@
   --text-3xl: 1.875rem;
   --text-4xl: 2.25rem;
   --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
 
   /* Spacing */
   --space-1: 0.25rem;
@@ -53,24 +61,27 @@
   --space-12: 3rem;
   --space-16: 4rem;
   --space-20: 5rem;
+  --space-24: 6rem;
 
   /* Layout */
-  --container-max: 1280px;
-  --container-padding: 1.5rem;
+  --container-max: 1200px;
+  --container-padding: 1rem;
 
   /* Borders */
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.15);
+  --shadow-card: 0 2px 8px rgba(26, 58, 92, 0.1);
+  --shadow-card-hover: 0 8px 24px rgba(26, 58, 92, 0.15);
 
   /* Transitions */
   --transition-fast: 150ms ease;
@@ -142,7 +153,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
-  color: var(--color-gray-900);
+  color: var(--color-primary-dark);
 }
 
 h1 { font-size: var(--text-4xl); }
@@ -163,6 +174,12 @@ h4 { font-size: var(--text-xl); }
   padding: 0 var(--container-padding);
 }
 
+@media (min-width: 768px) {
+  .container {
+    padding: 0 var(--space-6);
+  }
+}
+
 .section {
   padding: var(--space-16) 0;
 }
@@ -180,11 +197,26 @@ h4 { font-size: var(--text-xl); }
 
 .section-title {
   margin-bottom: var(--space-4);
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 2px;
 }
 
 .section-subtitle {
   font-size: var(--text-lg);
   color: var(--color-gray-500);
+  margin-top: var(--space-6);
 }
 
 /* ===== Buttons ===== */
@@ -195,29 +227,44 @@ h4 { font-size: var(--text-xl); }
   gap: var(--space-2);
   padding: var(--space-3) var(--space-6);
   font-weight: 600;
+  font-size: var(--text-sm);
   border-radius: var(--radius-md);
   transition: all var(--transition-base);
   cursor: pointer;
   white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .btn:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(10, 61, 98, 0.3);
+  box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.3);
 }
 
 .btn-primary {
-  background-color: var(--color-secondary);
-  color: var(--color-gray-900);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-primary);
 }
 
 .btn-primary:hover {
-  background-color: var(--color-secondary-light);
-  transform: translateY(-2px);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  border: 2px solid var(--color-accent);
+}
+
+.btn-accent:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
 }
 
 .btn-secondary {
-  background-color: var(--color-white);
+  background-color: transparent;
   color: var(--color-primary);
   border: 2px solid var(--color-primary);
 }
@@ -227,20 +274,20 @@ h4 { font-size: var(--text-xl); }
   color: var(--color-white);
 }
 
-.btn-outline {
-  background-color: transparent;
-  color: var(--color-white);
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-primary);
   border: 2px solid var(--color-white);
 }
 
-.btn-outline:hover {
-  background-color: var(--color-white);
-  color: var(--color-primary);
+.btn-white:hover {
+  background-color: transparent;
+  color: var(--color-white);
 }
 
 .btn-lg {
   padding: var(--space-4) var(--space-8);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
 }
 
 /* ===== Header ===== */
@@ -251,7 +298,7 @@ h4 { font-size: var(--text-xl); }
   right: 0;
   z-index: var(--z-fixed);
   background-color: transparent;
-  transition: background-color var(--transition-base), box-shadow var(--transition-base);
+  transition: all var(--transition-base);
 }
 
 .header.scrolled {
@@ -267,10 +314,6 @@ h4 { font-size: var(--text-xl); }
   color: var(--color-primary);
 }
 
-.header.scrolled .logo {
-  color: var(--color-primary);
-}
-
 .header.scrolled .mobile-menu-toggle span {
   background-color: var(--color-gray-800);
 }
@@ -283,29 +326,19 @@ h4 { font-size: var(--text-xl); }
 }
 
 .logo {
-  font-family: var(--font-heading);
-  font-size: var(--text-xl);
-  font-weight: 700;
-  color: var(--color-white);
   display: flex;
   align-items: center;
-  gap: var(--space-2);
 }
 
 .logo-img {
-  height: 50px;
+  height: 45px;
   width: auto;
   object-fit: contain;
 }
 
 .footer .logo-img {
-  height: 60px;
+  height: 55px;
   margin-bottom: var(--space-4);
-}
-
-.logo svg {
-  width: 32px;
-  height: 32px;
 }
 
 .nav-menu {
@@ -322,25 +355,15 @@ h4 { font-size: var(--text-xl); }
 
 .nav-link {
   font-weight: 500;
+  font-size: var(--text-sm);
   color: var(--color-white);
   transition: color var(--transition-fast);
-  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-secondary);
-  transition: width var(--transition-base);
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
+.nav-link:hover {
+  color: var(--color-accent);
 }
 
 .header-actions {
@@ -352,9 +375,9 @@ h4 { font-size: var(--text-xl); }
 /* Language Switcher */
 .lang-switcher {
   display: flex;
-  gap: var(--space-1);
-  background-color: rgba(255, 255, 255, 0.15);
-  padding: var(--space-1);
+  gap: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 3px;
   border-radius: var(--radius-md);
 }
 
@@ -364,7 +387,7 @@ h4 { font-size: var(--text-xl); }
 
 .lang-btn {
   padding: var(--space-1) var(--space-2);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   font-weight: 600;
   color: var(--color-white);
   border-radius: var(--radius-sm);
@@ -384,8 +407,8 @@ h4 { font-size: var(--text-xl); }
 }
 
 .lang-btn.active {
-  background-color: var(--color-secondary);
-  color: var(--color-gray-900);
+  background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 /* Mobile Menu Toggle */
@@ -468,7 +491,8 @@ h4 { font-size: var(--text-xl); }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 50%, var(--color-secondary) 100%);
   overflow: hidden;
 }
 
@@ -476,34 +500,47 @@ h4 { font-size: var(--text-xl); }
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=1920&h=1080&fit=crop');
+  background-image: url('https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1920&h=1080&fit=crop');
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  opacity: 0.25;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(13, 35, 64, 0.4) 0%, rgba(13, 35, 64, 0.6) 100%);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 700px;
+  text-align: center;
+  max-width: 800px;
+  padding: 0 var(--space-4);
 }
 
 .hero-title {
   font-size: var(--text-4xl);
   color: var(--color-white);
   margin-bottom: var(--space-6);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: var(--text-5xl);
+    font-size: var(--text-6xl);
   }
 }
 
 .hero-subtitle {
   font-size: var(--text-lg);
   color: rgba(255, 255, 255, 0.9);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-10);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -515,6 +552,7 @@ h4 { font-size: var(--text-xl); }
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-4);
 }
 
@@ -524,6 +562,7 @@ h4 { font-size: var(--text-xl); }
   bottom: var(--space-8);
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
   color: var(--color-white);
   animation: bounce 2s infinite;
 }
@@ -542,7 +581,7 @@ h4 { font-size: var(--text-xl); }
 
 /* ===== About Section ===== */
 .about {
-  background-color: var(--color-off-white);
+  background-color: var(--color-white);
 }
 
 .about-grid {
@@ -561,12 +600,22 @@ h4 { font-size: var(--text-xl); }
   position: relative;
   border-radius: var(--radius-xl);
   overflow: hidden;
-  aspect-ratio: 4/3;
+  box-shadow: var(--shadow-lg);
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 3px solid var(--color-accent);
+  border-radius: var(--radius-xl);
+  transform: translate(15px, 15px);
+  z-index: -1;
 }
 
 .about-image img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 4/3;
   object-fit: cover;
 }
 
@@ -576,14 +625,17 @@ h4 { font-size: var(--text-xl); }
 
 .about-subtitle {
   font-size: var(--text-lg);
-  color: var(--color-secondary);
+  color: var(--color-accent);
   font-weight: 600;
   margin-bottom: var(--space-6);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .about-text {
   color: var(--color-gray-600);
   margin-bottom: var(--space-4);
+  line-height: 1.8;
 }
 
 .about-stats {
@@ -591,6 +643,8 @@ h4 { font-size: var(--text-xl); }
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
   margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-gray-200);
 }
 
 @media (min-width: 480px) {
@@ -614,11 +668,13 @@ h4 { font-size: var(--text-xl); }
 .stat-label {
   font-size: var(--text-sm);
   color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* ===== Tours Section ===== */
 .tours {
-  background-color: var(--color-white);
+  background-color: var(--color-off-white);
 }
 
 .tours-grid {
@@ -635,15 +691,15 @@ h4 { font-size: var(--text-xl); }
 .tour-card {
   display: block;
   background-color: var(--color-white);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
   transition: all var(--transition-base);
 }
 
 .tour-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
 }
 
 .tour-card-image {
@@ -660,27 +716,29 @@ h4 { font-size: var(--text-xl); }
 }
 
 .tour-card:hover .tour-card-image img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .tour-duration {
   position: absolute;
-  top: var(--space-4);
-  left: var(--space-4);
+  top: var(--space-3);
+  right: var(--space-3);
   padding: var(--space-1) var(--space-3);
-  background-color: var(--color-white);
-  color: var(--color-gray-800);
-  font-size: var(--text-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-size: var(--text-xs);
   font-weight: 600;
   border-radius: var(--radius-full);
 }
 
 .tour-card-content {
-  padding: var(--space-6);
+  padding: var(--space-5);
 }
 
 .tour-card-title {
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-primary-dark);
   margin-bottom: var(--space-2);
 }
 
@@ -694,26 +752,30 @@ h4 { font-size: var(--text-xl); }
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-gray-100);
 }
 
 .tour-price {
   font-weight: 700;
-  color: var(--color-primary);
+  font-size: var(--text-lg);
+  color: var(--color-accent);
 }
 
 .tour-cta {
   font-weight: 600;
-  color: var(--color-secondary);
+  font-size: var(--text-sm);
+  color: var(--color-primary);
   transition: color var(--transition-fast);
 }
 
 .tour-card:hover .tour-cta {
-  color: var(--color-primary);
+  color: var(--color-accent);
 }
 
 /* ===== Fleet Section ===== */
 .fleet {
-  background-color: var(--color-off-white);
+  background-color: var(--color-white);
 }
 
 .fleet-grid {
@@ -742,20 +804,22 @@ h4 { font-size: var(--text-xl); }
 .yacht-card {
   display: block;
   background-color: var(--color-white);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
   transition: all var(--transition-base);
+  border: 1px solid var(--color-gray-100);
 }
 
 .yacht-card:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--color-accent);
 }
 
 .yacht-card-image {
   position: relative;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/11;
   overflow: hidden;
 }
 
@@ -767,61 +831,65 @@ h4 { font-size: var(--text-xl); }
 }
 
 .yacht-card:hover .yacht-card-image img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .yacht-type-badge {
   position: absolute;
-  top: var(--space-4);
-  left: var(--space-4);
+  top: var(--space-3);
+  left: var(--space-3);
   padding: var(--space-1) var(--space-3);
-  background-color: var(--color-primary);
+  background-color: var(--color-accent);
   color: var(--color-white);
   font-size: var(--text-xs);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-sm);
 }
 
 .yacht-card-content {
-  padding: var(--space-5);
+  padding: var(--space-4);
 }
 
 .yacht-card-title {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
+  font-weight: 600;
+  color: var(--color-primary-dark);
   margin-bottom: var(--space-2);
 }
 
 .yacht-card-desc {
   font-size: var(--text-sm);
   color: var(--color-gray-500);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-3);
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  line-height: 1.5;
 }
 
 .yacht-card-specs {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
-  margin-bottom: var(--space-4);
-  padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-gray-200);
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--color-gray-100);
 }
 
 .yacht-card-specs .spec {
   display: flex;
   align-items: center;
   gap: var(--space-1);
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   color: var(--color-gray-600);
 }
 
 .yacht-card-specs .spec svg {
-  color: var(--color-gray-400);
+  color: var(--color-primary);
+  opacity: 0.7;
 }
 
 .yacht-card-footer {
@@ -833,24 +901,21 @@ h4 { font-size: var(--text-xl); }
 .yacht-price {
   font-weight: 700;
   color: var(--color-primary);
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
 }
 
 .yacht-price .per-day {
-  font-size: var(--text-sm);
+  font-size: var(--text-xs);
   font-weight: 400;
   color: var(--color-gray-500);
 }
 
 .yacht-cta {
   font-weight: 600;
-  font-size: var(--text-sm);
-  color: var(--color-secondary);
-  transition: color var(--transition-fast);
-}
-
-.yacht-card:hover .yacht-cta {
-  color: var(--color-primary);
+  font-size: var(--text-xs);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* ===== Catalog Page ===== */
@@ -882,11 +947,14 @@ h4 { font-size: var(--text-xl); }
 .filter-btn {
   padding: var(--space-3) var(--space-6);
   font-weight: 600;
+  font-size: var(--text-sm);
   color: var(--color-gray-600);
   background-color: var(--color-white);
   border: 2px solid var(--color-gray-200);
   border-radius: var(--radius-full);
   transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .filter-btn:hover {
@@ -939,7 +1007,8 @@ h4 { font-size: var(--text-xl); }
 
 .breadcrumb {
   padding: var(--space-4) 0;
-  background-color: var(--color-gray-100);
+  background-color: var(--color-gray-50);
+  border-bottom: 1px solid var(--color-gray-200);
 }
 
 .breadcrumb-link {
@@ -948,23 +1017,26 @@ h4 { font-size: var(--text-xl); }
   gap: var(--space-2);
   color: var(--color-primary);
   font-weight: 500;
+  font-size: var(--text-sm);
   transition: color var(--transition-fast);
 }
 
 .breadcrumb-link:hover {
-  color: var(--color-primary-light);
+  color: var(--color-accent);
 }
 
 /* Yacht Gallery */
 .yacht-gallery {
   padding: var(--space-8) 0;
+  background-color: var(--color-white);
 }
 
 .gallery-main {
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   margin-bottom: var(--space-4);
   aspect-ratio: 16/9;
+  box-shadow: var(--shadow-md);
 }
 
 .gallery-main img {
@@ -988,7 +1060,7 @@ h4 { font-size: var(--text-xl); }
   overflow: hidden;
   cursor: pointer;
   opacity: 0.6;
-  transition: opacity var(--transition-fast);
+  transition: all var(--transition-fast);
   border: 2px solid transparent;
 }
 
@@ -998,7 +1070,7 @@ h4 { font-size: var(--text-xl); }
 }
 
 .gallery-thumb.active {
-  border-color: var(--color-secondary);
+  border-color: var(--color-accent);
 }
 
 .gallery-thumb img {
@@ -1047,17 +1119,19 @@ h4 { font-size: var(--text-xl); }
 /* Specifications Card */
 .specs-card {
   background-color: var(--color-white);
-  border-radius: var(--radius-xl);
+  border-radius: var(--radius-lg);
   padding: var(--space-6);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-card);
   position: sticky;
   top: 100px;
+  border: 1px solid var(--color-gray-100);
 }
 
 .specs-card h3 {
   margin-bottom: var(--space-6);
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--color-gray-200);
+  border-bottom: 2px solid var(--color-accent);
+  font-size: var(--text-lg);
 }
 
 .specs-list {
@@ -1077,6 +1151,7 @@ h4 { font-size: var(--text-xl); }
 
 .spec-label {
   color: var(--color-gray-500);
+  font-size: var(--text-sm);
 }
 
 .spec-value {
@@ -1087,19 +1162,27 @@ h4 { font-size: var(--text-xl); }
 .price-display {
   text-align: center;
   padding: var(--space-4);
-  background-color: var(--color-gray-100);
+  background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-6);
+}
+
+.price-display .price-label {
+  display: block;
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-1);
 }
 
 .price-amount {
   font-size: var(--text-3xl);
   font-weight: 700;
-  color: var(--color-primary);
+  color: var(--color-white);
 }
 
 .price-period {
-  color: var(--color-gray-500);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: var(--text-sm);
 }
 
 .specs-card .btn {
@@ -1110,6 +1193,12 @@ h4 { font-size: var(--text-xl); }
 /* Amenities */
 .yacht-amenities {
   padding: var(--space-8) 0;
+  background-color: var(--color-white);
+}
+
+.yacht-amenities h2 {
+  margin-bottom: var(--space-6);
+  font-size: var(--text-2xl);
 }
 
 .amenities-grid {
@@ -1135,12 +1224,19 @@ h4 { font-size: var(--text-xl); }
   align-items: center;
   gap: var(--space-3);
   padding: var(--space-4);
-  background-color: var(--color-gray-100);
-  border-radius: var(--radius-lg);
+  background-color: var(--color-gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-gray-100);
 }
 
 .amenity-item .material-icons {
-  color: var(--color-primary);
+  color: var(--color-accent);
+  font-size: 20px;
+}
+
+.amenity-item span:last-child {
+  font-size: var(--text-sm);
+  color: var(--color-gray-700);
 }
 
 /* Similar Yachts */
@@ -1187,13 +1283,13 @@ h4 { font-size: var(--text-xl); }
 .modal-backdrop {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(13, 35, 64, 0.8);
 }
 
 .modal-content {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   max-height: 90vh;
   overflow-y: auto;
   background-color: var(--color-white);
@@ -1216,16 +1312,19 @@ h4 { font-size: var(--text-xl); }
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-gray-500);
+  color: var(--color-gray-400);
   transition: color var(--transition-fast);
+  border-radius: var(--radius-full);
 }
 
 .modal-close:hover {
   color: var(--color-gray-800);
+  background-color: var(--color-gray-100);
 }
 
 .modal-title {
   margin-bottom: var(--space-6);
+  font-size: var(--text-2xl);
 }
 
 /* Booking Form */
@@ -1243,6 +1342,7 @@ h4 { font-size: var(--text-xl); }
 
 .form-group label {
   font-weight: 500;
+  font-size: var(--text-sm);
   color: var(--color-gray-700);
 }
 
@@ -1286,7 +1386,7 @@ h4 { font-size: var(--text-xl); }
 
 /* ===== Footer ===== */
 .footer {
-  background-color: var(--color-gray-900);
+  background-color: var(--color-primary-dark);
   color: var(--color-white);
   padding: var(--space-16) 0 var(--space-8);
 }
@@ -1309,19 +1409,20 @@ h4 { font-size: var(--text-xl); }
   }
 }
 
-.footer-brand .logo {
-  margin-bottom: var(--space-4);
-}
-
 .footer-brand p {
   color: var(--color-gray-400);
-  max-width: 300px;
+  max-width: 280px;
+  font-size: var(--text-sm);
+  line-height: 1.7;
 }
 
 .footer-title {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   font-weight: 600;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-5);
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .footer-links {
@@ -1332,11 +1433,12 @@ h4 { font-size: var(--text-xl); }
 
 .footer-link {
   color: var(--color-gray-400);
+  font-size: var(--text-sm);
   transition: color var(--transition-fast);
 }
 
 .footer-link:hover {
-  color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 .contact-item {
@@ -1345,16 +1447,18 @@ h4 { font-size: var(--text-xl); }
   gap: var(--space-3);
   color: var(--color-gray-400);
   margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
 }
 
 .contact-item svg {
   flex-shrink: 0;
   margin-top: 2px;
+  color: var(--color-accent);
 }
 
 .social-links {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .social-link {
@@ -1363,15 +1467,15 @@ h4 { font-size: var(--text-xl); }
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-gray-800);
-  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
   color: var(--color-gray-400);
   transition: all var(--transition-fast);
 }
 
 .social-link:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-gray-900);
+  background-color: var(--color-accent);
+  color: var(--color-white);
 }
 
 .footer-bottom {
@@ -1379,7 +1483,7 @@ h4 { font-size: var(--text-xl); }
   flex-direction: column;
   gap: var(--space-4);
   padding-top: var(--space-8);
-  border-top: 1px solid var(--color-gray-800);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
 }
 
@@ -1393,6 +1497,7 @@ h4 { font-size: var(--text-xl); }
 
 .footer-copyright {
   color: var(--color-gray-500);
+  font-size: var(--text-sm);
 }
 
 .footer-legal {
@@ -1402,11 +1507,12 @@ h4 { font-size: var(--text-xl); }
 
 .footer-legal a {
   color: var(--color-gray-500);
+  font-size: var(--text-sm);
   transition: color var(--transition-fast);
 }
 
 .footer-legal a:hover {
-  color: var(--color-secondary);
+  color: var(--color-accent);
 }
 
 /* ===== Utility Classes ===== */
@@ -1424,13 +1530,4 @@ h4 { font-size: var(--text-xl); }
 
 .text-center {
   text-align: center;
-}
-
-/* ===== Placeholder Images ===== */
-.yacht-card-image img,
-.tour-card-image img,
-.about-image img,
-.gallery-main img,
-.gallery-thumb img {
-  background-color: var(--color-gray-200);
 }
