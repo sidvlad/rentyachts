@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Luxury yacht and catamaran rental in Greek islands. Experience premium sailing with our professional crew.">
-  <title>Yacht & Catamaran Rental - Luxury Charter in Greece</title>
+  <meta name="description" content="Yacht rental in Limassol, Cyprus. Premium yacht charter services with professional crew.">
+  <title>Yacht Rental in Limassol | Premium Charter Services</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/styles.css">
@@ -19,6 +18,40 @@
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛵</text></svg>">
 </head>
 <body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-inner">
+        <div class="top-bar-location">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+            <circle cx="12" cy="10" r="3"></circle>
+          </svg>
+          <span data-i18n="topbar.location">Limassol, Cyprus</span>
+        </div>
+        <div class="top-bar-contacts">
+          <a href="tel:+35725123456" class="top-bar-phone">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            +357 25 123 456
+          </a>
+          <a href="https://wa.me/35725123456" class="top-bar-whatsapp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ru">RU</button>
+          <button class="lang-btn" data-lang="el">EL</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
@@ -28,21 +61,23 @@
         </a>
 
         <nav class="nav-menu" id="nav-menu">
-          <a href="index.html" class="nav-link active" data-i18n="nav.home">Home</a>
-          <a href="catalog.html" class="nav-link" data-i18n="nav.catalog">Catalog</a>
-          <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
-          <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
-          <a href="#" class="btn btn-primary" data-i18n="nav.bookNow" onclick="openBookingModal()">Book Now</a>
+          <a href="catalog.html" class="nav-link" data-i18n="nav.catalog">Yacht Catalog</a>
+          <a href="#tours" class="nav-link" data-i18n="nav.tours">Tours</a>
+          <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+          <a href="#reviews" class="nav-link" data-i18n="nav.reviews">Reviews</a>
+          <a href="#about" class="nav-link" data-i18n="nav.about">About Us</a>
+          <a href="#contact" class="nav-link" data-i18n="nav.contact">Contacts</a>
         </nav>
 
         <div class="header-actions">
-          <div class="lang-switcher">
-            <button class="lang-btn active" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="ru">RU</button>
-            <button class="lang-btn" data-lang="el">EL</button>
-          </div>
-
-          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+          <a href="tel:+35725123456" class="header-phone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>+357 25 123 456</span>
+          </a>
+          <button class="btn btn-primary header-cta" onclick="openBookingModal()" data-i18n="nav.bookNow">Book a Yacht</button>
+          <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
             <span></span>
             <span></span>
             <span></span>
@@ -54,65 +89,111 @@
 
   <!-- Hero Section -->
   <section class="hero" id="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1920&h=1080&fit=crop" alt="Yacht in Mediterranean Sea">
+    </div>
+    <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content">
-        <h1 class="hero-title" data-i18n="hero.title">Luxury Yacht & Catamaran Rental</h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle">Explore the stunning Greek islands aboard our premium fleet</p>
+        <h1 class="hero-title" data-i18n="hero.title">Yacht Rental in Limassol</h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">More than 3,000 satisfied clients since 2015</p>
         <div class="hero-actions">
-          <a href="catalog.html" class="btn btn-primary btn-lg" data-i18n="hero.cta">View Fleet</a>
-          <a href="#contact" class="btn btn-outline btn-lg" data-i18n="hero.secondaryCta">Contact Us</a>
+          <a href="catalog.html" class="btn btn-primary btn-lg" data-i18n="hero.cta">Rent a Yacht</a>
+          <a href="#tours" class="btn btn-outline btn-lg" data-i18n="hero.secondaryCta">View Tours</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-number">8+</span>
+            <span class="hero-stat-label" data-i18n="hero.years">years of experience</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">25+</span>
+            <span class="hero-stat-label" data-i18n="hero.yachts">yachts in fleet</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">3000+</span>
+            <span class="hero-stat-label" data-i18n="hero.clients">happy clients</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat-number">99%</span>
+            <span class="hero-stat-label" data-i18n="hero.satisfaction">satisfaction rate</span>
+          </div>
         </div>
       </div>
     </div>
     <div class="scroll-indicator">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M12 5v14M5 12l7 7 7-7"/>
       </svg>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="section about" id="about">
+  <!-- Categories Section -->
+  <section class="section categories" id="categories">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="https://images.unsplash.com/photo-1540946485063-a40da27545f8?w=800&h=600&fit=crop" alt="Luxury yacht sailing in Greek waters" loading="lazy">
-        </div>
-        <div class="about-content">
-          <h2 data-i18n="about.title">About Our Company</h2>
-          <p class="about-subtitle" data-i18n="about.subtitle">Your Premier Yacht Charter Experience</p>
-          <p class="about-text" data-i18n="about.text1">With over 15 years of experience in luxury yacht charters, we provide unforgettable sailing experiences across the beautiful Greek islands. Our fleet consists of meticulously maintained sailing yachts, motor yachts, and catamarans to suit every preference.</p>
-          <p class="about-text" data-i18n="about.text2">Whether you're seeking a romantic getaway, family adventure, or corporate retreat, our professional crew and personalized service ensure every voyage exceeds expectations.</p>
-
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-number">15+</span>
-              <span class="stat-label" data-i18n="about.experience">Years Experience</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">25+</span>
-              <span class="stat-label" data-i18n="about.yachts">Premium Yachts</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">3K+</span>
-              <span class="stat-label" data-i18n="about.clients">Happy Clients</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">50+</span>
-              <span class="stat-label" data-i18n="about.destinations">Destinations</span>
-            </div>
+      <div class="categories-grid">
+        <a href="catalog.html?type=motor" class="category-card">
+          <div class="category-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M2 20h20M4 20V10l8-6 8 6v10M4 14h16"/>
+            </svg>
           </div>
-        </div>
+          <h3 class="category-title" data-i18n="categories.motor">Motor Yachts</h3>
+          <span class="category-count">12 <span data-i18n="categories.vessels">vessels</span></span>
+        </a>
+        <a href="catalog.html?type=sailing" class="category-card">
+          <div class="category-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2L2 20h20L12 2zM12 6v10"/>
+            </svg>
+          </div>
+          <h3 class="category-title" data-i18n="categories.sailing">Sailing Yachts</h3>
+          <span class="category-count">8 <span data-i18n="categories.vessels">vessels</span></span>
+        </a>
+        <a href="catalog.html?type=catamaran" class="category-card">
+          <div class="category-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 18h16M6 18V8l6-4 6 4v10M4 14h16"/>
+            </svg>
+          </div>
+          <h3 class="category-title" data-i18n="categories.catamaran">Catamarans</h3>
+          <span class="category-count">5 <span data-i18n="categories.vessels">vessels</span></span>
+        </a>
+        <a href="catalog.html?type=luxury" class="category-card">
+          <div class="category-icon">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/>
+            </svg>
+          </div>
+          <h3 class="category-title" data-i18n="categories.luxury">VIP Yachts</h3>
+          <span class="category-count">4 <span data-i18n="categories.vessels">vessels</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Popular Yachts Section -->
+  <section class="section yachts-section" id="fleet">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="fleet.title">Popular Yachts</h2>
+        <p class="section-subtitle" data-i18n="fleet.subtitle">Choose your perfect vessel for an unforgettable trip</p>
+      </div>
+      <div class="yachts-grid" id="fleet-grid">
+        <!-- Yacht cards will be rendered by JavaScript -->
+      </div>
+      <div class="section-cta">
+        <a href="catalog.html" class="btn btn-primary btn-lg" data-i18n="fleet.viewAll">View All Yachts</a>
       </div>
     </div>
   </section>
 
   <!-- Popular Tours Section -->
-  <section class="section tours" id="tours">
+  <section class="section tours-section" id="tours">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title" data-i18n="tours.title">Popular Tours</h2>
-        <p class="section-subtitle" data-i18n="tours.subtitle">Discover our most loved experiences</p>
+        <p class="section-subtitle" data-i18n="tours.subtitle">Ready-made routes for every occasion</p>
       </div>
       <div class="tours-grid" id="tours-grid">
         <!-- Tours will be rendered by JavaScript -->
@@ -120,18 +201,249 @@
     </div>
   </section>
 
-  <!-- Fleet Section -->
-  <section class="section fleet" id="fleet">
+  <!-- Advantages Section -->
+  <section class="section advantages" id="about">
     <div class="container">
       <div class="section-header">
-        <h2 class="section-title" data-i18n="fleet.title">Our Fleet</h2>
-        <p class="section-subtitle" data-i18n="fleet.subtitle">Choose from our selection of premium vessels</p>
+        <h2 class="section-title" data-i18n="advantages.title">Why Choose Us</h2>
+        <p class="section-subtitle" data-i18n="advantages.subtitle">Your comfort and safety is our priority</p>
       </div>
-      <div class="fleet-grid" id="fleet-grid">
-        <!-- Yacht cards will be rendered by JavaScript -->
+      <div class="advantages-grid">
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="advantage-title" data-i18n="advantages.safety">Safety Guaranteed</h3>
+          <p class="advantage-desc" data-i18n="advantages.safetyDesc">All yachts are fully equipped with safety gear and regularly inspected</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <h3 class="advantage-title" data-i18n="advantages.support">24/7 Support</h3>
+          <p class="advantage-desc" data-i18n="advantages.supportDesc">Our team is available around the clock to assist you</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/>
+            </svg>
+          </div>
+          <h3 class="advantage-title" data-i18n="advantages.quality">Premium Quality</h3>
+          <p class="advantage-desc" data-i18n="advantages.qualityDesc">Only the best yachts with professional crew</p>
+        </div>
+        <div class="advantage-card">
+          <div class="advantage-icon">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="M12 12h.01M8 12h.01M16 12h.01"/>
+            </svg>
+          </div>
+          <h3 class="advantage-title" data-i18n="advantages.payment">Flexible Payment</h3>
+          <p class="advantage-desc" data-i18n="advantages.paymentDesc">Various payment options including cards and crypto</p>
+        </div>
       </div>
-      <div class="fleet-cta">
-        <a href="catalog.html" class="btn btn-primary btn-lg" data-i18n="fleet.viewAll">View Full Catalog</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="services.title">Additional Services</h2>
+        <p class="section-subtitle" data-i18n="services.subtitle">Make your trip even more special</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2a9 9 0 0 0-9 9c0 6 9 13 9 13s9-7 9-13a9 9 0 0 0-9-9z"/>
+              <circle cx="12" cy="11" r="3"/>
+            </svg>
+          </div>
+          <span class="service-name" data-i18n="services.transfer">Transfer</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 3a9 9 0 1 0 9 9M21 3l-9 9"/>
+            </svg>
+          </div>
+          <span class="service-name" data-i18n="services.catering">Catering</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="M21 15l-5-5L5 21"/>
+            </svg>
+          </div>
+          <span class="service-name" data-i18n="services.photoshoot">Photoshoot</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 18V5l12-2v13"/>
+              <circle cx="6" cy="18" r="3"/>
+              <circle cx="18" cy="16" r="3"/>
+            </svg>
+          </div>
+          <span class="service-name" data-i18n="services.music">DJ & Music</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2v20M2 12h20"/>
+              <circle cx="12" cy="12" r="4"/>
+            </svg>
+          </div>
+          <span class="service-name" data-i18n="services.decoration">Decoration</span>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </div>
+          <span class="service-name" data-i18n="services.celebration">Celebrations</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="reviews.title">Client Reviews</h2>
+        <p class="section-subtitle" data-i18n="reviews.subtitle">What our clients say about us</p>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">A</div>
+            <div class="review-info">
+              <span class="review-name">Anna K.</span>
+              <div class="review-stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              </div>
+            </div>
+          </div>
+          <p class="review-text" data-i18n="reviews.review1">Amazing experience! The yacht was in perfect condition, the crew was professional and friendly. Will definitely book again!</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div class="review-info">
+              <span class="review-name">Michael S.</span>
+              <div class="review-stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              </div>
+            </div>
+          </div>
+          <p class="review-text" data-i18n="reviews.review2">We celebrated my wife's birthday on the yacht. Everything was perfect - from booking to the trip itself. Highly recommended!</p>
+        </div>
+        <div class="review-card">
+          <div class="review-header">
+            <div class="review-avatar">D</div>
+            <div class="review-info">
+              <span class="review-name">Dmitry P.</span>
+              <div class="review-stars">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              </div>
+            </div>
+          </div>
+          <p class="review-text" data-i18n="reviews.review3">Best yacht rental service in Cyprus! Great prices, excellent service, beautiful yachts. Thank you for the unforgettable memories!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="faq.title">Frequently Asked Questions</h2>
+        <p class="section-subtitle" data-i18n="faq.subtitle">Answers to common questions about yacht rental</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q1">What documents are needed to rent a yacht?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a1">For yacht rental you need a valid passport or ID. If you plan to captain the yacht yourself, you'll need a valid boating license. For chartered trips with our captain, no license is required.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q2">How far in advance should I book?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a2">We recommend booking at least 1-2 weeks in advance, especially during peak season (June-September). However, last-minute bookings are possible subject to availability.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q3">Is fuel included in the price?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a3">Fuel costs are typically included for standard routes. For longer trips or custom routes, fuel may be charged separately. Please check the specific yacht listing or ask our team for details.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span data-i18n="faq.q4">What is your cancellation policy?</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <p data-i18n="faq.a4">Free cancellation up to 48 hours before the trip. Cancellations within 48 hours are subject to a 50% fee. In case of bad weather, we offer full rescheduling or refund.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2 class="cta-title" data-i18n="cta.title">Ready for an Unforgettable Trip?</h2>
+        <p class="cta-subtitle" data-i18n="cta.subtitle">Contact us now and get a 10% discount on your first booking</p>
+        <div class="cta-actions">
+          <button class="btn btn-primary btn-lg" onclick="openBookingModal()" data-i18n="cta.book">Book Now</button>
+          <a href="tel:+35725123456" class="btn btn-outline btn-lg" data-i18n="cta.call">Call Us</a>
+        </div>
       </div>
     </div>
   </section>
@@ -144,16 +456,51 @@
           <a href="index.html" class="logo">
             <img src="assets/img/logo.png" alt="YachtRentals" class="logo-img">
           </a>
-          <p data-i18n="footer.description">Premium yacht charter services in the Greek islands. Experience luxury sailing with our professional crew.</p>
+          <p data-i18n="footer.description">Premium yacht charter services in Limassol, Cyprus. Experience luxury sailing with our professional crew since 2015.</p>
+          <div class="footer-social">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://wa.me/35725123456" class="social-link" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Telegram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+              </svg>
+            </a>
+          </div>
         </div>
 
         <div class="footer-nav">
-          <h4 class="footer-title" data-i18n="footer.quickLinks">Quick Links</h4>
+          <h4 class="footer-title" data-i18n="footer.navigation">Navigation</h4>
           <nav class="footer-links">
-            <a href="index.html" class="footer-link" data-i18n="nav.home">Home</a>
-            <a href="catalog.html" class="footer-link" data-i18n="nav.catalog">Catalog</a>
-            <a href="#about" class="footer-link" data-i18n="nav.about">About</a>
-            <a href="#contact" class="footer-link" data-i18n="nav.contact">Contact</a>
+            <a href="catalog.html" class="footer-link" data-i18n="nav.catalog">Yacht Catalog</a>
+            <a href="#tours" class="footer-link" data-i18n="nav.tours">Tours</a>
+            <a href="#services" class="footer-link" data-i18n="nav.services">Services</a>
+            <a href="#reviews" class="footer-link" data-i18n="nav.reviews">Reviews</a>
+            <a href="#faq" class="footer-link" data-i18n="nav.faq">FAQ</a>
+          </nav>
+        </div>
+
+        <div class="footer-services">
+          <h4 class="footer-title" data-i18n="footer.services">Services</h4>
+          <nav class="footer-links">
+            <a href="catalog.html?type=motor" class="footer-link" data-i18n="categories.motor">Motor Yachts</a>
+            <a href="catalog.html?type=sailing" class="footer-link" data-i18n="categories.sailing">Sailing Yachts</a>
+            <a href="catalog.html?type=catamaran" class="footer-link" data-i18n="categories.catamaran">Catamarans</a>
+            <a href="#tours" class="footer-link" data-i18n="footer.tours">Sea Tours</a>
           </nav>
         </div>
 
@@ -165,57 +512,35 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
-              <span data-i18n="footer.address">Rhodes Marina, Greece</span>
+              <span data-i18n="footer.address">Limassol Marina, Cyprus</span>
             </div>
             <div class="contact-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
               </svg>
-              <span>+357 25 123 456</span>
+              <a href="tel:+35725123456">+357 25 123 456</a>
             </div>
             <div class="contact-item">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                 <polyline points="22,6 12,13 2,6"></polyline>
               </svg>
-              <span>info@yachtrentals.gr</span>
+              <a href="mailto:info@yachtrentals.cy">info@yachtrentals.cy</a>
             </div>
-          </div>
-        </div>
-
-        <div class="footer-social">
-          <h4 class="footer-title" data-i18n="footer.followUs">Follow Us</h4>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Facebook">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            <div class="contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
               </svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Instagram">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-              </svg>
-            </a>
-            <a href="#" class="social-link" aria-label="Twitter">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-              </svg>
-            </a>
-            <a href="#" class="social-link" aria-label="YouTube">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
-                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white"></polygon>
-              </svg>
-            </a>
+              <span data-i18n="footer.hours">Daily: 9:00 - 21:00</span>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
         <p class="footer-copyright">
-          &copy; 2024 YachtRentals. <span data-i18n="footer.copyright">All rights reserved.</span>
+          &copy; 2015-2026 YachtRentals. <span data-i18n="footer.copyright">All rights reserved.</span>
         </p>
         <div class="footer-legal">
           <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
@@ -227,7 +552,7 @@
 
   <!-- Booking Modal -->
   <div class="modal" id="booking-modal">
-    <div class="modal-backdrop"></div>
+    <div class="modal-backdrop" onclick="closeBookingModal()"></div>
     <div class="modal-content">
       <button class="modal-close" onclick="closeBookingModal()" aria-label="Close modal">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -242,26 +567,22 @@
           <input type="text" id="booking-name" name="name" required>
         </div>
         <div class="form-group">
-          <label for="booking-email" data-i18n="booking.email">Email Address</label>
-          <input type="email" id="booking-email" name="email" required>
-        </div>
-        <div class="form-group">
           <label for="booking-phone" data-i18n="booking.phone">Phone Number</label>
-          <input type="tel" id="booking-phone" name="phone">
+          <input type="tel" id="booking-phone" name="phone" required>
         </div>
         <div class="form-group">
-          <label for="booking-dates" data-i18n="booking.dates">Preferred Dates</label>
-          <input type="text" id="booking-dates" name="dates" placeholder="e.g., June 15-22, 2024">
+          <label for="booking-email" data-i18n="booking.email">Email Address</label>
+          <input type="email" id="booking-email" name="email">
         </div>
         <div class="form-group">
-          <label for="booking-guests" data-i18n="booking.guests">Number of Guests</label>
-          <input type="number" id="booking-guests" name="guests" min="1" max="20">
+          <label for="booking-date" data-i18n="booking.date">Preferred Date</label>
+          <input type="date" id="booking-date" name="date">
         </div>
         <div class="form-group">
-          <label for="booking-message" data-i18n="booking.message">Additional Message</label>
+          <label for="booking-message" data-i18n="booking.message">Message</label>
           <textarea id="booking-message" name="message" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-lg" data-i18n="booking.submit">Send Request</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" data-i18n="booking.submit">Send Request</button>
       </form>
     </div>
   </div>
@@ -271,11 +592,18 @@
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Header scroll effect -->
+  <!-- FAQ Toggle & Header scroll -->
   <script>
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+      if (!isOpen) item.classList.add('active');
+    }
+
     window.addEventListener('scroll', function() {
       const header = document.getElementById('header');
-      if (window.scrollY > 50) {
+      if (window.scrollY > 100) {
         header.classList.add('scrolled');
       } else {
         header.classList.remove('scrolled');
