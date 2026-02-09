@@ -1,31 +1,12 @@
 /**
  * ON THE SEA - Yacht Rental Cyprus
- * Clean, minimal design with teal & orange accents
+ * Clean minimal mobile-first design
  */
 
-/* ===== Variables ===== */
-:root {
-  --teal: #2EBDB6;
-  --teal-dark: #1a8a85;
-  --teal-light: #e8f7f6;
-  --orange: #F5A962;
-  --orange-dark: #e8934a;
-  --white: #ffffff;
-  --black: #000000;
-  --gray-dark: #333333;
-  --gray: #666666;
-  --gray-light: #999999;
-  --bg-gradient: linear-gradient(180deg, #ffffff 0%, #e8f7f6 100%);
-  --font: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
-  --shadow: 0 4px 20px rgba(0,0,0,0.1);
-  --radius: 12px;
-}
-
-/* ===== Reset ===== */
-*, *::before, *::after {
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -33,18 +14,18 @@ html {
 }
 
 body {
-  font-family: var(--font);
-  font-size: 16px;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
   line-height: 1.6;
-  color: var(--gray-dark);
-  background: var(--white);
-  padding-bottom: 70px;
+  color: #333;
+  background: #fff;
+  padding-bottom: 120px;
   -webkit-font-smoothing: antialiased;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
 img {
@@ -59,129 +40,259 @@ ul {
 
 button {
   font-family: inherit;
-  cursor: pointer;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
-/* ===== Container ===== */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ===== Header ===== */
+/* ========== Header ========== */
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  background: var(--bg-gradient);
-  padding: 15px 0;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 12px 16px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .logo-icon {
-  width: 40px;
-  height: 40px;
+  flex-shrink: 0;
 }
 
 .logo-text {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  color: var(--gray-dark);
-  letter-spacing: 2px;
+  color: #333;
+  letter-spacing: 1px;
 }
 
 /* Menu Button */
 .menu-btn {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  padding: 5px;
-  width: 35px;
+  justify-content: center;
+  gap: 5px;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
 }
 
 .menu-btn span {
   display: block;
   height: 2px;
-  background: var(--gray-dark);
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  background: #333;
+  border-radius: 1px;
+  transition: 0.3s;
 }
-
-.menu-btn span:nth-child(1) { width: 100%; }
-.menu-btn span:nth-child(2) { width: 80%; margin-left: auto; }
-.menu-btn span:nth-child(3) { width: 60%; margin-left: auto; }
 
 .menu-btn.active span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
+
 .menu-btn.active span:nth-child(2) {
   opacity: 0;
 }
+
 .menu-btn.active span:nth-child(3) {
-  width: 100%;
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Mobile Navigation */
-.mobile-nav {
+/* Mobile Menu */
+.mobile-menu {
   position: fixed;
-  top: 70px;
+  top: 52px;
   left: 0;
   right: 0;
-  background: var(--white);
-  padding: 20px;
-  box-shadow: var(--shadow);
-  transform: translateY(-100%);
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.3s ease;
+  background: #fff;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
   z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.mobile-nav.active {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
+.mobile-menu.active {
+  max-height: 300px;
+  padding: 10px 0;
 }
 
-.mobile-nav ul {
+.mobile-menu a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 15px;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-menu a:last-child {
+  border-bottom: none;
+}
+
+/* ========== Yacht Page ========== */
+.yacht-page {
+  padding-top: 52px;
+}
+
+.yacht-gallery {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.yacht-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.yacht-content {
+  padding: 20px 16px 30px;
+}
+
+.yacht-section {
+  margin-bottom: 30px;
+}
+
+.section-heading {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2EBDB6;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.feature-list li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  color: #333;
+}
+
+.description-text {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.7;
+}
+
+.description-text p {
+  margin-bottom: 12px;
+}
+
+.description-text strong {
+  font-weight: 600;
+}
+
+/* ========== Sticky Footer ========== */
+.sticky-footer {
+  position: fixed;
+  bottom: 56px;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+  z-index: 998;
+}
+
+.sticky-info {
+  flex: 1;
+}
+
+.sticky-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #999;
+}
+
+.sticky-location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #999;
+  margin-top: 2px;
+}
+
+.order-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #F5A962;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.order-btn:hover {
+  background: #e8994d;
+}
+
+/* ========== Bottom Navigation ========== */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  box-shadow: 0 -1px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nav-item,
+.bottom-nav-item {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #666;
+  transition: color 0.3s;
 }
 
-.mobile-nav a {
-  display: block;
-  padding: 10px 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--gray-dark);
-  border-bottom: 1px solid #eee;
+.nav-item:hover,
+.bottom-nav-item:hover {
+  color: #2EBDB6;
 }
 
-/* ===== Hero Section ===== */
+/* ========== Main Page Hero ========== */
 .hero {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 100px 20px 80px;
+  padding: 80px 20px 100px;
 }
 
 .hero-bg {
@@ -193,86 +304,88 @@ button {
   z-index: -1;
 }
 
-.hero-image {
+.hero-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
 .hero-content {
-  color: var(--white);
+  color: #fff;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 10vw, 4.5rem);
-  font-weight: 800;
+  font-size: 2.8rem;
+  font-weight: 700;
   line-height: 1.1;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .hero-subtitle {
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-size: 13px;
   font-weight: 600;
-  color: var(--teal);
+  color: #2EBDB6;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   text-shadow: none;
 }
 
 .hero-duration {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 14px;
+  gap: 8px;
+  font-size: 13px;
   opacity: 0.9;
 }
 
-/* ===== Yachts Section ===== */
-.yachts-section {
-  padding: 60px 0;
-  background: var(--white);
+/* ========== Sections ========== */
+.section {
+  padding: 50px 16px;
 }
 
 .section-title {
-  font-size: clamp(1.5rem, 5vw, 2rem);
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 600;
   text-align: center;
-  margin-bottom: 10px;
-  letter-spacing: 2px;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
 }
 
 .section-title.teal {
-  color: var(--teal);
+  color: #2EBDB6;
 }
 
 .section-subtitle {
   text-align: center;
-  color: var(--gray);
-  margin-bottom: 40px;
-  font-size: 15px;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+
+/* ========== Yachts Grid ========== */
+.yachts-section {
+  padding: 40px 16px;
 }
 
 .yachts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  margin-bottom: 40px;
+  gap: 20px;
+  margin-bottom: 30px;
 }
 
-/* Yacht Card */
 .yacht-card {
   display: block;
-  background: var(--white);
-  border-radius: var(--radius);
+  background: #fff;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .yacht-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
 
 .yacht-image {
@@ -284,7 +397,7 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s;
 }
 
 .yacht-card:hover .yacht-image img {
@@ -292,103 +405,96 @@ button {
 }
 
 .yacht-info {
-  padding: 20px;
+  padding: 15px;
 }
 
 .yacht-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: var(--gray-dark);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 
 .yacht-location {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 13px;
-  color: var(--gray);
-  margin-bottom: 8px;
+  gap: 4px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
 }
 
 .yacht-location svg {
-  color: var(--teal);
+  color: #2EBDB6;
 }
 
 .yacht-specs {
-  font-size: 13px;
-  color: var(--gray-light);
-  margin-bottom: 12px;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 8px;
 }
 
 .yacht-price {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--teal);
+  font-size: 14px;
+  font-weight: 600;
+  color: #2EBDB6;
 }
 
 .section-footer {
   text-align: center;
 }
 
-/* ===== Buttons ===== */
+/* ========== Buttons ========== */
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 14px 32px;
-  font-size: 14px;
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 13px;
   font-weight: 600;
-  border-radius: 30px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  text-transform: uppercase;
+  border-radius: 25px;
+  transition: all 0.3s;
   letter-spacing: 1px;
 }
 
 .btn-outline-teal {
   background: transparent;
-  color: var(--teal);
-  border: 2px solid var(--teal);
+  color: #2EBDB6;
+  border: 2px solid #2EBDB6;
 }
 
 .btn-outline-teal:hover {
-  background: var(--teal);
-  color: var(--white);
+  background: #2EBDB6;
+  color: #fff;
 }
 
 .btn-orange {
-  background: var(--orange);
-  color: var(--white);
-  border: 2px solid var(--orange);
+  background: #F5A962;
+  color: #fff;
+  border: none;
 }
 
 .btn-orange:hover {
-  background: var(--orange-dark);
-  border-color: var(--orange-dark);
+  background: #e8994d;
 }
 
-/* ===== Booking Section ===== */
+/* ========== Booking Section ========== */
 .booking-section {
-  padding: 60px 0;
-  background: var(--bg-gradient);
+  padding: 50px 16px;
+  background: linear-gradient(180deg, #fff 0%, #f0faf9 100%);
 }
 
 .booking-text {
   text-align: center;
-  max-width: 600px;
-  margin: 0 auto 50px;
-  color: var(--gray);
-  font-size: 15px;
+  max-width: 500px;
+  margin: 0 auto 40px;
+  color: #666;
+  font-size: 14px;
   line-height: 1.7;
 }
 
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 30px;
-  max-width: 600px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 400px;
   margin: 0 auto;
 }
 
@@ -397,62 +503,60 @@ button {
 }
 
 .feature-icon {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .feature-text {
-  font-size: 14px;
-  color: var(--gray);
+  font-size: 12px;
+  color: #666;
   line-height: 1.4;
 }
 
-/* ===== Contact Section ===== */
+/* ========== Contact Section ========== */
 .contact-section {
-  padding: 60px 0;
-  background: var(--white);
+  padding: 50px 16px;
   text-align: center;
 }
 
 .contact-title {
-  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  font-size: 1.5rem;
   font-weight: 300;
-  margin-bottom: 25px;
-  color: var(--gray-dark);
+  margin-bottom: 15px;
 }
 
 .contact-text {
-  font-size: 13px;
-  color: var(--gray);
+  font-size: 11px;
+  color: #666;
   letter-spacing: 1px;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   line-height: 1.8;
 }
 
 .phone-link {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1.3rem;
+  gap: 10px;
+  font-size: 1.2rem;
   font-weight: 500;
-  color: var(--gray-dark);
-  margin-bottom: 25px;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .contact-buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
 .contact-btn {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
 
 .contact-btn:hover {
@@ -467,246 +571,63 @@ button {
   background: #25D366;
 }
 
-/* ===== Bottom Navigation ===== */
-.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--white);
-  display: flex;
-  justify-content: space-around;
-  padding: 12px 20px;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-}
-
-.bottom-nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  font-size: 12px;
-  color: var(--gray);
-  transition: color 0.3s ease;
-}
-
-.bottom-nav-item:hover {
-  color: var(--teal);
-}
-
-/* ===== Yacht Detail Page ===== */
-.yacht-detail {
-  padding-top: 70px;
-}
-
-.yacht-gallery {
-  position: relative;
-}
-
-.yacht-gallery-main {
-  aspect-ratio: 16/10;
-  overflow: hidden;
-}
-
-.yacht-gallery-main img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.yacht-detail-content {
-  padding: 25px 20px 100px;
-}
-
-.yacht-detail-header {
-  margin-bottom: 30px;
-}
-
-.yacht-detail-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.yacht-detail-location {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 14px;
-  color: var(--gray);
-}
-
-/* Specs Table */
-.specs-section {
-  margin-bottom: 40px;
-}
-
-.specs-title {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  color: var(--gray-dark);
-}
-
-.specs-table {
-  width: 100%;
-}
-
-.specs-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.specs-label {
-  color: var(--gray-dark);
-  font-size: 15px;
-}
-
-.specs-value {
-  font-weight: 600;
-  color: var(--gray-dark);
-  font-size: 15px;
-}
-
-/* Description */
-.description-section {
-  margin-bottom: 40px;
-}
-
-.description-title {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
-  color: var(--gray-dark);
-}
-
-.description-text {
-  font-size: 15px;
-  color: var(--gray);
-  line-height: 1.8;
-}
-
-.description-text p {
-  margin-bottom: 15px;
-}
-
-.description-text strong {
-  color: var(--gray-dark);
-}
-
-/* Booking Section on Detail */
-.detail-booking {
-  background: var(--teal-light);
-  padding: 30px 20px;
-  border-radius: var(--radius);
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.detail-booking-title {
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: var(--teal);
-  margin-bottom: 15px;
-}
-
-.detail-booking-text {
-  font-size: 14px;
-  color: var(--gray);
-  line-height: 1.6;
-}
-
-/* Sticky Footer */
-.sticky-footer {
-  position: fixed;
-  bottom: 70px;
-  left: 0;
-  right: 0;
-  background: var(--white);
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
-  z-index: 999;
-}
-
-.sticky-footer-info {
-  flex: 1;
-}
-
-.sticky-footer-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--gray-dark);
-}
-
-.sticky-footer-location {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 12px;
-  color: var(--gray);
-}
-
-.btn-order {
-  padding: 14px 28px;
-  background: var(--orange);
-  color: var(--white);
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 30px;
-  letter-spacing: 2px;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.btn-order:hover {
-  background: var(--orange-dark);
-}
-
-/* ===== Catalog Page ===== */
+/* ========== Catalog ========== */
 .catalog-header {
-  padding: 90px 20px 30px;
-  background: var(--bg-gradient);
+  padding: 70px 16px 20px;
+  background: linear-gradient(180deg, #fff 0%, #f0faf9 100%);
   text-align: center;
 }
 
 .catalog-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .catalog-grid {
-  padding: 30px 20px 100px;
+  padding: 20px 16px 30px;
 }
 
-/* ===== Responsive ===== */
-@media (min-width: 768px) {
+/* ========== Container ========== */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ========== Responsive ========== */
+@media (min-width: 480px) {
   .yachts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .features-grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (min-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    max-width: 800px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .yachts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 }
 
 @media (min-width: 1024px) {
-  .yachts-grid {
-    grid-template-columns: repeat(3, 1fr);
+  .container {
+    max-width: 1000px;
   }
 
-  .hero-content {
-    max-width: 600px;
+  .yachts-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .bottom-nav {
