@@ -1,92 +1,43 @@
 /**
- * Yacht Rental Cyprus - Main JavaScript
+ * ON THE SEA - Main JavaScript
+ * Clean, minimal functionality
  */
 
 document.addEventListener('DOMContentLoaded', function() {
   initMobileMenu();
-  initYachtTabs();
-  initFaqAccordion();
   initSmoothScroll();
-  initHeaderScroll();
 });
 
 /**
  * Mobile menu toggle
  */
 function initMobileMenu() {
-  const menuBtn = document.querySelector('.mobile-menu-btn');
-  const nav = document.querySelector('.nav');
+  const menuBtn = document.querySelector('.menu-btn');
+  const mobileNav = document.querySelector('.mobile-nav');
 
-  if (menuBtn && nav) {
+  if (menuBtn && mobileNav) {
     menuBtn.addEventListener('click', function() {
-      nav.classList.toggle('active');
       menuBtn.classList.toggle('active');
+      mobileNav.classList.toggle('active');
     });
 
     // Close menu on link click
-    const navLinks = nav.querySelectorAll('a');
+    const navLinks = mobileNav.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        nav.classList.remove('active');
         menuBtn.classList.remove('active');
+        mobileNav.classList.remove('active');
       });
+    });
+
+    // Close menu on outside click
+    document.addEventListener('click', function(e) {
+      if (!menuBtn.contains(e.target) && !mobileNav.contains(e.target)) {
+        menuBtn.classList.remove('active');
+        mobileNav.classList.remove('active');
+      }
     });
   }
-}
-
-/**
- * Yacht category tabs
- */
-function initYachtTabs() {
-  const tabs = document.querySelectorAll('.yacht-tab');
-  const cards = document.querySelectorAll('.yacht-card');
-
-  if (tabs.length === 0 || cards.length === 0) return;
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', function() {
-      // Update active tab
-      tabs.forEach(t => t.classList.remove('active'));
-      this.classList.add('active');
-
-      // Filter cards
-      const category = this.dataset.category;
-
-      cards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-          card.style.display = 'block';
-          card.style.animation = 'fadeInUp 0.4s ease-out forwards';
-        } else {
-          card.style.display = 'none';
-        }
-      });
-    });
-  });
-}
-
-/**
- * FAQ Accordion
- */
-function initFaqAccordion() {
-  const faqItems = document.querySelectorAll('.faq-item');
-
-  faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
-
-    if (question) {
-      question.addEventListener('click', function() {
-        // Close other items
-        faqItems.forEach(other => {
-          if (other !== item) {
-            other.classList.remove('active');
-          }
-        });
-
-        // Toggle current item
-        item.classList.toggle('active');
-      });
-    }
-  });
 }
 
 /**
@@ -105,7 +56,7 @@ function initSmoothScroll() {
 
       if (target) {
         e.preventDefault();
-        const headerHeight = document.querySelector('.header').offsetHeight;
+        const headerHeight = document.querySelector('.header')?.offsetHeight || 70;
         const targetPosition = target.offsetTop - headerHeight;
 
         window.scrollTo({
@@ -115,24 +66,4 @@ function initSmoothScroll() {
       }
     });
   });
-}
-
-/**
- * Header background on scroll
- */
-function initHeaderScroll() {
-  const header = document.querySelector('.header');
-
-  if (!header) return;
-
-  function updateHeader() {
-    if (window.scrollY > 100) {
-      header.classList.add('scrolled');
-    } else {
-      header.classList.remove('scrolled');
-    }
-  }
-
-  window.addEventListener('scroll', updateHeader);
-  updateHeader();
 }
