@@ -1,0 +1,264 @@
+{
+  "yachts": [
+    {
+      "id": "azimut-55",
+      "slug": "azimut-55",
+      "featured": true,
+      "price": 2500,
+      "currency": "EUR",
+      "length": 17,
+      "guests": 12,
+      "year": 2019,
+      "images": [
+        "assets/img/yachts/azimut-55-1.jpg",
+        "assets/img/yachts/azimut-55-2.jpg",
+        "assets/img/yachts/azimut-55-3.jpg",
+        "assets/img/yachts/azimut-55-4.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
+      "specs": {
+        "length": "16.97 m",
+        "beam": "4.54 m",
+        "draft": "1.32 m",
+        "engines": "2 x MAN V8 900",
+        "fuel": "1800 L",
+        "water": "500 L",
+        "cabins": 3,
+        "bathrooms": 2
+      },
+      "name": {
+        "en": "Azimut 55",
+        "ru": "Azimut 55",
+        "el": "Azimut 55"
+      },
+      "description": {
+        "en": "Luxurious Azimut 55 is the perfect choice for an unforgettable sea adventure. This elegant yacht combines Italian design with exceptional comfort, offering spacious decks for relaxation and entertainment.",
+        "ru": "Роскошная Azimut 55 — идеальный выбор для незабываемого морского приключения. Эта элегантная яхта сочетает итальянский дизайн с исключительным комфортом, предлагая просторные палубы для отдыха и развлечений.",
+        "el": "Το πολυτελές Azimut 55 είναι η ιδανική επιλογή για μια αξέχαστη θαλάσσια περιπέτεια. Αυτό το κομψό σκάφος συνδυάζει τον ιταλικό σχεδιασμό με εξαιρετική άνεση."
+      }
+    },
+    {
+      "id": "sunseeker-68",
+      "slug": "sunseeker-68",
+      "featured": true,
+      "price": 3500,
+      "currency": "EUR",
+      "length": 21,
+      "guests": 14,
+      "year": 2021,
+      "images": [
+        "assets/img/yachts/sunseeker-68-1.jpg",
+        "assets/img/yachts/sunseeker-68-2.jpg",
+        "assets/img/yachts/sunseeker-68-3.jpg",
+        "assets/img/yachts/sunseeker-68-4.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski"],
+      "specs": {
+        "length": "20.73 m",
+        "beam": "5.18 m",
+        "draft": "1.55 m",
+        "engines": "2 x MAN V12 1400",
+        "fuel": "3200 L",
+        "water": "750 L",
+        "cabins": 4,
+        "bathrooms": 3
+      },
+      "name": {
+        "en": "Sunseeker 68",
+        "ru": "Sunseeker 68",
+        "el": "Sunseeker 68"
+      },
+      "description": {
+        "en": "The Sunseeker 68 Sport Yacht represents the pinnacle of British yacht engineering. With its sleek lines and powerful performance, this vessel offers an unmatched cruising experience along the Cyprus coast.",
+        "ru": "Sunseeker 68 Sport Yacht представляет собой вершину британского яхтенного инженерного искусства. Благодаря изящным линиям и мощным характеристикам это судно предлагает непревзойденный опыт круизов вдоль побережья Кипра.",
+        "el": "Το Sunseeker 68 Sport Yacht αντιπροσωπεύει την κορυφή της βρετανικής ναυπηγικής μηχανικής. Με τις κομψές γραμμές και τις ισχυρές επιδόσεις του, αυτό το σκάφος προσφέρει μια απαράμιλλη εμπειρία κρουαζιέρας."
+      }
+    },
+    {
+      "id": "princess-62",
+      "slug": "princess-62",
+      "featured": true,
+      "price": 2800,
+      "currency": "EUR",
+      "length": 19,
+      "guests": 10,
+      "year": 2020,
+      "images": [
+        "assets/img/yachts/princess-62-1.jpg",
+        "assets/img/yachts/princess-62-2.jpg",
+        "assets/img/yachts/princess-62-3.jpg",
+        "assets/img/yachts/princess-62-4.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
+      "specs": {
+        "length": "19.05 m",
+        "beam": "4.98 m",
+        "draft": "1.45 m",
+        "engines": "2 x CAT C18 1150",
+        "fuel": "2800 L",
+        "water": "600 L",
+        "cabins": 3,
+        "bathrooms": 2
+      },
+      "name": {
+        "en": "Princess 62",
+        "ru": "Princess 62",
+        "el": "Princess 62"
+      },
+      "description": {
+        "en": "Princess 62 embodies sophistication and style. Perfect for day trips or overnight adventures, featuring exquisite interiors and a flybridge that offers panoramic views of the Mediterranean.",
+        "ru": "Princess 62 воплощает изысканность и стиль. Идеально подходит для дневных поездок или ночных приключений, с изысканными интерьерами и флайбриджем с панорамным видом на Средиземное море.",
+        "el": "Το Princess 62 ενσαρκώνει την κομψότητα και το στυλ. Ιδανικό για ημερήσιες εκδρομές ή νυχτερινές περιπέτειες, με εξαιρετικά εσωτερικά και flybridge που προσφέρει πανοραμική θέα στη Μεσόγειο."
+      }
+    },
+    {
+      "id": "ferretti-720",
+      "slug": "ferretti-720",
+      "featured": false,
+      "price": 4500,
+      "currency": "EUR",
+      "length": 22,
+      "guests": 12,
+      "year": 2022,
+      "images": [
+        "assets/img/yachts/ferretti-720-1.jpg",
+        "assets/img/yachts/ferretti-720-2.jpg",
+        "assets/img/yachts/ferretti-720-3.jpg",
+        "assets/img/yachts/ferretti-720-4.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski", "seabob"],
+      "specs": {
+        "length": "22.03 m",
+        "beam": "5.49 m",
+        "draft": "1.65 m",
+        "engines": "2 x MAN V12 1550",
+        "fuel": "4000 L",
+        "water": "900 L",
+        "cabins": 4,
+        "bathrooms": 4
+      },
+      "name": {
+        "en": "Ferretti 720",
+        "ru": "Ferretti 720",
+        "el": "Ferretti 720"
+      },
+      "description": {
+        "en": "The Ferretti 720 is a masterpiece of Italian craftsmanship. This flagship yacht offers unparalleled luxury with its spacious salon, gourmet galley, and multiple entertainment areas.",
+        "ru": "Ferretti 720 — шедевр итальянского мастерства. Эта флагманская яхта предлагает непревзойденную роскошь с просторным салоном, кухней для гурманов и множеством зон развлечений.",
+        "el": "Το Ferretti 720 είναι ένα αριστούργημα της ιταλικής τεχνογνωσίας. Αυτό το ναυαρχικό σκάφος προσφέρει απαράμιλλη πολυτέλεια με το ευρύχωρο σαλόνι, την γκουρμέ κουζίνα και τις πολλαπλές ζώνες ψυχαγωγίας."
+      }
+    },
+    {
+      "id": "beneteau-42",
+      "slug": "beneteau-42",
+      "featured": false,
+      "price": 1200,
+      "currency": "EUR",
+      "length": 13,
+      "guests": 8,
+      "year": 2018,
+      "images": [
+        "assets/img/yachts/beneteau-42-1.jpg",
+        "assets/img/yachts/beneteau-42-2.jpg",
+        "assets/img/yachts/beneteau-42-3.jpg",
+        "assets/img/yachts/beneteau-42-4.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing"],
+      "specs": {
+        "length": "12.78 m",
+        "beam": "4.18 m",
+        "draft": "1.10 m",
+        "engines": "2 x Volvo D4 260",
+        "fuel": "800 L",
+        "water": "350 L",
+        "cabins": 2,
+        "bathrooms": 1
+      },
+      "name": {
+        "en": "Beneteau Gran Turismo 42",
+        "ru": "Beneteau Gran Turismo 42",
+        "el": "Beneteau Gran Turismo 42"
+      },
+      "description": {
+        "en": "The Beneteau GT 42 is perfect for those seeking an intimate yet comfortable cruising experience. Its efficient design makes it ideal for exploring the hidden coves of Cyprus.",
+        "ru": "Beneteau GT 42 идеально подходит для тех, кто ищет уютный, но комфортный круизный опыт. Его эффективный дизайн делает его идеальным для исследования скрытых бухт Кипра.",
+        "el": "Το Beneteau GT 42 είναι ιδανικό για όσους αναζητούν μια οικεία αλλά άνετη εμπειρία κρουαζιέρας. Ο αποτελεσματικός σχεδιασμός του το καθιστά ιδανικό για την εξερεύνηση των κρυφών όρμων της Κύπρου."
+      }
+    },
+    {
+      "id": "lagoon-52",
+      "slug": "lagoon-52",
+      "featured": false,
+      "price": 2200,
+      "currency": "EUR",
+      "length": 16,
+      "guests": 14,
+      "year": 2020,
+      "images": [
+        "assets/img/yachts/lagoon-52-1.jpg",
+        "assets/img/yachts/lagoon-52-2.jpg",
+        "assets/img/yachts/lagoon-52-3.jpg",
+        "assets/img/yachts/lagoon-52-4.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "paddleboard"],
+      "specs": {
+        "length": "15.84 m",
+        "beam": "8.60 m",
+        "draft": "1.45 m",
+        "engines": "2 x Yanmar 80",
+        "fuel": "1200 L",
+        "water": "700 L",
+        "cabins": 5,
+        "bathrooms": 4
+      },
+      "name": {
+        "en": "Lagoon 52 Catamaran",
+        "ru": "Lagoon 52 Катамаран",
+        "el": "Lagoon 52 Καταμαράν"
+      },
+      "description": {
+        "en": "Experience the ultimate stability and space with the Lagoon 52 catamaran. Its twin-hull design provides exceptional comfort, making it perfect for families and large groups.",
+        "ru": "Испытайте непревзойденную стабильность и простор с катамараном Lagoon 52. Его двухкорпусная конструкция обеспечивает исключительный комфорт, что делает его идеальным для семей и больших групп.",
+        "el": "Ζήστε την απόλυτη σταθερότητα και χώρο με το καταμαράν Lagoon 52. Ο σχεδιασμός διπλής γάστρας προσφέρει εξαιρετική άνεση, ιδανικό για οικογένειες και μεγάλες ομάδες."
+      }
+    }
+  ],
+  "options": {
+    "wifi": {
+      "icon": "wifi",
+      "name": { "en": "Wi-Fi", "ru": "Wi-Fi", "el": "Wi-Fi" }
+    },
+    "ac": {
+      "icon": "snowflake",
+      "name": { "en": "Air Conditioning", "ru": "Кондиционер", "el": "Κλιματισμός" }
+    },
+    "kitchen": {
+      "icon": "utensils",
+      "name": { "en": "Full Kitchen", "ru": "Кухня", "el": "Κουζίνα" }
+    },
+    "audio": {
+      "icon": "music",
+      "name": { "en": "Audio System", "ru": "Аудиосистема", "el": "Ηχοσύστημα" }
+    },
+    "sunbathing": {
+      "icon": "sun",
+      "name": { "en": "Sunbathing Area", "ru": "Зона для загара", "el": "Ηλιοθεραπεία" }
+    },
+    "swimming": {
+      "icon": "swimmer",
+      "name": { "en": "Swimming Platform", "ru": "Платформа для плавания", "el": "Πλατφόρμα κολύμβησης" }
+    },
+    "jetski": {
+      "icon": "water",
+      "name": { "en": "Jet Ski", "ru": "Гидроцикл", "el": "Jet Ski" }
+    },
+    "seabob": {
+      "icon": "fish",
+      "name": { "en": "Seabob", "ru": "Seabob", "el": "Seabob" }
+    },
+    "paddleboard": {
+      "icon": "ship",
+      "name": { "en": "Paddleboard", "ru": "Сап-борд", "el": "Paddleboard" }
+    }
+  }
+}

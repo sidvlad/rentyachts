@@ -1,0 +1,21 @@
+{
+  "rewrites": [
+    { "source": "/yacht/:slug", "destination": "/yacht.html" },
+    { "source": "/service/:slug", "destination": "/service.html" },
+    { "source": "/catalog", "destination": "/catalog.html" }
+  ],
+  "headers": [
+    {
+      "source": "/content/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300" }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

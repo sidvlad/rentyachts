@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yacht Details - ON THE SEA</title>
+    <meta name="description" content="View yacht details and book your luxury yacht charter in Limassol, Cyprus.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-yacht">
+    <!-- Header -->
+    <header class="header header--light" id="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <span class="logo__text">ON THE SEA</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link" data-i18n="nav.home">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html" class="nav__link active" data-i18n="nav.yachts">Yachts</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#services" class="nav__link" data-i18n="nav.services">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link" data-i18n="nav.about">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-switcher__btn active" data-lang="en">EN</button>
+                    <button class="lang-switcher__btn" data-lang="ru">RU</button>
+                    <button class="lang-switcher__btn" data-lang="el">EL</button>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <span class="logo__text">ON THE SEA</span>
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link" data-i18n="nav.home">Home</a>
+            <a href="catalog.html" class="mobile-menu__link active" data-i18n="nav.yachts">Yachts</a>
+            <a href="index.html#services" class="mobile-menu__link" data-i18n="nav.services">Services</a>
+            <a href="index.html#about" class="mobile-menu__link" data-i18n="nav.about">About</a>
+            <a href="index.html#contact" class="mobile-menu__link" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="mobile-menu__lang">
+            <button class="mobile-menu__lang-btn active" data-lang="en">EN</button>
+            <button class="mobile-menu__lang-btn" data-lang="ru">RU</button>
+            <button class="mobile-menu__lang-btn" data-lang="el">EL</button>
+        </div>
+        <div class="mobile-menu__contact">
+            <a href="tel:+35796123456" class="mobile-menu__contact-link">
+                <i class="fas fa-phone"></i>
+                <span>+357 96 123456</span>
+            </a>
+            <a href="https://wa.me/35796123456" class="mobile-menu__contact-link">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="yacht-detail">
+        <!-- Image Slider -->
+        <section class="yacht-slider">
+            <div class="yacht-slider__main">
+                <div class="yacht-slider__container" id="yachtSliderContainer">
+                    <!-- Images will be rendered by JavaScript -->
+                </div>
+                <button class="yacht-slider__arrow yacht-slider__arrow--prev" id="sliderPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="yacht-slider__arrow yacht-slider__arrow--next" id="sliderNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <div class="yacht-slider__watermark">
+                    <span>ON THE SEA</span>
+                </div>
+            </div>
+            <div class="yacht-slider__thumbs" id="yachtSliderThumbs">
+                <!-- Thumbnails will be rendered by JavaScript -->
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Yacht Info -->
+            <section class="yacht-info">
+                <h1 class="yacht-info__name" id="yachtName">Yacht Name</h1>
+                <div class="yacht-info__price">
+                    <span class="yacht-info__price-value" id="yachtPrice">€2500</span>
+                    <span class="yacht-info__price-period" data-i18n="yacht.perDay">/ day</span>
+                </div>
+                <div class="yacht-info__specs">
+                    <div class="yacht-info__spec">
+                        <span class="yacht-info__spec-label" data-i18n="yacht.size">Size</span>
+                        <span class="yacht-info__spec-value" id="yachtLength">17m</span>
+                    </div>
+                    <div class="yacht-info__spec">
+                        <span class="yacht-info__spec-label" data-i18n="yacht.guests">Guests</span>
+                        <span class="yacht-info__spec-value" id="yachtGuests">12</span>
+                    </div>
+                    <div class="yacht-info__spec">
+                        <span class="yacht-info__spec-label" data-i18n="yacht.year">Year</span>
+                        <span class="yacht-info__spec-value" id="yachtYear">2019</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Options Section -->
+            <section class="yacht-section yacht-options">
+                <h2 class="yacht-section__title" data-i18n="yacht.options">Options Available Onboard</h2>
+                <div class="yacht-options__grid" id="yachtOptions">
+                    <!-- Options will be rendered by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Description Section -->
+            <section class="yacht-section yacht-description">
+                <h2 class="yacht-section__title" data-i18n="yacht.description">Description</h2>
+                <div class="yacht-description__text" id="yachtDescription">
+                    <!-- Description will be rendered by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Specs Section -->
+            <section class="yacht-section yacht-specs">
+                <h2 class="yacht-section__title" data-i18n="yacht.specs">Technical Specifications</h2>
+                <table class="yacht-specs__table" id="yachtSpecsTable">
+                    <!-- Specs will be rendered by JavaScript -->
+                </table>
+            </section>
+
+            <!-- Booking Section -->
+            <section class="yacht-section yacht-booking" id="booking">
+                <h2 class="yacht-section__title" data-i18n="yacht.booking">Booking</h2>
+                <form class="yacht-booking__form" id="bookingForm">
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="date" class="form__input" name="date" required>
+                            <label class="form__label" data-i18n="booking.selectDate">Select Date</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="time" class="form__input" name="time" value="10:00">
+                            <label class="form__label" data-i18n="booking.selectTime">Select Time</label>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <select class="form__input form__select" name="guests" required>
+                            <option value="">--</option>
+                            <option value="2">2</option>
+                            <option value="4">4</option>
+                            <option value="6">6</option>
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="12">12</option>
+                            <option value="14">14+</option>
+                        </select>
+                        <label class="form__label" data-i18n="booking.guests">Number of Guests</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" name="name" required placeholder=" ">
+                        <label class="form__label" data-i18n="booking.name">Your Name</label>
+                    </div>
+                    <div class="form__group">
+                        <input type="tel" class="form__input" name="phone" required placeholder=" ">
+                        <label class="form__label" data-i18n="booking.phone">Phone Number</label>
+                    </div>
+                    <div class="form__group">
+                        <textarea class="form__input form__textarea" name="message" rows="3" placeholder=" "></textarea>
+                        <label class="form__label" data-i18n="booking.message">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full" data-i18n="booking.submit">Send Request</button>
+                </form>
+            </section>
+
+            <!-- Payment Methods Section -->
+            <section class="yacht-section yacht-payment">
+                <h2 class="yacht-section__title" data-i18n="yacht.payment">Payment Methods</h2>
+                <div class="yacht-payment__methods">
+                    <div class="yacht-payment__method">
+                        <i class="fas fa-euro-sign"></i>
+                        <span>Cash (EUR)</span>
+                    </div>
+                    <div class="yacht-payment__method">
+                        <i class="fas fa-building-columns"></i>
+                        <span>Bank Transfer</span>
+                    </div>
+                    <div class="yacht-payment__method">
+                        <i class="fab fa-cc-visa"></i>
+                        <span>VISA / MasterCard</span>
+                    </div>
+                    <div class="yacht-payment__method">
+                        <i class="fab fa-paypal"></i>
+                        <span>PayPal</span>
+                    </div>
+                    <div class="yacht-payment__method">
+                        <img src="assets/img/icons/revolut.svg" alt="Revolut" class="payment-icon">
+                        <span>Revolut</span>
+                    </div>
+                    <div class="yacht-payment__method">
+                        <i class="fab fa-bitcoin"></i>
+                        <span>Crypto</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section class="yacht-section yacht-contact">
+                <h2 class="yacht-section__title" data-i18n="sections.contact">Contact Us</h2>
+                <div class="yacht-contact__info">
+                    <a href="tel:+35796123456" class="yacht-contact__item">
+                        <i class="fas fa-phone"></i>
+                        <span>+357 96 123456</span>
+                    </a>
+                    <a href="https://wa.me/35796123456" class="yacht-contact__item">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://t.me/ontheseacy" class="yacht-contact__item">
+                        <i class="fab fa-telegram"></i>
+                        <span>Telegram</span>
+                    </a>
+                    <a href="mailto:info@onthesea.cy" class="yacht-contact__item">
+                        <i class="fas fa-envelope"></i>
+                        <span>info@onthesea.cy</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="logo__text">ON THE SEA</span>
+                    <p class="footer__tagline">Luxury Yacht Charter</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#" class="footer__link" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" class="footer__link" data-i18n="footer.terms">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2024 ON THE SEA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sticky Booking Bar -->
+    <div class="sticky-booking" id="stickyBooking">
+        <div class="sticky-booking__price">
+            <span class="sticky-booking__price-label" data-i18n="yacht.from">from</span>
+            <span class="sticky-booking__price-value" id="stickyPrice">€2500</span>
+            <span class="sticky-booking__price-period" data-i18n="yacht.perDay">/ day</span>
+        </div>
+        <a href="#booking" class="btn btn--primary sticky-booking__btn" data-i18n="yacht.book">Book Now</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

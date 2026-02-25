@@ -1,0 +1,158 @@
+backend:
+  name: github
+  repo: sidvlad/rentyachts
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "assets/img"
+public_folder: "/assets/img"
+
+locale: 'en'
+
+i18n:
+  structure: single_file
+  locales: [en, ru, el]
+  default_locale: en
+
+collections:
+  - name: "yachts"
+    label: "Yachts"
+    label_singular: "Yacht"
+    folder: "content/yachts"
+    create: true
+    format: json
+    extension: json
+    identifier_field: slug
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Price (EUR/day)", name: "price", widget: "number", min: 0 }
+      - { label: "Length (meters)", name: "length", widget: "number", min: 0 }
+      - { label: "Max Guests", name: "guests", widget: "number", min: 1 }
+      - { label: "Year", name: "year", widget: "number", min: 1990 }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+      - label: "Options"
+        name: "options"
+        widget: "select"
+        multiple: true
+        options:
+          - { label: "Wi-Fi", value: "wifi" }
+          - { label: "Air Conditioning", value: "ac" }
+          - { label: "Full Kitchen", value: "kitchen" }
+          - { label: "Audio System", value: "audio" }
+          - { label: "Sunbathing Area", value: "sunbathing" }
+          - { label: "Swimming Platform", value: "swimming" }
+          - { label: "Jet Ski", value: "jetski" }
+          - { label: "Seabob", value: "seabob" }
+          - { label: "Paddleboard", value: "paddleboard" }
+      - label: "Specifications"
+        name: "specs"
+        widget: "object"
+        fields:
+          - { label: "Length", name: "length", widget: "string" }
+          - { label: "Beam", name: "beam", widget: "string" }
+          - { label: "Draft", name: "draft", widget: "string" }
+          - { label: "Engines", name: "engines", widget: "string" }
+          - { label: "Fuel Capacity", name: "fuel", widget: "string" }
+          - { label: "Water Capacity", name: "water", widget: "string" }
+          - { label: "Cabins", name: "cabins", widget: "number" }
+          - { label: "Bathrooms", name: "bathrooms", widget: "number" }
+      - label: "Name"
+        name: "name"
+        widget: "object"
+        i18n: true
+        fields:
+          - { label: "English", name: "en", widget: "string" }
+          - { label: "Russian", name: "ru", widget: "string" }
+          - { label: "Greek", name: "el", widget: "string" }
+      - label: "Description"
+        name: "description"
+        widget: "object"
+        i18n: true
+        fields:
+          - { label: "English", name: "en", widget: "text" }
+          - { label: "Russian", name: "ru", widget: "text" }
+          - { label: "Greek", name: "el", widget: "text" }
+
+  - name: "services"
+    label: "Services"
+    label_singular: "Service"
+    folder: "content/services"
+    create: true
+    format: json
+    extension: json
+    identifier_field: slug
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Price (EUR)", name: "price", widget: "number", min: 0 }
+      - { label: "Duration (hours)", name: "duration", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - label: "Name"
+        name: "name"
+        widget: "object"
+        i18n: true
+        fields:
+          - { label: "English", name: "en", widget: "string" }
+          - { label: "Russian", name: "ru", widget: "string" }
+          - { label: "Greek", name: "el", widget: "string" }
+      - label: "Short Description"
+        name: "shortDescription"
+        widget: "object"
+        i18n: true
+        fields:
+          - { label: "English", name: "en", widget: "text" }
+          - { label: "Russian", name: "ru", widget: "text" }
+          - { label: "Greek", name: "el", widget: "text" }
+      - label: "Full Description"
+        name: "description"
+        widget: "object"
+        i18n: true
+        fields:
+          - { label: "English", name: "en", widget: "text" }
+          - { label: "Russian", name: "ru", widget: "text" }
+          - { label: "Greek", name: "el", widget: "text" }
+      - label: "What's Included"
+        name: "includes"
+        widget: "select"
+        multiple: true
+        options:
+          - { label: "Lunch", value: "lunch" }
+          - { label: "Drinks", value: "drinks" }
+          - { label: "Snorkeling Gear", value: "snorkeling" }
+          - { label: "Towels", value: "towels" }
+          - { label: "Champagne", value: "champagne" }
+          - { label: "Appetizers", value: "appetizers" }
+          - { label: "Open Bar", value: "openbar" }
+          - { label: "Live Music", value: "music" }
+          - { label: "Equipment", value: "equipment" }
+          - { label: "Bait & Tackle", value: "bait" }
+          - { label: "Snacks", value: "snacks" }
+          - { label: "Catch Cleaning", value: "cleaning" }
+
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "contact"
+        label: "Contact Information"
+        file: "content/settings/contact.json"
+        fields:
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "WhatsApp", name: "whatsapp", widget: "string" }
+          - { label: "Telegram", name: "telegram", widget: "string" }
+          - { label: "Instagram", name: "instagram", widget: "string" }
+          - { label: "Facebook", name: "facebook", widget: "string" }
+          - label: "Address"
+            name: "address"
+            widget: "object"
+            fields:
+              - { label: "English", name: "en", widget: "string" }
+              - { label: "Russian", name: "ru", widget: "string" }
+              - { label: "Greek", name: "el", widget: "string" }

@@ -1,2 +1,0 @@
-# rentyachts
-rent yachts site

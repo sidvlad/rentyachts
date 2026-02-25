@@ -1,0 +1,212 @@
+{
+  "meta": {
+    "siteName": "ON THE SEA",
+    "title": {
+      "en": "ON THE SEA - Luxury Yacht Charter in Limassol, Cyprus",
+      "ru": "ON THE SEA - Аренда роскошных яхт в Лимассоле, Кипр",
+      "el": "ON THE SEA - Ενοικίαση Πολυτελών Σκαφών στη Λεμεσό, Κύπρος"
+    },
+    "description": {
+      "en": "Premium yacht charter services in Limassol, Cyprus. Explore the Mediterranean on luxury yachts with professional crew.",
+      "ru": "Премиум услуги аренды яхт в Лимассоле, Кипр. Исследуйте Средиземноморье на роскошных яхтах с профессиональным экипажем.",
+      "el": "Premium υπηρεσίες ενοικίασης σκαφών στη Λεμεσό, Κύπρος. Εξερευνήστε τη Μεσόγειο σε πολυτελή σκάφη με επαγγελματικό πλήρωμα."
+    }
+  },
+  "nav": {
+    "home": { "en": "Home", "ru": "Главная", "el": "Αρχική" },
+    "yachts": { "en": "Yachts", "ru": "Яхты", "el": "Σκάφη" },
+    "services": { "en": "Services", "ru": "Услуги", "el": "Υπηρεσίες" },
+    "about": { "en": "About", "ru": "О нас", "el": "Σχετικά" },
+    "contact": { "en": "Contact", "ru": "Контакты", "el": "Επικοινωνία" }
+  },
+  "hero": {
+    "title": {
+      "en": "Experience Luxury on the Mediterranean",
+      "ru": "Роскошный отдых на Средиземноморье",
+      "el": "Ζήστε την Πολυτέλεια στη Μεσόγειο"
+    },
+    "subtitle": {
+      "en": "Premium yacht charter in Limassol, Cyprus",
+      "ru": "Премиум аренда яхт в Лимассоле, Кипр",
+      "el": "Premium ενοικίαση σκαφών στη Λεμεσό, Κύπρος"
+    },
+    "cta": {
+      "en": "View Yachts",
+      "ru": "Смотреть яхты",
+      "el": "Δείτε τα σκάφη"
+    }
+  },
+  "about": {
+    "title": {
+      "en": "About Us",
+      "ru": "О нас",
+      "el": "Σχετικά με εμάς"
+    },
+    "text": {
+      "en": "ON THE SEA is a premium yacht charter company based in Limassol, Cyprus. We offer an exclusive fleet of luxury yachts for unforgettable experiences on the Mediterranean Sea.\n\nOur professional crew ensures your safety and comfort while you explore the stunning coastline of Cyprus. Whether you're planning a romantic sunset cruise, a family adventure, or a corporate event, we have the perfect vessel for your needs.",
+      "ru": "ON THE SEA — премиальная компания по аренде яхт, базирующаяся в Лимассоле, Кипр. Мы предлагаем эксклюзивный флот роскошных яхт для незабываемых впечатлений на Средиземном море.\n\nНаш профессиональный экипаж обеспечивает вашу безопасность и комфорт, пока вы исследуете потрясающее побережье Кипра. Планируете ли вы романтический круиз на закате, семейное приключение или корпоративное мероприятие — у нас есть идеальное судно для ваших потребностей.",
+      "el": "Η ON THE SEA είναι μια premium εταιρεία ενοικίασης σκαφών με έδρα τη Λεμεσό, Κύπρος. Προσφέρουμε έναν αποκλειστικό στόλο πολυτελών σκαφών για αξέχαστες εμπειρίες στη Μεσόγειο Θάλασσα."
+    }
+  },
+  "sections": {
+    "featuredYachts": {
+      "en": "Our Fleet",
+      "ru": "Наш флот",
+      "el": "Ο Στόλος μας"
+    },
+    "services": {
+      "en": "Our Services",
+      "ru": "Наши услуги",
+      "el": "Οι Υπηρεσίες μας"
+    },
+    "cities": {
+      "en": "Destinations",
+      "ru": "Направления",
+      "el": "Προορισμοί"
+    },
+    "contact": {
+      "en": "Contact Us",
+      "ru": "Свяжитесь с нами",
+      "el": "Επικοινωνήστε μαζί μας"
+    }
+  },
+  "yacht": {
+    "from": { "en": "from", "ru": "от", "el": "από" },
+    "perDay": { "en": "/ day", "ru": "/ день", "el": "/ ημέρα" },
+    "size": { "en": "Size", "ru": "Размер", "el": "Μέγεθος" },
+    "guests": { "en": "Guests", "ru": "Гостей", "el": "Επισκέπτες" },
+    "year": { "en": "Year", "ru": "Год", "el": "Έτος" },
+    "meters": { "en": "m", "ru": "м", "el": "μ" },
+    "viewDetails": { "en": "View Details", "ru": "Подробнее", "el": "Λεπτομέρειες" },
+    "book": { "en": "Book Now", "ru": "Забронировать", "el": "Κράτηση" },
+    "options": {
+      "en": "Options Available Onboard",
+      "ru": "Опции, доступные на борту",
+      "el": "Διαθέσιμες επιλογές στο σκάφος"
+    },
+    "description": { "en": "Description", "ru": "Описание", "el": "Περιγραφή" },
+    "specs": {
+      "en": "Technical Specifications",
+      "ru": "Технические характеристики",
+      "el": "Τεχνικές προδιαγραφές"
+    },
+    "booking": { "en": "Booking", "ru": "Бронирование", "el": "Κράτηση" },
+    "payment": {
+      "en": "Payment Methods",
+      "ru": "Способы оплаты",
+      "el": "Μέθοδοι πληρωμής"
+    }
+  },
+  "service": {
+    "duration": { "en": "Duration", "ru": "Продолжительность", "el": "Διάρκεια" },
+    "hours": { "en": "hours", "ru": "часов", "el": "ώρες" },
+    "perPerson": { "en": "/ person", "ru": "/ человек", "el": "/ άτομο" },
+    "includes": { "en": "What's Included", "ru": "Что включено", "el": "Τι περιλαμβάνεται" },
+    "bookService": { "en": "Book Service", "ru": "Забронировать", "el": "Κράτηση" }
+  },
+  "catalog": {
+    "title": { "en": "Yacht Catalog", "ru": "Каталог яхт", "el": "Κατάλογος σκαφών" },
+    "filter": {
+      "all": { "en": "All", "ru": "Все", "el": "Όλα" },
+      "price": { "en": "Price", "ru": "Цена", "el": "Τιμή" },
+      "guests": { "en": "Guests", "ru": "Гости", "el": "Επισκέπτες" },
+      "length": { "en": "Length", "ru": "Длина", "el": "Μήκος" }
+    },
+    "sort": {
+      "label": { "en": "Sort by", "ru": "Сортировать", "el": "Ταξινόμηση" },
+      "priceLow": { "en": "Price: Low to High", "ru": "Цена: по возрастанию", "el": "Τιμή: Χαμηλή προς Υψηλή" },
+      "priceHigh": { "en": "Price: High to Low", "ru": "Цена: по убыванию", "el": "Τιμή: Υψηλή προς Χαμηλή" },
+      "newest": { "en": "Newest First", "ru": "Сначала новые", "el": "Νεότερα πρώτα" }
+    },
+    "noResults": {
+      "en": "No yachts found matching your criteria",
+      "ru": "Яхты не найдены по вашим критериям",
+      "el": "Δεν βρέθηκαν σκάφη που να ταιριάζουν με τα κριτήριά σας"
+    }
+  },
+  "contact": {
+    "title": {
+      "en": "Get in Touch",
+      "ru": "Связаться с нами",
+      "el": "Επικοινωνήστε μαζί μας"
+    },
+    "phone": { "en": "Phone", "ru": "Телефон", "el": "Τηλέφωνο" },
+    "email": { "en": "Email", "ru": "Email", "el": "Email" },
+    "address": { "en": "Address", "ru": "Адрес", "el": "Διεύθυνση" },
+    "addressValue": {
+      "en": "Limassol Marina, Cyprus",
+      "ru": "Марина Лимассол, Кипр",
+      "el": "Μαρίνα Λεμεσού, Κύπρος"
+    },
+    "workingHours": { "en": "Working Hours", "ru": "Часы работы", "el": "Ώρες εργασίας" },
+    "workingHoursValue": {
+      "en": "Mon - Sun: 9:00 - 21:00",
+      "ru": "Пн - Вс: 9:00 - 21:00",
+      "el": "Δευ - Κυρ: 9:00 - 21:00"
+    }
+  },
+  "booking": {
+    "selectDate": { "en": "Select Date", "ru": "Выберите дату", "el": "Επιλέξτε ημερομηνία" },
+    "selectTime": { "en": "Select Time", "ru": "Выберите время", "el": "Επιλέξτε ώρα" },
+    "guests": { "en": "Number of Guests", "ru": "Количество гостей", "el": "Αριθμός επισκεπτών" },
+    "name": { "en": "Your Name", "ru": "Ваше имя", "el": "Το όνομά σας" },
+    "phone": { "en": "Phone Number", "ru": "Номер телефона", "el": "Τηλέφωνο" },
+    "email": { "en": "Email", "ru": "Email", "el": "Email" },
+    "message": { "en": "Message", "ru": "Сообщение", "el": "Μήνυμα" },
+    "submit": { "en": "Send Request", "ru": "Отправить запрос", "el": "Αποστολή αιτήματος" },
+    "success": {
+      "en": "Thank you! We will contact you shortly.",
+      "ru": "Спасибо! Мы свяжемся с вами в ближайшее время.",
+      "el": "Ευχαριστούμε! Θα επικοινωνήσουμε μαζί σας σύντομα."
+    }
+  },
+  "footer": {
+    "copyright": {
+      "en": "© 2024 ON THE SEA. All rights reserved.",
+      "ru": "© 2024 ON THE SEA. Все права защищены.",
+      "el": "© 2024 ON THE SEA. Όλα τα δικαιώματα κατοχυρωμένα."
+    },
+    "privacy": { "en": "Privacy Policy", "ru": "Политика конфиденциальности", "el": "Πολιτική απορρήτου" },
+    "terms": { "en": "Terms of Service", "ru": "Условия использования", "el": "Όροι χρήσης" }
+  },
+  "specs": {
+    "length": { "en": "Length", "ru": "Длина", "el": "Μήκος" },
+    "beam": { "en": "Beam", "ru": "Ширина", "el": "Πλάτος" },
+    "draft": { "en": "Draft", "ru": "Осадка", "el": "Βύθισμα" },
+    "engines": { "en": "Engines", "ru": "Двигатели", "el": "Κινητήρες" },
+    "fuel": { "en": "Fuel Capacity", "ru": "Топливный бак", "el": "Χωρητικότητα καυσίμου" },
+    "water": { "en": "Water Capacity", "ru": "Бак воды", "el": "Χωρητικότητα νερού" },
+    "cabins": { "en": "Cabins", "ru": "Каюты", "el": "Καμπίνες" },
+    "bathrooms": { "en": "Bathrooms", "ru": "Ванные", "el": "Μπάνια" }
+  },
+  "cities": [
+    {
+      "id": "limassol",
+      "name": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
+      "image": "assets/img/cities/limassol.jpg"
+    },
+    {
+      "id": "paphos",
+      "name": { "en": "Paphos", "ru": "Пафос", "el": "Πάφος" },
+      "image": "assets/img/cities/paphos.jpg"
+    },
+    {
+      "id": "larnaca",
+      "name": { "en": "Larnaca", "ru": "Ларнака", "el": "Λάρνακα" },
+      "image": "assets/img/cities/larnaca.jpg"
+    },
+    {
+      "id": "ayia-napa",
+      "name": { "en": "Ayia Napa", "ru": "Айя-Напа", "el": "Αγία Νάπα" },
+      "image": "assets/img/cities/ayia-napa.jpg"
+    }
+  ],
+  "companyInfo": {
+    "phone": "+357 96 123456",
+    "email": "info@onthesea.cy",
+    "whatsapp": "+35796123456",
+    "telegram": "ontheseacy",
+    "instagram": "onthesea.cy",
+    "facebook": "ontheseacy"
+  }
+}
