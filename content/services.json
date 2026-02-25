@@ -1,0 +1,129 @@
+{
+  "services": [
+    {
+      "id": "blue-lagoon-cruise",
+      "slug": "blue-lagoon-cruise",
+      "featured": true,
+      "price": 150,
+      "currency": "EUR",
+      "duration": "8",
+      "image": "assets/img/services/blue-lagoon.jpg",
+      "name": {
+        "en": "Blue Lagoon Cruise",
+        "ru": "Круиз в Голубую Лагуну",
+        "el": "Κρουαζιέρα στη Γαλάζια Λίμνη"
+      },
+      "shortDescription": {
+        "en": "Discover the crystal-clear waters of the famous Blue Lagoon on an unforgettable day trip.",
+        "ru": "Откройте для себя кристально чистые воды знаменитой Голубой Лагуны в незабываемой однодневной поездке.",
+        "el": "Ανακαλύψτε τα κρυστάλλινα νερά της διάσημης Γαλάζιας Λίμνης σε μια αξέχαστη ημερήσια εκδρομή."
+      },
+      "description": {
+        "en": "Embark on a magical journey to the stunning Blue Lagoon, one of Cyprus's most beautiful natural wonders. Our luxury cruise takes you through the scenic coastline, past dramatic cliffs and hidden caves, to the pristine turquoise waters of the lagoon.\n\nYour day includes:\n- Scenic cruise along the Akamas Peninsula\n- Swimming stop at the Blue Lagoon\n- Fresh Mediterranean lunch onboard\n- Snorkeling equipment provided\n- Unlimited refreshments\n- Professional crew service\n\nThe Blue Lagoon's crystal-clear waters and white sandy bottom create a perfect swimming and snorkeling paradise. Spend the day relaxing on deck, exploring underwater life, or simply soaking in the breathtaking views.",
+        "ru": "Отправляйтесь в волшебное путешествие к потрясающей Голубой Лагуне — одному из самых красивых природных чудес Кипра. Наш роскошный круиз проведёт вас вдоль живописного побережья, мимо драматических скал и скрытых пещер, к кристально чистым бирюзовым водам лагуны.\n\nВаш день включает:\n- Живописный круиз вдоль полуострова Акамас\n- Остановка для купания в Голубой Лагуне\n- Свежий средиземноморский обед на борту\n- Снаряжение для снорклинга\n- Безлимитные напитки\n- Профессиональный сервис экипажа\n\nКристально чистые воды и белое песчаное дно Голубой Лагуны создают идеальный рай для плавания и снорклинга.",
+        "el": "Ξεκινήστε ένα μαγικό ταξίδι στην εκπληκτική Γαλάζια Λίμνη, ένα από τα πιο όμορφα φυσικά θαύματα της Κύπρου. Η πολυτελής κρουαζιέρα μας σας μεταφέρει κατά μήκος της γραφικής ακτογραμμής, περνώντας από δραματικούς βράχους και κρυφές σπηλιές."
+      },
+      "includes": ["lunch", "drinks", "snorkeling", "towels"]
+    },
+    {
+      "id": "sunset-cruise",
+      "slug": "sunset-cruise",
+      "featured": true,
+      "price": 120,
+      "currency": "EUR",
+      "duration": "4",
+      "image": "assets/img/services/sunset-cruise.jpg",
+      "name": {
+        "en": "Sunset Cruise",
+        "ru": "Круиз на закате",
+        "el": "Κρουαζιέρα Ηλιοβασιλέματος"
+      },
+      "shortDescription": {
+        "en": "Experience the magic of a Mediterranean sunset from the deck of a luxury yacht.",
+        "ru": "Испытайте магию средиземноморского заката с палубы роскошной яхты.",
+        "el": "Ζήστε τη μαγεία ενός μεσογειακού ηλιοβασιλέματος από το κατάστρωμα ενός πολυτελούς σκάφους."
+      },
+      "description": {
+        "en": "There's nothing quite like watching the sun dip below the Mediterranean horizon from the deck of a beautiful yacht. Our sunset cruise offers a romantic and unforgettable experience perfect for couples, celebrations, or anyone seeking a magical evening on the water.\n\nYour evening includes:\n- Departure from Limassol Marina\n- Champagne welcome aboard\n- Gourmet appetizers and canapés\n- Premium open bar\n- Live ambient music\n- Photo opportunities with stunning backdrops\n\nAs the golden hour approaches, we'll position the yacht for optimal sunset viewing. Watch as the sky transforms into a canvas of oranges, pinks, and purples while you sip champagne and create memories that will last a lifetime.",
+        "ru": "Нет ничего прекраснее, чем наблюдать, как солнце опускается за горизонт Средиземного моря с палубы красивой яхты. Наш круиз на закате предлагает романтический и незабываемый опыт, идеальный для пар, торжеств или всех, кто ищет волшебный вечер на воде.\n\nВаш вечер включает:\n- Отправление из марины Лимассола\n- Приветственное шампанское на борту\n- Изысканные закуски и канапе\n- Премиум открытый бар\n- Живая эмбиент музыка\n- Фотосессия на фоне потрясающих пейзажей",
+        "el": "Δεν υπάρχει τίποτα καλύτερο από το να παρακολουθείτε τον ήλιο να βυθίζεται κάτω από τον ορίζοντα της Μεσογείου από το κατάστρωμα ενός όμορφου σκάφους. Η κρουαζιέρα ηλιοβασιλέματος προσφέρει μια ρομαντική και αξέχαστη εμπειρία."
+      },
+      "includes": ["champagne", "appetizers", "openbar", "music"]
+    },
+    {
+      "id": "fishing-trip",
+      "slug": "fishing-trip",
+      "featured": true,
+      "price": 200,
+      "currency": "EUR",
+      "duration": "6",
+      "image": "assets/img/services/fishing.jpg",
+      "name": {
+        "en": "Deep Sea Fishing",
+        "ru": "Глубоководная рыбалка",
+        "el": "Ψάρεμα Βαθέων Υδάτων"
+      },
+      "shortDescription": {
+        "en": "Join us for an exciting deep sea fishing adventure in the rich waters of the Mediterranean.",
+        "ru": "Присоединяйтесь к захватывающему приключению глубоководной рыбалки в богатых водах Средиземноморья.",
+        "el": "Ελάτε μαζί μας για μια συναρπαστική περιπέτεια ψαρέματος βαθέων υδάτων στα πλούσια νερά της Μεσογείου."
+      },
+      "description": {
+        "en": "Experience the thrill of deep sea fishing in the abundant waters off the coast of Cyprus. Our experienced captain and crew know exactly where to find the best catches, from tuna and swordfish to grouper and sea bream.\n\nYour fishing adventure includes:\n- Professional fishing equipment\n- Expert guidance from experienced crew\n- Bait and tackle provided\n- Light refreshments and snacks\n- Catch cleaning and packaging\n- Optional cooking of your catch at partner restaurants\n\nWhether you're a seasoned angler or trying fishing for the first time, our crew will ensure you have an exciting and successful day on the water. The Mediterranean Sea offers some of the best fishing in Europe, and Cyprus is perfectly positioned for year-round fishing adventures.",
+        "ru": "Испытайте азарт глубоководной рыбалки в богатых водах у побережья Кипра. Наш опытный капитан и экипаж точно знают, где найти лучший улов — от тунца и меч-рыбы до групера и морского леща.\n\nВаше рыболовное приключение включает:\n- Профессиональное рыболовное оборудование\n- Экспертное руководство от опытного экипажа\n- Наживка и снасти\n- Легкие закуски и напитки\n- Чистка и упаковка улова\n- Возможность приготовления улова в ресторанах-партнерах",
+        "el": "Ζήστε τη συγκίνηση του ψαρέματος βαθέων υδάτων στα πλούσια νερά στα ανοικτά της Κύπρου. Ο έμπειρος καπετάνιος και το πλήρωμά μας γνωρίζουν ακριβώς πού να βρουν τις καλύτερες λείες."
+      },
+      "includes": ["equipment", "bait", "snacks", "cleaning"]
+    }
+  ],
+  "includes": {
+    "lunch": {
+      "icon": "utensils",
+      "name": { "en": "Lunch", "ru": "Обед", "el": "Μεσημεριανό" }
+    },
+    "drinks": {
+      "icon": "glass-water",
+      "name": { "en": "Drinks", "ru": "Напитки", "el": "Ποτά" }
+    },
+    "snorkeling": {
+      "icon": "mask-snorkel",
+      "name": { "en": "Snorkeling Gear", "ru": "Снаряжение для снорклинга", "el": "Εξοπλισμός κατάδυσης" }
+    },
+    "towels": {
+      "icon": "blanket",
+      "name": { "en": "Towels", "ru": "Полотенца", "el": "Πετσέτες" }
+    },
+    "champagne": {
+      "icon": "champagne-glasses",
+      "name": { "en": "Champagne", "ru": "Шампанское", "el": "Σαμπάνια" }
+    },
+    "appetizers": {
+      "icon": "bowl-food",
+      "name": { "en": "Appetizers", "ru": "Закуски", "el": "Ορεκτικά" }
+    },
+    "openbar": {
+      "icon": "martini-glass",
+      "name": { "en": "Open Bar", "ru": "Открытый бар", "el": "Open Bar" }
+    },
+    "music": {
+      "icon": "music",
+      "name": { "en": "Live Music", "ru": "Живая музыка", "el": "Ζωντανή μουσική" }
+    },
+    "equipment": {
+      "icon": "fishing-rod",
+      "name": { "en": "Equipment", "ru": "Оборудование", "el": "Εξοπλισμός" }
+    },
+    "bait": {
+      "icon": "worm",
+      "name": { "en": "Bait & Tackle", "ru": "Наживка и снасти", "el": "Δόλωμα" }
+    },
+    "snacks": {
+      "icon": "cookie",
+      "name": { "en": "Snacks", "ru": "Закуски", "el": "Σνακ" }
+    },
+    "cleaning": {
+      "icon": "fish",
+      "name": { "en": "Catch Cleaning", "ru": "Чистка улова", "el": "Καθαρισμός ψαριών" }
+    }
+  }
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yacht Catalog - ON THE SEA</title>
+    <meta name="description" content="Browse our fleet of luxury yachts available for charter in Limassol, Cyprus.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-catalog">
+    <!-- Header -->
+    <header class="header header--light" id="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <span class="logo__text">ON THE SEA</span>
+            </a>
+
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link" data-i18n="nav.home">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="catalog.html" class="nav__link active" data-i18n="nav.yachts">Yachts</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#services" class="nav__link" data-i18n="nav.services">Services</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link" data-i18n="nav.about">About</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link" data-i18n="nav.contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-switcher__btn active" data-lang="en">EN</button>
+                    <button class="lang-switcher__btn" data-lang="ru">RU</button>
+                    <button class="lang-switcher__btn" data-lang="el">EL</button>
+                </div>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <span class="logo__text">ON THE SEA</span>
+            <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link" data-i18n="nav.home">Home</a>
+            <a href="catalog.html" class="mobile-menu__link active" data-i18n="nav.yachts">Yachts</a>
+            <a href="index.html#services" class="mobile-menu__link" data-i18n="nav.services">Services</a>
+            <a href="index.html#about" class="mobile-menu__link" data-i18n="nav.about">About</a>
+            <a href="index.html#contact" class="mobile-menu__link" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="mobile-menu__lang">
+            <button class="mobile-menu__lang-btn active" data-lang="en">EN</button>
+            <button class="mobile-menu__lang-btn" data-lang="ru">RU</button>
+            <button class="mobile-menu__lang-btn" data-lang="el">EL</button>
+        </div>
+        <div class="mobile-menu__contact">
+            <a href="tel:+35796123456" class="mobile-menu__contact-link">
+                <i class="fas fa-phone"></i>
+                <span>+357 96 123456</span>
+            </a>
+            <a href="https://wa.me/35796123456" class="mobile-menu__contact-link">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="catalog">
+        <div class="container">
+            <!-- Page Header -->
+            <div class="catalog__header">
+                <h1 class="catalog__title" data-i18n="catalog.title">Yacht Catalog</h1>
+            </div>
+
+            <!-- Filters -->
+            <div class="catalog__filters">
+                <div class="catalog__filter-group">
+                    <label class="catalog__filter-label" data-i18n="catalog.filter.guests">Guests</label>
+                    <select class="catalog__filter-select" id="filterGuests">
+                        <option value="" data-i18n="catalog.filter.all">All</option>
+                        <option value="8">Up to 8</option>
+                        <option value="10">Up to 10</option>
+                        <option value="12">Up to 12</option>
+                        <option value="14">14+</option>
+                    </select>
+                </div>
+                <div class="catalog__filter-group">
+                    <label class="catalog__filter-label" data-i18n="catalog.filter.price">Price</label>
+                    <select class="catalog__filter-select" id="filterPrice">
+                        <option value="" data-i18n="catalog.filter.all">All</option>
+                        <option value="1500">&lt; €1500</option>
+                        <option value="2500">€1500 - €2500</option>
+                        <option value="3500">€2500 - €3500</option>
+                        <option value="9999">&gt; €3500</option>
+                    </select>
+                </div>
+                <div class="catalog__filter-group">
+                    <label class="catalog__filter-label" data-i18n="catalog.sort.label">Sort by</label>
+                    <select class="catalog__filter-select" id="sortBy">
+                        <option value="featured">Featured</option>
+                        <option value="priceLow" data-i18n="catalog.sort.priceLow">Price: Low to High</option>
+                        <option value="priceHigh" data-i18n="catalog.sort.priceHigh">Price: High to Low</option>
+                        <option value="newest" data-i18n="catalog.sort.newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Yachts Grid -->
+            <div class="catalog__grid" id="catalogGrid">
+                <!-- Yachts will be rendered by JavaScript -->
+            </div>
+
+            <!-- No Results Message -->
+            <div class="catalog__no-results" id="noResults" style="display: none;">
+                <i class="fas fa-ship"></i>
+                <p data-i18n="catalog.noResults">No yachts found matching your criteria</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <span class="logo__text">ON THE SEA</span>
+                    <p class="footer__tagline">Luxury Yacht Charter</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#" class="footer__link" data-i18n="footer.privacy">Privacy Policy</a>
+                    <a href="#" class="footer__link" data-i18n="footer.terms">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright" data-i18n="footer.copyright">&copy; 2024 ON THE SEA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation (Mobile) -->
+    <nav class="bottom-nav" id="bottomNav">
+        <a href="index.html" class="bottom-nav__item">
+            <i class="fas fa-home"></i>
+            <span data-i18n="nav.home">Home</span>
+        </a>
+        <a href="catalog.html" class="bottom-nav__item active">
+            <i class="fas fa-ship"></i>
+            <span data-i18n="nav.yachts">Yachts</span>
+        </a>
+        <a href="tel:+35796123456" class="bottom-nav__item bottom-nav__item--call">
+            <i class="fas fa-phone"></i>
+            <span data-i18n="nav.contact">Call</span>
+        </a>
+        <a href="https://wa.me/35796123456" class="bottom-nav__item">
+            <i class="fab fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
