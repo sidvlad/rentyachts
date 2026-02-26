@@ -137,27 +137,36 @@
     // Mobile Menu
     // ============================================
     function initMobileMenu() {
-        const menuToggle = document.getElementById('menuToggle');
+        const burgerBtn = document.getElementById('burgerBtn');
         const mobileMenu = document.getElementById('mobileMenu');
-        const mobileMenuClose = document.getElementById('mobileMenuClose');
 
-        if (menuToggle && mobileMenu) {
-            menuToggle.addEventListener('click', () => {
-                mobileMenu.classList.add('active');
-                document.body.style.overflow = 'hidden';
+        if (burgerBtn && mobileMenu) {
+            burgerBtn.addEventListener('click', () => {
+                const isActive = mobileMenu.classList.contains('active');
+                if (isActive) {
+                    closeMobileMenu();
+                } else {
+                    mobileMenu.classList.add('active');
+                    burgerBtn.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
             });
         }
 
-        if (mobileMenuClose && mobileMenu) {
-            mobileMenuClose.addEventListener('click', closeMobileMenu);
-        }
-
-        // Close on link click
+        // Close on link click (for links with data-close attribute or anchor links)
         document.querySelectorAll('.mobile-menu__link').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+            link.addEventListener('click', (e) => {
+                // Only close if it's an anchor link on the same page
+                const href = link.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    closeMobileMenu();
+                } else if (link.hasAttribute('data-close')) {
+                    closeMobileMenu();
+                }
+            });
         });
 
-        // Close on overlay click
+        // Close on overlay click (clicking outside content)
         if (mobileMenu) {
             mobileMenu.addEventListener('click', (e) => {
                 if (e.target === mobileMenu) {
@@ -169,9 +178,13 @@
 
     function closeMobileMenu() {
         const mobileMenu = document.getElementById('mobileMenu');
+        const burgerBtn = document.getElementById('burgerBtn');
         if (mobileMenu) {
             mobileMenu.classList.remove('active');
             document.body.style.overflow = '';
+        }
+        if (burgerBtn) {
+            burgerBtn.classList.remove('active');
         }
     }
 
@@ -319,15 +332,15 @@
                     <h3 class="yacht-card__name">${yacht.name[state.currentLang]}</h3>
                     <div class="yacht-card__specs">
                         <span class="yacht-card__spec">
-                            <i class="fas fa-ruler"></i>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 12l4-4m-4 4l4 4"/></svg>
                             ${yacht.length}${getText('yacht.meters')}
                         </span>
                         <span class="yacht-card__spec">
-                            <i class="fas fa-users"></i>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             ${yacht.guests}
                         </span>
                         <span class="yacht-card__spec">
-                            <i class="fas fa-calendar"></i>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                             ${yacht.year}
                         </span>
                     </div>
@@ -352,21 +365,14 @@
             <a href="service.html?slug=${service.slug}" class="service-card">
                 <div class="service-card__image">
                     <img src="${service.image}" alt="${service.name[state.currentLang]}">
-                    <div class="service-card__watermark">ON THE SEA</div>
                 </div>
                 <div class="service-card__content">
                     <h3 class="service-card__name">${service.name[state.currentLang]}</h3>
                     <p class="service-card__description">${service.shortDescription[state.currentLang]}</p>
                     <div class="service-card__footer">
-                        <div class="service-card__meta">
-                            <span class="service-card__duration">
-                                <i class="fas fa-clock"></i>
-                                ${service.duration} ${getText('service.hours')}
-                            </span>
-                            <span class="service-card__price">
-                                ${getText('yacht.from')} ${formatPrice(service.price)}
-                            </span>
-                        </div>
+                        <span class="service-card__price">
+                            ${getText('yacht.from')} ${formatPrice(service.price)}
+                        </span>
                         <span class="service-card__cta">${getText('yacht.viewDetails')}</span>
                     </div>
                 </div>
@@ -452,15 +458,15 @@
                     <h3 class="yacht-card__name">${yacht.name[state.currentLang]}</h3>
                     <div class="yacht-card__specs">
                         <span class="yacht-card__spec">
-                            <i class="fas fa-ruler"></i>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 12l4-4m-4 4l4 4"/></svg>
                             ${yacht.length}${getText('yacht.meters')}
                         </span>
                         <span class="yacht-card__spec">
-                            <i class="fas fa-users"></i>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                             ${yacht.guests}
                         </span>
                         <span class="yacht-card__spec">
-                            <i class="fas fa-calendar"></i>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                             ${yacht.year}
                         </span>
                     </div>
