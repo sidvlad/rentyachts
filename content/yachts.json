@@ -10,10 +10,10 @@
       "guests": 12,
       "year": 2019,
       "images": [
-        "assets/img/yachts/azimut-55-1.jpg",
-        "assets/img/yachts/azimut-55-2.jpg",
-        "assets/img/yachts/azimut-55-3.jpg",
-        "assets/img/yachts/azimut-55-4.jpg"
+        "assets/img/yachts/azimut-55-1.svg",
+        "assets/img/yachts/azimut-55-2.svg",
+        "assets/img/yachts/azimut-55-3.svg",
+        "assets/img/yachts/azimut-55-4.svg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
@@ -47,10 +47,10 @@
       "guests": 14,
       "year": 2021,
       "images": [
-        "assets/img/yachts/sunseeker-68-1.jpg",
-        "assets/img/yachts/sunseeker-68-2.jpg",
-        "assets/img/yachts/sunseeker-68-3.jpg",
-        "assets/img/yachts/sunseeker-68-4.jpg"
+        "assets/img/yachts/sunseeker-68-1.svg",
+        "assets/img/yachts/sunseeker-68-2.svg",
+        "assets/img/yachts/sunseeker-68-3.svg",
+        "assets/img/yachts/sunseeker-68-4.svg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski"],
       "specs": {
@@ -84,10 +84,10 @@
       "guests": 10,
       "year": 2020,
       "images": [
-        "assets/img/yachts/princess-62-1.jpg",
-        "assets/img/yachts/princess-62-2.jpg",
-        "assets/img/yachts/princess-62-3.jpg",
-        "assets/img/yachts/princess-62-4.jpg"
+        "assets/img/yachts/princess-62-1.svg",
+        "assets/img/yachts/princess-62-2.svg",
+        "assets/img/yachts/princess-62-3.svg",
+        "assets/img/yachts/princess-62-4.svg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
@@ -121,10 +121,10 @@
       "guests": 12,
       "year": 2022,
       "images": [
-        "assets/img/yachts/ferretti-720-1.jpg",
-        "assets/img/yachts/ferretti-720-2.jpg",
-        "assets/img/yachts/ferretti-720-3.jpg",
-        "assets/img/yachts/ferretti-720-4.jpg"
+        "assets/img/yachts/ferretti-720-1.svg",
+        "assets/img/yachts/ferretti-720-2.svg",
+        "assets/img/yachts/ferretti-720-3.svg",
+        "assets/img/yachts/ferretti-720-4.svg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski", "seabob"],
       "specs": {
@@ -158,10 +158,10 @@
       "guests": 8,
       "year": 2018,
       "images": [
-        "assets/img/yachts/beneteau-42-1.jpg",
-        "assets/img/yachts/beneteau-42-2.jpg",
-        "assets/img/yachts/beneteau-42-3.jpg",
-        "assets/img/yachts/beneteau-42-4.jpg"
+        "assets/img/yachts/beneteau-42-1.svg",
+        "assets/img/yachts/beneteau-42-2.svg",
+        "assets/img/yachts/beneteau-42-3.svg",
+        "assets/img/yachts/beneteau-42-4.svg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing"],
       "specs": {
@@ -195,10 +195,10 @@
       "guests": 14,
       "year": 2020,
       "images": [
-        "assets/img/yachts/lagoon-52-1.jpg",
-        "assets/img/yachts/lagoon-52-2.jpg",
-        "assets/img/yachts/lagoon-52-3.jpg",
-        "assets/img/yachts/lagoon-52-4.jpg"
+        "assets/img/yachts/lagoon-52-1.svg",
+        "assets/img/yachts/lagoon-52-2.svg",
+        "assets/img/yachts/lagoon-52-3.svg",
+        "assets/img/yachts/lagoon-52-4.svg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "paddleboard"],
       "specs": {
