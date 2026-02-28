@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ON THE SEA - Аренда яхт на Кипре</title>
-    <meta name="description" content="Аренда яхт на Кипре. Морские прогулки и круизы от 2-х часов до нескольких недель.">
+    <title>ON THE SEA - Yacht Charter in Cyprus</title>
+    <meta name="description" content="Yacht charter in Cyprus. Sea trips and cruises from 2 hours to several weeks.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
@@ -12,41 +12,47 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
         <a href="index.html" class="logo">
             <svg class="logo__icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="25" cy="25" r="23" stroke="#2EBDB6" stroke-width="2"/>
-                <path d="M25 38 C25 38 15 30 15 22 C15 18 18 14 25 14 C32 14 35 18 35 22 C35 30 25 38 25 38Z" fill="#2EBDB6"/>
-                <path d="M18 28 Q25 20 32 28" stroke="white" stroke-width="2" fill="none"/>
-                <circle cx="25" cy="22" r="4" fill="white"/>
+                <circle cx="25" cy="25" r="23" stroke="currentColor" stroke-width="2"/>
+                <path d="M25 38 C25 38 15 30 15 22 C15 18 18 14 25 14 C32 14 35 18 35 22 C35 30 25 38 25 38Z" fill="currentColor"/>
+                <path d="M18 28 Q25 20 32 28" stroke="var(--logo-accent)" stroke-width="2" fill="none"/>
+                <circle cx="25" cy="22" r="4" fill="var(--logo-accent)"/>
             </svg>
             <span class="logo__text">ON THE SEA</span>
         </a>
-        <button class="burger" id="burgerBtn" aria-label="Меню">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
+        <div class="header__right">
+            <div class="lang-switcher">
+                <button class="lang-switcher__btn" data-lang="en">EN</button>
+                <button class="lang-switcher__btn" data-lang="ru">RU</button>
+                <button class="lang-switcher__btn" data-lang="el">EL</button>
+            </div>
+            <button class="burger" id="burgerBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <div class="mobile-menu__content">
             <nav class="mobile-menu__nav">
-                <a href="index.html" class="mobile-menu__link">Главная</a>
-                <a href="#about" class="mobile-menu__link" data-close>О нас</a>
-                <a href="catalog.html" class="mobile-menu__link">Каталог яхт</a>
-                <a href="#services" class="mobile-menu__link" data-close>Круизы</a>
-                <a href="#services" class="mobile-menu__link" data-close>Услуги</a>
-                <a href="#contact" class="mobile-menu__link" data-close>Отзывы</a>
-                <a href="#contact" class="mobile-menu__link" data-close>Контакты</a>
+                <a href="index.html" class="mobile-menu__link" data-i18n="nav.home">Home</a>
+                <a href="#about" class="mobile-menu__link" data-i18n="nav.about">About</a>
+                <a href="catalog.html" class="mobile-menu__link" data-i18n="nav.catalog">Yacht Catalog</a>
+                <a href="#services" class="mobile-menu__link" data-i18n="nav.cruises">Cruises</a>
+                <a href="#services" class="mobile-menu__link" data-i18n="nav.services">Services</a>
+                <a href="#contact" class="mobile-menu__link" data-i18n="nav.contact">Contacts</a>
             </nav>
 
             <div class="mobile-menu__logo">
@@ -59,8 +65,14 @@
                 <span>ON THE SEA</span>
             </div>
 
+            <div class="mobile-menu__lang">
+                <button class="mobile-menu__lang-btn" data-lang="en">EN</button>
+                <button class="mobile-menu__lang-btn" data-lang="ru">RU</button>
+                <button class="mobile-menu__lang-btn" data-lang="el">EL</button>
+            </div>
+
             <div class="mobile-menu__contact">
-                <p class="mobile-menu__contact-title">СВЯЖИТЕСЬ С НАМИ:</p>
+                <p class="mobile-menu__contact-title" data-i18n="menu.contactUs">CONTACT US:</p>
                 <a href="tel:+35796343679" class="mobile-menu__contact-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
@@ -109,27 +121,27 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero__bg">
-            <img src="assets/img/hero-yacht.jpg" alt="Яхта на Кипре">
+            <img src="assets/img/hero-yacht.jpg" alt="Yacht in Cyprus">
         </div>
         <div class="hero__content">
-            <h1 class="hero__title">АРЕНДА<br>ЯХТ<br>НА КИПРЕ</h1>
-            <p class="hero__subtitle">МОРСКИЕ ПРОГУЛКИ И КРУИЗЫ</p>
+            <h1 class="hero__title" data-i18n="hero.title">YACHT<br>CHARTER<br>IN CYPRUS</h1>
+            <p class="hero__subtitle" data-i18n="hero.subtitle">SEA TRIPS AND CRUISES</p>
             <p class="hero__duration">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                     <circle cx="12" cy="12" r="10"/>
                     <polyline points="12 6 12 12 16 14"/>
                 </svg>
-                От 2-х часов до нескольких недель
+                <span data-i18n="hero.duration">From 2 hours to several weeks</span>
             </p>
         </div>
     </section>
 
     <!-- About Section -->
     <section class="about" id="about">
-        <h2 class="about__title">ДОБРО ПОЖАЛОВАТЬ В МИР МОРСКИХ ПУТЕШЕСТВИЙ!</h2>
-        <p class="about__text">Откройте для себя искусство отдыха на воде, мы создаём не просто поездки, а атмосферу свободы, комфорта и хорошего сервиса. Каждая деталь вашего путешествия будет тщательно спланировано с заботой о ваших пожеланиях.</p>
-        <p class="about__text">Выберите свою яхту. Определите маршрут. Позвольте морю стать вашим пространством для отдыха, вдохновения и новых впечатлений.</p>
-        <p class="about__text about__text--bold">Ваше идеальное путешествие начинается здесь.</p>
+        <h2 class="about__title" data-i18n="about.title">WELCOME TO THE WORLD OF SEA TRAVEL!</h2>
+        <p class="about__text" data-i18n="about.text1">Discover the art of water recreation, we create not just trips, but an atmosphere of freedom, comfort and good service. Every detail of your journey will be carefully planned with care for your wishes.</p>
+        <p class="about__text" data-i18n="about.text2">Choose your yacht. Set your route. Let the sea become your space for relaxation, inspiration and new experiences.</p>
+        <p class="about__text about__text--bold" data-i18n="about.text3">Your perfect journey begins here.</p>
 
         <div class="cities">
             <p class="cities__label">
@@ -137,20 +149,20 @@
                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
                     <circle cx="12" cy="10" r="3"/>
                 </svg>
-                ГОРОДА
+                <span data-i18n="about.cities">CITIES</span>
             </p>
             <div class="cities__list">
-                <a href="catalog.html?city=limassol">ЛИМАССОЛ</a>
-                <a href="catalog.html?city=ayia-napa">АЙЯ НАПА</a>
-                <a href="catalog.html?city=protaras">ПРОТАРАС</a>
-                <a href="catalog.html?city=latchi">ЛАЧИ</a>
+                <a href="catalog.html?city=limassol" data-i18n="cities.limassol">LIMASSOL</a>
+                <a href="catalog.html?city=ayia-napa" data-i18n="cities.ayiaNapa">AYIA NAPA</a>
+                <a href="catalog.html?city=protaras" data-i18n="cities.protaras">PROTARAS</a>
+                <a href="catalog.html?city=latchi" data-i18n="cities.latchi">LATCHI</a>
             </div>
         </div>
     </section>
 
     <!-- Popular Yachts Section -->
     <section class="yachts" id="yachts">
-        <h2 class="section-title">Популярные яхты</h2>
+        <h2 class="section-title" data-i18n="sections.popularYachts">Popular Yachts</h2>
         <div class="yachts__grid" id="yachtsGrid">
             <!-- Yachts will be rendered by JavaScript -->
         </div>
@@ -158,7 +170,7 @@
 
     <!-- Services Section -->
     <section class="services" id="services">
-        <h2 class="section-title">Услуги</h2>
+        <h2 class="section-title" data-i18n="sections.services">Services</h2>
         <div class="services__grid" id="servicesGrid">
             <!-- Services will be rendered by JavaScript -->
         </div>
@@ -166,7 +178,7 @@
 
     <!-- Contact Section -->
     <section class="contact" id="contact">
-        <h2 class="section-title">Контакты</h2>
+        <h2 class="section-title" data-i18n="sections.contacts">Contacts</h2>
         <div class="contact__content">
             <a href="tel:+35796343679" class="contact__item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -196,7 +208,7 @@
                 </svg>
                 <span>ON THE SEA</span>
             </div>
-            <p class="footer__tagline">Аренда яхт на Кипре</p>
+            <p class="footer__tagline" data-i18n="footer.tagline">Yacht Charter in Cyprus</p>
 
             <div class="footer__social">
                 <a href="https://wa.me/35796343679" class="footer__social-link" aria-label="WhatsApp">
@@ -224,7 +236,7 @@
                 <a href="mailto:d.a.onthesea@hotmail.com">d.a.onthesea@hotmail.com</a>
             </div>
 
-            <p class="footer__copy">© 2024 ON THE SEA. Все права защищены.</p>
+            <p class="footer__copy" data-i18n="footer.copy">© 2024 ON THE SEA. All rights reserved.</p>
         </div>
     </footer>
 
@@ -246,7 +258,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
             </svg>
-            <span>Позвонить</span>
+            <span data-i18n="nav.call">Call</span>
         </a>
     </nav>
 

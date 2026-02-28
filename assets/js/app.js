@@ -17,6 +17,11 @@
         currentSlide: 0
     };
 
+    // Default to English if no saved preference
+    if (!localStorage.getItem('lang')) {
+        localStorage.setItem('lang', 'en');
+    }
+
     // ============================================
     // Utility Functions
     // ============================================
@@ -30,13 +35,13 @@
         const keys = key.split('.');
         let value = state.texts;
         for (const k of keys) {
-            if (value && value[k]) {
+            if (value && value[k] !== undefined) {
                 value = value[k];
             } else {
                 return key;
             }
         }
-        if (typeof value === 'object' && value[state.currentLang]) {
+        if (typeof value === 'object' && value[state.currentLang] !== undefined) {
             return value[state.currentLang];
         }
         return value || key;
@@ -81,7 +86,12 @@
             const key = el.getAttribute('data-i18n');
             const text = getText(key);
             if (text && text !== key) {
-                el.textContent = text;
+                // Use innerHTML for elements that might contain HTML (like <br>)
+                if (text.includes('<br>') || text.includes('<')) {
+                    el.innerHTML = text;
+                } else {
+                    el.textContent = text;
+                }
             }
         });
 
@@ -100,9 +110,7 @@
         localStorage.setItem('lang', lang);
 
         // Update active buttons
-        document.querySelectorAll('[data-lang]').forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
-        });
+        updateLangButtons();
 
         applyTranslations();
 
@@ -122,12 +130,21 @@
     function initLanguageSwitcher() {
         document.querySelectorAll('[data-lang]').forEach(btn => {
             btn.addEventListener('click', () => {
-                setLanguage(btn.getAttribute('data-lang'));
-                closeMobileMenu();
+                const lang = btn.getAttribute('data-lang');
+                setLanguage(lang);
+
+                // If clicked from mobile menu, close it
+                if (btn.classList.contains('mobile-menu__lang-btn')) {
+                    closeMobileMenu();
+                }
             });
         });
 
         // Set initial active state
+        updateLangButtons();
+    }
+
+    function updateLangButtons() {
         document.querySelectorAll('[data-lang]').forEach(btn => {
             btn.classList.toggle('active', btn.getAttribute('data-lang') === state.currentLang);
         });
@@ -195,18 +212,17 @@
         const header = document.getElementById('header');
         if (!header) return;
 
-        let lastScroll = 0;
+        // Check initial scroll position
+        if (window.pageYOffset > 50) {
+            header.classList.add('header--scrolled');
+        }
 
         window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 100) {
+            if (window.pageYOffset > 50) {
                 header.classList.add('header--scrolled');
             } else {
                 header.classList.remove('header--scrolled');
             }
-
-            lastScroll = currentScroll;
         });
     }
 
