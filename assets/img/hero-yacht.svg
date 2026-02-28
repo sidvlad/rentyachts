@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a3a52"/>
+      <stop offset="50%" style="stop-color:#2d5a7b"/>
+      <stop offset="100%" style="stop-color:#4a90b8"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e6b8a"/>
+      <stop offset="100%" style="stop-color:#0d3d4d"/>
+    </linearGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="1200" height="500" fill="url(#sky)"/>
+  <!-- Sun glow -->
+  <circle cx="900" cy="200" r="150" fill="#ffd700" opacity="0.3"/>
+  <circle cx="900" cy="200" r="80" fill="#ffd700" opacity="0.5"/>
+  <circle cx="900" cy="200" r="40" fill="#fff8dc"/>
+  <!-- Sea -->
+  <rect y="500" width="1200" height="300" fill="url(#sea)"/>
+  <!-- Yacht silhouette -->
+  <g transform="translate(300, 380)">
+    <!-- Hull -->
+    <path d="M0 120 Q100 150 300 150 Q500 150 600 120 L580 80 Q300 90 20 80 Z" fill="#1a1a2e"/>
+    <!-- Cabin -->
+    <path d="M150 80 L150 40 L450 40 L450 80 Z" fill="#2d2d44"/>
+    <!-- Windows -->
+    <rect x="180" y="50" width="40" height="20" rx="3" fill="#4a90b8" opacity="0.7"/>
+    <rect x="240" y="50" width="40" height="20" rx="3" fill="#4a90b8" opacity="0.7"/>
+    <rect x="300" y="50" width="40" height="20" rx="3" fill="#4a90b8" opacity="0.7"/>
+    <rect x="360" y="50" width="40" height="20" rx="3" fill="#4a90b8" opacity="0.7"/>
+    <!-- Upper deck -->
+    <path d="M200 40 L200 10 L400 10 L400 40 Z" fill="#3d3d5c"/>
+    <!-- Antenna -->
+    <line x1="350" y1="10" x2="350" y2="-20" stroke="#555" stroke-width="2"/>
+    <line x1="340" y1="-10" x2="360" y2="-10" stroke="#555" stroke-width="2"/>
+  </g>
+  <!-- Water reflections -->
+  <ellipse cx="600" cy="550" rx="350" ry="20" fill="#fff" opacity="0.1"/>
+  <ellipse cx="600" cy="580" rx="250" ry="10" fill="#fff" opacity="0.05"/>
+  <!-- Waves -->
+  <path d="M0 520 Q150 510 300 520 Q450 530 600 520 Q750 510 900 520 Q1050 530 1200 520" fill="none" stroke="#fff" stroke-width="2" opacity="0.2"/>
+  <path d="M0 550 Q150 540 300 550 Q450 560 600 550 Q750 540 900 550 Q1050 560 1200 550" fill="none" stroke="#fff" stroke-width="1" opacity="0.15"/>
+</svg>

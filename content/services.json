@@ -7,7 +7,7 @@
       "price": 150,
       "currency": "EUR",
       "duration": "8",
-      "image": "assets/img/services/blue-lagoon.jpg",
+      "image": "assets/img/services/blue-lagoon.svg",
       "name": {
         "en": "Blue Lagoon Cruise",
         "ru": "Круиз в Голубую Лагуну",
@@ -32,7 +32,7 @@
       "price": 120,
       "currency": "EUR",
       "duration": "4",
-      "image": "assets/img/services/sunset-cruise.jpg",
+      "image": "assets/img/services/sunset-cruise.svg",
       "name": {
         "en": "Sunset Cruise",
         "ru": "Круиз на закате",
@@ -57,7 +57,7 @@
       "price": 200,
       "currency": "EUR",
       "duration": "6",
-      "image": "assets/img/services/fishing.jpg",
+      "image": "assets/img/services/fishing.svg",
       "name": {
         "en": "Deep Sea Fishing",
         "ru": "Глубоководная рыбалка",

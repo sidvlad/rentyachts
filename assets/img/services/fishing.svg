@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="deepblue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1565c0"/>
+      <stop offset="100%" style="stop-color:#0d47a1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#deepblue)"/>
+  <path d="M100 350 Q200 320 300 350 Q400 380 500 350 Q600 320 700 350" fill="none" stroke="#fff" stroke-width="2" opacity="0.3"/>
+  <path d="M100 380 Q200 350 300 380 Q400 410 500 380 Q600 350 700 380" fill="none" stroke="#fff" stroke-width="1" opacity="0.2"/>
+  <text x="400" y="220" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="28" fill="#fff" font-weight="600">DEEP SEA FISHING</text>
+  <text x="400" y="260" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="16" fill="#fff" opacity="0.8">Adventure Awaits</text>
+</svg>
