@@ -1,15 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
   <defs>
-    <linearGradient id="sunset" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#ff7043"/>
-      <stop offset="50%" style="stop-color:#ff5722"/>
-      <stop offset="100%" style="stop-color:#bf360c"/>
+    <linearGradient id="sky-sunset" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6f00"/>
+      <stop offset="30%" style="stop-color:#ff8f00"/>
+      <stop offset="60%" style="stop-color:#ffb300"/>
+      <stop offset="100%" style="stop-color:#ffca28"/>
+    </linearGradient>
+    <linearGradient id="sea-sunset" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e65100"/>
+      <stop offset="50%" style="stop-color:#bf360c"/>
+      <stop offset="100%" style="stop-color:#4e342e"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="500" fill="url(#sunset)"/>
-  <circle cx="400" cy="350" r="80" fill="#ffcc02" opacity="0.8"/>
-  <circle cx="400" cy="350" r="60" fill="#ffd54f"/>
-  <rect y="380" width="800" height="120" fill="#3e2723" opacity="0.4"/>
-  <text x="400" y="180" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="28" fill="#fff" font-weight="600">SUNSET CRUISE</text>
-  <text x="400" y="220" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="16" fill="#fff" opacity="0.9">Romantic Evening</text>
+  <!-- Sky -->
+  <rect width="800" height="280" fill="url(#sky-sunset)"/>
+  <!-- Sun -->
+  <circle cx="400" cy="240" r="70" fill="#fff59d" opacity="0.9"/>
+  <circle cx="400" cy="240" r="50" fill="#ffee58"/>
+  <!-- Sun reflection path -->
+  <ellipse cx="400" cy="350" rx="80" ry="100" fill="#ffcc80" opacity="0.4"/>
+  <!-- Sea -->
+  <rect y="280" width="800" height="170" fill="url(#sea-sunset)"/>
+  <!-- Yacht silhouette -->
+  <g transform="translate(280, 220)">
+    <path d="M0 60 Q60 70 120 70 Q180 70 240 60 L230 40 Q120 45 10 40 Z" fill="#1a1a1a" opacity="0.9"/>
+    <path d="M60 40 L60 15 L180 30 L180 40 Z" fill="#1a1a1a" opacity="0.85"/>
+    <path d="M100 15 L100 -10 L105 -10 L105 15" fill="#1a1a1a" opacity="0.8"/>
+  </g>
+  <!-- Waves -->
+  <path d="M0 350 Q100 340 200 350 Q300 360 400 350 Q500 340 600 350 Q700 360 800 350 V450 H0 Z" fill="#3e2723" opacity="0.4"/>
 </svg>
