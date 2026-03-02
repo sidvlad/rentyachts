@@ -72,6 +72,8 @@
   },
   "sections": {
     "popularYachts": { "en": "Popular Yachts", "ru": "Популярные яхты", "el": "Δημοφιλή Σκάφη" },
+    "viewAllYachts": { "en": "VIEW ALL YACHTS", "ru": "СМОТРЕТЬ ВСЕ ЯХТЫ", "el": "ΔΕΙΤΕ ΟΛΑ ΤΑ ΣΚΑΦΗ" },
+    "popularTours": { "en": "Popular Tours", "ru": "Популярные туры", "el": "Δημοφιλείς Περιηγήσεις" },
     "services": { "en": "Services", "ru": "Услуги", "el": "Υπηρεσίες" },
     "contacts": { "en": "Contacts", "ru": "Контакты", "el": "Επικοινωνία" }
   },

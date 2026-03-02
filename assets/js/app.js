@@ -328,7 +328,7 @@
     // ============================================
     function renderHomePage() {
         renderFeaturedYachts();
-        renderServices();
+        renderTours();
         renderCities();
     }
 
@@ -368,6 +368,22 @@
                         </div>
                         <span class="yacht-card__cta">${getText('yacht.viewDetails')}</span>
                     </div>
+                </div>
+            </a>
+        `).join('');
+    }
+
+    function renderTours() {
+        const grid = document.getElementById('toursGrid');
+        if (!grid || !state.services) return;
+
+        grid.innerHTML = state.services.map(service => `
+            <a href="service.html?slug=${service.slug}" class="tour-card">
+                <div class="tour-card__image">
+                    <img src="${service.image}" alt="${service.name[state.currentLang]}">
+                </div>
+                <div class="tour-card__content">
+                    <h3 class="tour-card__name">${service.name[state.currentLang]}</h3>
                 </div>
             </a>
         `).join('');
