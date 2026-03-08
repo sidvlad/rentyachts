@@ -1,0 +1,217 @@
+{
+  "tours": [
+    {
+      "id": "birthday-yacht",
+      "slug": "birthday-yacht",
+      "featured": true,
+      "image": "assets/img/tours/birthday.jpg",
+      "name": {
+        "en": "Birthday on a Yacht",
+        "ru": "День рождения на яхте",
+        "el": "Γενέθλια σε Σκάφος"
+      },
+      "shortDescription": {
+        "en": "A birthday on a yacht is a gift that is impossible to forget.",
+        "ru": "День рождения на яхте — подарок, который невозможно забыть.",
+        "el": "Τα γενέθλια σε ένα σκάφος είναι ένα δώρο που είναι αδύνατο να ξεχαστεί."
+      },
+      "description": {
+        "en": "<p>A birthday on a yacht is a gift that is impossible to forget. Gather your loved ones, open the sparkling wine and celebrate in the open sea. We are waiting for you!</p><p>The uniqueness of a birthday on a yacht is in its flexibility. You choose the scenario yourself: a morning cruise with swimming in crystal clear water, a daytime party with a DJ and photo session, a romantic sunset meeting or an elegant dinner under the stars.</p><p>You can arrange a themed party, live music, a buffet or a full banquet — everything is limited only by your imagination.</p><p>It is a vacation that combines dynamics and relaxation. Swimming in the open sea, sunbathing on deck, beautiful views, stunning photos and the feeling of a real escape from everyday life.</p><p>At the same time, the service on board allows you not to worry about anything — the team takes care of the organization so that you can simply enjoy the moment.</p><p>A birthday on a yacht is emotions that cannot be repeated in a restaurant or banquet hall. It is a celebration with the taste of freedom, the sea and real life.</p>",
+        "ru": "<p>День рождения на яхте — подарок, который невозможно забыть. Собираем близких, открываем игристое и встречаем праздник в открытом море. Ждём вас!</p><p>Особенность дня рождения на яхте — в его гибкости. Вы сами выбираете сценарий: утренний круиз с купанием в прозрачной воде, дневная вечеринка с диджеем и фотосессией, романтичная встреча заката или элегантный ужин под звёздным небом.</p><p>Можно устроить тематическую вечеринку, живую музыку, фуршет или полноценный банкет — всё ограничено лишь вашей фантазией.</p><p>Это отдых, который сочетает в себе динамику и расслабление. Купание в открытом море, солнечные ванны на палубе, красивые виды, эффектные фотографии и ощущение настоящего побега от повседневности.</p><p>При этом сервис на борту позволяет ни о чём не беспокоиться — команда берёт организацию на себя, чтобы вы могли просто наслаждаться моментом.</p><p>День рождения на яхте — это эмоции, которые невозможно повторить в ресторане или банкетном зале. Это праздник со вкусом свободы, моря и настоящей жизни.</p>",
+        "el": "<p>Τα γενέθλια σε ένα σκάφος είναι ένα δώρο που είναι αδύνατο να ξεχαστεί. Μαζέψτε τους αγαπημένους σας, ανοίξτε το αφρώδες κρασί και γιορτάστε στην ανοιχτή θάλασσα. Σας περιμένουμε!</p>"
+      },
+      "tips": {
+        "title": {
+          "en": "How to Organize a Birthday on a Yacht",
+          "ru": "Как организовать День рождения на яхте",
+          "el": "Πώς να οργανώσετε γενέθλια σε σκάφος"
+        },
+        "intro": {
+          "en": "A few helpful tips for such a service as renting a yacht for a Birthday, which will help you properly organize everything, especially if you have not relaxed this way before. So, where to start?",
+          "ru": "Несколько полезных подсказок по такой услуге, как аренда яхты на День рождения, которые помогут вам правильно всё организовать, особенно если вы раньше не отдыхали таким способом. Итак, с чего начать?",
+          "el": "Μερικές χρήσιμες συμβουλές για μια τέτοια υπηρεσία όπως η ενοικίαση σκάφους για γενέθλια."
+        },
+        "items": [
+          {
+            "title": {
+              "en": "1. Decide on the format of the celebration.",
+              "ru": "1. Определитесь с форматом праздника.",
+              "el": "1. Αποφασίστε για τη μορφή της γιορτής."
+            },
+            "text": {
+              "en": "The first step is to understand what kind of Birthday you want. It can be a cozy walk in the circle of close friends or a bright party with music, dancing and entertainment.",
+              "ru": "Первый шаг — понять, каким вы хотите видеть свой День рождения. Это может быть уютная прогулка в кругу близких друзей или яркая вечеринка с музыкой, танцами и развлечениями.",
+              "el": "Το πρώτο βήμα είναι να καταλάβετε τι είδους γενέθλια θέλετε."
+            }
+          },
+          {
+            "title": {
+              "en": "2. Choose the right yacht.",
+              "ru": "2. Выберите подходящую яхту.",
+              "el": "2. Επιλέξτε το κατάλληλο σκάφος."
+            },
+            "text": {
+              "en": "The number of guests directly affects the choice of yacht. For a small company, a compact and cozy yacht is suitable, and for a large company, it is better to choose a more spacious vessel with a large deck, relaxation area and a place for dancing.",
+              "ru": "Количество гостей напрямую влияет на выбор яхты. Для небольшой компании подойдёт компактная и уютная яхта, а для большой компании лучше выбрать более просторное судно с большой палубой, зоной отдыха и местом для танцев.",
+              "el": "Ο αριθμός των καλεσμένων επηρεάζει άμεσα την επιλογή του σκάφους."
+            }
+          },
+          {
+            "title": {
+              "en": "3. Think about the route.",
+              "ru": "3. Продумайте маршрут прогулки.",
+              "el": "3. Σκεφτείτε τη διαδρομή."
+            },
+            "text": {
+              "en": "A sea trip can last several hours or a whole day. During this time, you can stop in beautiful bays, swim in the sea, take bright photos and enjoy stunning views.",
+              "ru": "Морская прогулка может длиться несколько часов или целый день. За это время можно остановиться в красивых бухтах, искупаться в море, сделать яркие фотографии и насладиться потрясающими видами.",
+              "el": "Ένα θαλάσσιο ταξίδι μπορεί να διαρκέσει αρκετές ώρες ή μια ολόκληρη μέρα."
+            }
+          },
+          {
+            "title": {
+              "en": "4. Organize food and drinks.",
+              "ru": "4. Организуйте еду и напитки.",
+              "el": "4. Οργανώστε φαγητό και ποτά."
+            },
+            "text": {
+              "en": "We provide catering on board, you can also order an individual menu or bring something with you (drinks and treats). You can also order a festive cake or a special menu for guests.",
+              "ru": "Мы предоставляем кейтеринг на борту, вы также можете заказать индивидуальное меню или привезти что-то с собой (напитки и угощения). Также можно заказать праздничный торт или специальное меню для гостей.",
+              "el": "Παρέχουμε catering στο σκάφος, μπορείτε επίσης να παραγγείλετε ατομικό μενού."
+            }
+          },
+          {
+            "title": {
+              "en": "5. Add the atmosphere of the holiday.",
+              "ru": "5. Добавьте атмосферу праздника.",
+              "el": "5. Προσθέστε την ατμόσφαιρα της γιορτής."
+            },
+            "text": {
+              "en": "To make the Birthday even more special, you can decorate the yacht with balloons, prepare festive decor, invite a photographer or DJ. Music, good company and the sea atmosphere will create the perfect mood for the holiday.",
+              "ru": "Чтобы сделать День рождения ещё более особенным, можно украсить яхту шарами, подготовить праздничный декор, пригласить фотографа или диджея. Музыка, хорошая компания и морская атмосфера создадут идеальное настроение для праздника.",
+              "el": "Για να κάνετε τα γενέθλια ακόμα πιο ξεχωριστά, μπορείτε να διακοσμήσετε το σκάφος με μπαλόνια."
+            }
+          },
+          {
+            "title": {
+              "en": "6. Book the yacht in advance.",
+              "ru": "6. Забронируйте яхту заранее.",
+              "el": "6. Κλείστε το σκάφος εκ των προτέρων."
+            },
+            "text": {
+              "en": "Especially in the high season, yachts are in high demand, so it is better to book in advance. Clarify the departure time, meeting place, rental duration and additional services.",
+              "ru": "Особенно в высокий сезон яхты пользуются большим спросом, поэтому лучше забронировать её заранее. Уточните время отправления, место встречи, длительность аренды и дополнительные услуги.",
+              "el": "Ειδικά τη σεζόν αιχμής, τα σκάφη έχουν μεγάλη ζήτηση."
+            }
+          }
+        ],
+        "outro": {
+          "en": "A birthday on a yacht is not just a holiday, but a real sea adventure. Fresh sea breeze, beautiful landscapes and an atmosphere of freedom make this format of celebration truly unforgettable for you and your guests.",
+          "ru": "День рождения на яхте — это не просто праздник, а настоящее морское приключение. Свежий морской бриз, красивые пейзажи и атмосфера свободы делают такой формат праздника по-настоящему незабываемым для вас и ваших гостей.",
+          "el": "Τα γενέθλια σε ένα σκάφος δεν είναι απλώς μια γιορτή, αλλά μια πραγματική θαλάσσια περιπέτεια."
+        }
+      },
+      "reviews": [
+        {
+          "name": {
+            "en": "NIKOLAEV FAMILY",
+            "ru": "СЕМЬЯ НИКОЛАЕВЫХ",
+            "el": "ΟΙΚΟΓΕΝΕΙΑ ΝΙΚΟΛΑΕΦ"
+          },
+          "date": "12.05.2024",
+          "avatar": "assets/img/reviews/family1.jpg",
+          "tag": {
+            "en": "YACHT VACATION WITH FAMILY!",
+            "ru": "ОТДЫХ НА ЯХТЕ С СЕМЬЕЙ!",
+            "el": "ΔΙΑΚΟΠΕΣ ΣΕ ΣΚΑΦΟΣ ΜΕ ΤΗΝ ΟΙΚΟΓΕΝΕΙΑ!"
+          },
+          "text": {
+            "en": "We decided to spend the weekend on a yacht with our children. I was skeptical at first, but it turned out to be wonderful. The beautiful sea and dolphins brought us so much joy. I was absolutely delighted! I recommend renting yachts from VIP Ship!",
+            "ru": "Решили провести выходные на яхте с нашими детьми. Я сначала сомневалась, но, оказалось, напрасно. Красивое море и дельфины подарили массу удовольствия. Осталась просто в восторге! Рекомендую арендовать яхты на ВИП шип!",
+            "el": "Αποφασίσαμε να περάσουμε το Σαββατοκύριακο σε ένα σκάφος με τα παιδιά μας."
+          }
+        }
+      ],
+      "similarTours": ["sunset-cruise", "blue-lagoon-cruise"]
+    },
+    {
+      "id": "sunset-cruise",
+      "slug": "sunset-cruise",
+      "featured": true,
+      "image": "assets/img/tours/sunset.jpg",
+      "name": {
+        "en": "Sunset Cruise",
+        "ru": "Встреча заката",
+        "el": "Κρουαζιέρα Ηλιοβασιλέματος"
+      },
+      "shortDescription": {
+        "en": "Spend a perfect evening watching the sunset on a yacht at sea.",
+        "ru": "Проведите идеальный вечер, встречая закат на яхте в море.",
+        "el": "Περάστε μια τέλεια βραδιά παρακολουθώντας το ηλιοβασίλεμα σε σκάφος."
+      }
+    },
+    {
+      "id": "fishing-trip",
+      "slug": "fishing-trip",
+      "featured": true,
+      "image": "assets/img/tours/fishing.jpg",
+      "name": {
+        "en": "Sea Fishing",
+        "ru": "Морская рыбалка",
+        "el": "Θαλάσσιο Ψάρεμα"
+      },
+      "shortDescription": {
+        "en": "Join us for an exciting fishing adventure in the Mediterranean.",
+        "ru": "Присоединяйтесь к захватывающему рыболовному приключению в Средиземноморье.",
+        "el": "Ελάτε μαζί μας για μια συναρπαστική περιπέτεια ψαρέματος."
+      }
+    },
+    {
+      "id": "blue-lagoon",
+      "slug": "blue-lagoon",
+      "featured": true,
+      "image": "assets/img/tours/blue-lagoon.jpg",
+      "name": {
+        "en": "Blue Lagoon",
+        "ru": "Голубая лагуна",
+        "el": "Γαλάζια Λίμνη"
+      },
+      "shortDescription": {
+        "en": "Discover the crystal-clear waters of the famous Blue Lagoon.",
+        "ru": "Откройте для себя кристально чистые воды знаменитой Голубой Лагуны.",
+        "el": "Ανακαλύψτε τα κρυστάλλινα νερά της διάσημης Γαλάζιας Λίμνης."
+      }
+    }
+  ],
+  "booking": {
+    "title": {
+      "en": "BOOKING",
+      "ru": "БРОНИРОВАНИЕ",
+      "el": "ΚΡΑΤΗΣΗ"
+    },
+    "text": {
+      "en": "Contact us in a convenient way for you — we will confirm the availability of the selected yacht and provide personal assistance at all stages of booking.",
+      "ru": "Свяжитесь с нами удобным для вас способом — мы подтвердим доступность выбранной яхты и обеспечим персональное сопровождение на всех этапах бронирования.",
+      "el": "Επικοινωνήστε μαζί μας με έναν βολικό τρόπο για εσάς."
+    }
+  },
+  "duration": {
+    "title": {
+      "en": "DURATION",
+      "ru": "ПРОДОЛЖИТЕЛЬНОСТЬ",
+      "el": "ΔΙΑΡΚΕΙΑ"
+    },
+    "text": {
+      "en": "The departure time and charter duration are agreed individually and may depend on yacht availability, weather conditions, and your personal preferences.",
+      "ru": "Время выхода в море и продолжительность чартера оговариваются индивидуально и могут зависеть от наличия свободных яхт, погодных условий и ваших личных пожеланий.",
+      "el": "Η ώρα αναχώρησης και η διάρκεια του ναύλου συμφωνούνται ατομικά."
+    }
+  },
+  "contact": {
+    "title": {
+      "en": "CONTACT US,\nWE WILL FIND THE BEST\nCHARTER OPTION FOR YOU.",
+      "ru": "СВЯЖИТЕСЬ С НАМИ,\nМЫ ПОДБЕРЕМ ДЛЯ ВАС\nЛУЧШИЙ ВАРИАНТ ЧАРТЕРА.",
+      "el": "ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ,\nΘΑ ΒΡΟΥΜΕ ΤΗΝ ΚΑΛΥΤΕΡΗ\nΕΠΙΛΟΓΗ ΝΑΥΛΟΥ ΓΙΑ ΕΣΑΣ."
+    }
+  }
+}

@@ -19,7 +19,9 @@
     "cruises": { "en": "Cruises", "ru": "Круизы", "el": "Κρουαζιέρες" },
     "services": { "en": "Services", "ru": "Услуги", "el": "Υπηρεσίες" },
     "contact": { "en": "Contacts", "ru": "Контакты", "el": "Επικοινωνία" },
-    "call": { "en": "Call", "ru": "Позвонить", "el": "Κλήση" }
+    "call": { "en": "Call", "ru": "Позвонить", "el": "Κλήση" },
+    "reviews": { "en": "Reviews", "ru": "Отзывы", "el": "Κριτικές" },
+    "popularTours": { "en": "POPULAR TOURS", "ru": "ПОПУЛЯРНЫЕ ТУРЫ", "el": "ΔΗΜΟΦΙΛΕΙΣ ΠΕΡΙΗΓΗΣΕΙΣ" }
   },
   "menu": {
     "contactUs": { "en": "CONTACT US:", "ru": "СВЯЖИТЕСЬ С НАМИ:", "el": "ΕΠΙΚΟΙΝΩΝΗΣΤΕ:" }
@@ -78,13 +80,19 @@
     "contacts": { "en": "Contacts", "ru": "Контакты", "el": "Επικοινωνία" }
   },
   "yacht": {
-    "from": { "en": "from", "ru": "от", "el": "από" },
+    "from": { "en": "from", "ru": "От", "el": "από" },
     "perDay": { "en": "/ day", "ru": "/ день", "el": "/ ημέρα" },
+    "hour": { "en": "hour", "ru": "час", "el": "ώρα" },
     "guests": { "en": "Guests", "ru": "Гостей", "el": "Επισκέπτες" },
+    "guestsLabel": { "en": "Guests", "ru": "Гостей", "el": "Επισκέπτες" },
     "year": { "en": "Year", "ru": "Год", "el": "Έτος" },
+    "yearLabel": { "en": "Year", "ru": "Год", "el": "Έτος" },
+    "size": { "en": "Size", "ru": "Размер", "el": "Μέγεθος" },
     "meters": { "en": "m", "ru": "м", "el": "μ" },
+    "metersShort": { "en": "m.", "ru": "м.", "el": "μ." },
     "viewDetails": { "en": "Details", "ru": "Подробнее", "el": "Λεπτομέρειες" },
     "book": { "en": "Book Now", "ru": "Забронировать", "el": "Κράτηση" },
+    "order": { "en": "ORDER", "ru": "ЗАКАЗАТЬ", "el": "ΠΑΡΑΓΓΕΛΙΑ" },
     "options": {
       "en": "Options Available",
       "ru": "Доступные опции",
@@ -102,6 +110,28 @@
       "ru": "Способы оплаты",
       "el": "Μέθοδοι πληρωμής"
     }
+  },
+  "tour": {
+    "popularYachts": { "en": "Popular Yachts", "ru": "Популярные яхты", "el": "Δημοφιλή Σκάφη" },
+    "viewAllYachts": { "en": "VIEW ALL YACHTS", "ru": "СМОТРЕТЬ ВСЕ ЯХТЫ", "el": "ΔΕΙΤΕ ΟΛΑ ΤΑ ΣΚΑΦΗ" },
+    "reviews": { "en": "Reviews", "ru": "О нас говорят", "el": "Κριτικές" },
+    "reviewLabel": { "en": "Review", "ru": "Отзыв", "el": "Κριτική" },
+    "allReviews": { "en": "All reviews", "ru": "Все отзывы", "el": "Όλες οι κριτικές" },
+    "similarOffers": { "en": "Similar Offers", "ru": "Похожие предложения", "el": "Παρόμοιες προσφορές" },
+    "details": { "en": "DETAILS", "ru": "ПОДРОБНЕЕ", "el": "ΛΕΠΤΟΜΕΡΕΙΕΣ" },
+    "goToCatalog": { "en": "GO TO CATALOG", "ru": "ПЕРЕЙТИ В КАТАЛОГ", "el": "ΜΕΤΑΒΑΣΗ ΣΤΟΝ ΚΑΤΑΛΟΓΟ" },
+    "booking": { "en": "BOOKING", "ru": "БРОНИРОВАНИЕ", "el": "ΚΡΑΤΗΣΗ" },
+    "bookingText": { "en": "Contact us in a convenient way for you — we will confirm the availability of the selected yacht and provide personal assistance at all stages of booking.", "ru": "Свяжитесь с нами удобным для вас способом — мы подтвердим доступность выбранной яхты и обеспечим персональное сопровождение на всех этапах бронирования.", "el": "Επικοινωνήστε μαζί μας με έναν βολικό τρόπο για εσάς." },
+    "duration": { "en": "DURATION", "ru": "ПРОДОЛЖИТЕЛЬНОСТЬ", "el": "ΔΙΑΡΚΕΙΑ" },
+    "durationText": { "en": "The departure time and charter duration are agreed individually and may depend on yacht availability, weather conditions, and your personal preferences.", "ru": "Время выхода в море и продолжительность чартера оговариваются индивидуально и могут зависеть от наличия свободных яхт, погодных условий и ваших личных пожеланий.", "el": "Η ώρα αναχώρησης και η διάρκεια του ναύλου συμφωνούνται ατομικά." },
+    "paymentMethods": { "en": "PAYMENT METHODS", "ru": "СПОСОБЫ ОПЛАТЫ", "el": "ΜΕΘΟΔΟΙ ΠΛΗΡΩΜΗΣ" },
+    "contactTitle": { "en": "CONTACT US,<br>WE WILL FIND THE BEST<br>CHARTER OPTION FOR YOU.", "ru": "СВЯЖИТЕСЬ С НАМИ,<br>МЫ ПОДБЕРЕМ ДЛЯ ВАС<br>ЛУЧШИЙ ВАРИАНТ ЧАРТЕРА.", "el": "ΕΠΙΚΟΙΝΩΝΗΣΤΕ ΜΑΖΙ ΜΑΣ,<br>ΘΑ ΒΡΟΥΜΕ ΤΗΝ ΚΑΛΥΤΕΡΗ<br>ΕΠΙΛΟΓΗ ΝΑΥΛΟΥ ΓΙΑ ΕΣΑΣ." },
+    "writeEmail": { "en": "WRITE E-MAIL", "ru": "НАПИСАТЬ E-MAIL", "el": "ΓΡΑΨΤΕ E-MAIL" }
+  },
+  "benefits": {
+    "yachtHelp": { "en": "Yacht selection assistance", "ru": "Помощь в подборе яхты", "el": "Βοήθεια επιλογής σκάφους" },
+    "captains": { "en": "Certified captains", "ru": "Сертифицированные капитаны", "el": "Πιστοποιημένοι καπετάνιοι" },
+    "routes": { "en": "Thoughtful routes", "ru": "Продуманные маршруты", "el": "Προσεκτικές διαδρομές" }
   },
   "service": {
     "duration": { "en": "Duration", "ru": "Продолжительность", "el": "Διάρκεια" },

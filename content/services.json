@@ -1,6 +1,31 @@
 {
   "services": [
     {
+      "id": "birthday-yacht",
+      "slug": "birthday-yacht",
+      "featured": true,
+      "price": 300,
+      "currency": "EUR",
+      "duration": "4",
+      "image": "assets/img/tours/birthday.svg",
+      "name": {
+        "en": "Birthday on a Yacht",
+        "ru": "День рождения на яхте",
+        "el": "Γενέθλια σε Σκάφος"
+      },
+      "shortDescription": {
+        "en": "A birthday on a yacht is a gift that is impossible to forget.",
+        "ru": "День рождения на яхте — подарок, который невозможно забыть.",
+        "el": "Τα γενέθλια σε ένα σκάφος είναι ένα δώρο που είναι αδύνατο να ξεχαστεί."
+      },
+      "description": {
+        "en": "A birthday on a yacht is a gift that is impossible to forget. Gather your loved ones, open the sparkling wine and celebrate in the open sea. We are waiting for you!",
+        "ru": "День рождения на яхте — подарок, который невозможно забыть. Собираем близких, открываем игристое и встречаем праздник в открытом море. Ждём вас!",
+        "el": "Τα γενέθλια σε ένα σκάφος είναι ένα δώρο που είναι αδύνατο να ξεχαστεί."
+      },
+      "includes": ["champagne", "appetizers", "music"]
+    },
+    {
       "id": "blue-lagoon-cruise",
       "slug": "blue-lagoon-cruise",
       "featured": true,
