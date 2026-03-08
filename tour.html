@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour Details - ON THE SEA</title>
+    <meta name="description" content="Explore our yacht tours in Limassol, Cyprus.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="page-tour">
+    <!-- Header -->
+    <header class="header header--light" id="header">
+        <div class="container header__container">
+            <a href="index.html" class="logo">
+                <svg class="logo__icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="23" stroke="currentColor" stroke-width="2"/>
+                    <path d="M15 30 Q25 15 35 30" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M20 28 L25 18 L30 28" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                </svg>
+                <span class="logo__text">ON THE SEA</span>
+            </a>
+
+            <div class="header__actions">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                    <span class="menu-toggle__bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu__header">
+            <a href="index.html" class="logo">
+                <svg class="logo__icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="23" stroke="currentColor" stroke-width="2"/>
+                    <path d="M15 30 Q25 15 35 30" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M20 28 L25 18 L30 28" stroke="currentColor" stroke-width="1.5" fill="none"/>
+                </svg>
+                <span class="logo__text">ON THE SEA</span>
+            </a>
+            <div class="mobile-menu__header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-switcher__btn" data-lang="en">EN</button>
+                    <button class="lang-switcher__btn active" data-lang="ru">RU</button>
+                    <button class="lang-switcher__btn" data-lang="el">EL</button>
+                </div>
+                <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close menu">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <nav class="mobile-menu__nav">
+            <a href="index.html" class="mobile-menu__link" data-i18n="nav.home">Home</a>
+            <a href="index.html#about" class="mobile-menu__link" data-i18n="nav.about">About</a>
+            <a href="catalog.html" class="mobile-menu__link" data-i18n="nav.catalog">Yacht Catalog</a>
+            <a href="index.html#tours" class="mobile-menu__link" data-i18n="nav.cruises">Cruises</a>
+            <a href="index.html#services" class="mobile-menu__link" data-i18n="nav.services">Services</a>
+            <a href="index.html#contact" class="mobile-menu__link" data-i18n="nav.contact">Contacts</a>
+        </nav>
+        <div class="mobile-menu__lang">
+            <button class="mobile-menu__lang-btn" data-lang="en">EN</button>
+            <button class="mobile-menu__lang-btn active" data-lang="ru">RU</button>
+            <button class="mobile-menu__lang-btn" data-lang="el">EL</button>
+        </div>
+        <div class="mobile-menu__contact">
+            <p class="mobile-menu__contact-title" data-i18n="menu.contactUs">CONTACT US:</p>
+            <a href="tel:+35796343679" class="mobile-menu__contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                +357 96343679
+            </a>
+            <a href="mailto:d.a.onthesea@hotmail.com" class="mobile-menu__contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                d.a.onthesea@hotmail.com
+            </a>
+        </div>
+        <div class="mobile-menu__social">
+            <a href="https://wa.me/35796343679" class="mobile-menu__social-link" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                </svg>
+            </a>
+            <a href="https://t.me/onthesea" class="mobile-menu__social-link" aria-label="Telegram">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                </svg>
+            </a>
+            <a href="https://instagram.com/onthesea" class="mobile-menu__social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="tour-page">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumbs">
+            <a href="index.html" class="breadcrumbs__link" data-i18n="nav.home">HOME</a>
+            <span class="breadcrumbs__sep">&gt;</span>
+            <a href="catalog.html" class="breadcrumbs__link" data-i18n="nav.catalog">YACHT CATALOG</a>
+            <span class="breadcrumbs__sep">&gt;</span>
+            <span class="breadcrumbs__current" data-i18n="nav.popularTours">POPULAR TOURS</span>
+        </nav>
+
+        <!-- Tour Hero Image -->
+        <section class="tour-hero">
+            <img src="assets/img/tours/birthday.jpg" alt="Birthday on Yacht" class="tour-hero__image" id="tourImage">
+        </section>
+
+        <!-- Tour Description -->
+        <section class="tour-description">
+            <h1 class="tour-description__title" id="tourTitle">Birthday on a Yacht</h1>
+            <div class="tour-description__content" id="tourContent">
+                <!-- Content loaded via JS -->
+            </div>
+        </section>
+
+        <!-- Popular Yachts for this Tour -->
+        <section class="tour-yachts">
+            <h2 class="tour-section__title" data-i18n="tour.popularYachts">Popular Yachts</h2>
+            <div class="tour-yachts__grid" id="tourYachtsGrid">
+                <!-- Yachts loaded via JS -->
+            </div>
+            <div class="tour-yachts__cta">
+                <a href="catalog.html" class="btn btn--primary btn--full" data-i18n="tour.viewAllYachts">VIEW ALL YACHTS</a>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="tour-tips">
+            <h2 class="tour-section__title" id="tipsTitle">How to Organize a Birthday on a Yacht</h2>
+            <p class="tour-tips__intro" id="tipsIntro"></p>
+            <div class="tour-tips__list" id="tipsList">
+                <!-- Tips loaded via JS -->
+            </div>
+            <p class="tour-tips__outro" id="tipsOutro"></p>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="tour-reviews">
+            <h2 class="tour-section__title" data-i18n="tour.reviews">Reviews</h2>
+            <div class="tour-reviews__carousel" id="reviewsCarousel">
+                <div class="tour-reviews__slide active">
+                    <div class="tour-reviews__header">
+                        <img src="assets/img/reviews/family1.jpg" alt="Family" class="tour-reviews__avatar">
+                        <div class="tour-reviews__meta">
+                            <p class="tour-reviews__name">NIKOLAEV FAMILY</p>
+                            <p class="tour-reviews__date">12.05.2024</p>
+                        </div>
+                    </div>
+                    <p class="tour-reviews__tag">YACHT VACATION WITH FAMILY!</p>
+                    <p class="tour-reviews__label">Review:</p>
+                    <p class="tour-reviews__text">We decided to spend the weekend on a yacht with our children. I was skeptical at first, but it turned out to be wonderful. The beautiful sea and dolphins brought us so much joy. I was absolutely delighted! I recommend renting yachts from VIP Ship!</p>
+                </div>
+            </div>
+            <div class="tour-reviews__nav">
+                <button class="tour-reviews__arrow tour-reviews__arrow--prev" id="reviewPrev">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                </button>
+                <button class="tour-reviews__arrow tour-reviews__arrow--next" id="reviewNext">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                </button>
+            </div>
+            <a href="#" class="tour-reviews__all" data-i18n="tour.allReviews">All reviews</a>
+        </section>
+
+        <!-- Similar Offers -->
+        <section class="tour-similar">
+            <h2 class="tour-section__title" data-i18n="tour.similarOffers">Similar Offers</h2>
+            <div class="tour-similar__grid" id="similarToursGrid">
+                <!-- Similar tours loaded via JS -->
+            </div>
+        </section>
+
+        <!-- Go to Catalog Button -->
+        <div class="tour-cta">
+            <a href="catalog.html" class="btn btn--primary btn--full" data-i18n="tour.goToCatalog">GO TO CATALOG</a>
+        </div>
+
+        <!-- Benefits -->
+        <section class="tour-benefits">
+            <div class="tour-benefits__item">
+                <svg class="tour-benefits__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="24" cy="14" r="8"/>
+                    <path d="M8 44v-4c0-6.627 7.163-12 16-12s16 5.373 16 12v4"/>
+                    <path d="M40 20l4-4m0 0l4 4m-4-4v8"/>
+                </svg>
+                <p class="tour-benefits__text" data-i18n="benefits.yachtHelp">Yacht selection assistance</p>
+            </div>
+            <div class="tour-benefits__item">
+                <svg class="tour-benefits__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <ellipse cx="24" cy="14" rx="12" ry="6"/>
+                    <path d="M12 14v6c0 3.314 5.373 6 12 6s12-2.686 12-6v-6"/>
+                    <path d="M24 26v8"/>
+                </svg>
+                <p class="tour-benefits__text" data-i18n="benefits.captains">Certified captains</p>
+            </div>
+            <div class="tour-benefits__item">
+                <svg class="tour-benefits__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="16" cy="32" r="4"/>
+                    <path d="M16 28v-16l16 8v16"/>
+                    <circle cx="32" cy="36" r="4"/>
+                </svg>
+                <p class="tour-benefits__text" data-i18n="benefits.routes">Thoughtful routes</p>
+            </div>
+        </section>
+
+        <!-- Booking Section -->
+        <section class="tour-booking">
+            <h2 class="tour-section__title tour-section__title--teal" data-i18n="tour.booking">BOOKING</h2>
+            <p class="tour-booking__text" data-i18n="tour.bookingText">Contact us in a convenient way for you — we will confirm the availability of the selected yacht and provide personal assistance at all stages of booking.</p>
+        </section>
+
+        <!-- Duration Section -->
+        <section class="tour-duration">
+            <h2 class="tour-section__title tour-section__title--teal" data-i18n="tour.duration">DURATION</h2>
+            <p class="tour-duration__text" data-i18n="tour.durationText">The departure time and charter duration are agreed individually and may depend on yacht availability, weather conditions, and your personal preferences.</p>
+        </section>
+
+        <!-- Payment Methods -->
+        <section class="tour-payment">
+            <h2 class="tour-section__title tour-section__title--teal" data-i18n="tour.paymentMethods">PAYMENT METHODS</h2>
+            <div class="tour-payment__grid">
+                <div class="tour-payment__item">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="20" stroke="#2EBDB6" stroke-width="2"/>
+                        <text x="24" y="30" text-anchor="middle" font-size="18" fill="#2EBDB6">€</text>
+                    </svg>
+                </div>
+                <div class="tour-payment__item">
+                    <svg viewBox="0 0 64 40" fill="none">
+                        <rect x="1" y="1" width="62" height="38" rx="4" stroke="#333" stroke-width="2"/>
+                        <text x="32" y="20" text-anchor="middle" font-size="8" fill="#333">BANK</text>
+                        <text x="32" y="30" text-anchor="middle" font-size="8" fill="#F7941D">TRANSFER</text>
+                    </svg>
+                </div>
+                <div class="tour-payment__item">
+                    <svg viewBox="0 0 64 40" fill="none">
+                        <rect width="64" height="40" rx="4" fill="#1A1F71"/>
+                        <text x="32" y="26" text-anchor="middle" font-size="14" font-weight="bold" fill="white">VISA</text>
+                    </svg>
+                </div>
+                <div class="tour-payment__item">
+                    <svg viewBox="0 0 64 40" fill="none">
+                        <rect width="64" height="40" rx="4" fill="#003087"/>
+                        <text x="32" y="26" text-anchor="middle" font-size="12" font-weight="bold" fill="white">PayPal</text>
+                    </svg>
+                </div>
+                <div class="tour-payment__item">
+                    <svg viewBox="0 0 64 40" fill="none">
+                        <rect x="1" y="1" width="62" height="38" rx="4" stroke="#333" stroke-width="2"/>
+                        <text x="32" y="26" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Revolut</text>
+                    </svg>
+                </div>
+                <div class="tour-payment__item">
+                    <svg viewBox="0 0 48 48" fill="none">
+                        <circle cx="24" cy="24" r="20" fill="#F7931A"/>
+                        <text x="24" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="white">B</text>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="tour-contact">
+            <h2 class="tour-contact__title" data-i18n="tour.contactTitle">CONTACT US,<br>WE WILL FIND THE BEST<br>CHARTER OPTION FOR YOU.</h2>
+            <a href="tel:+35796343679" class="tour-contact__phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                +357 96 34 36 79
+            </a>
+            <div class="tour-contact__social">
+                <a href="https://t.me/onthesea" class="tour-contact__social-btn tour-contact__social-btn--telegram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/35796343679" class="tour-contact__social-btn tour-contact__social-btn--whatsapp">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                    </svg>
+                </a>
+                <a href="https://instagram.com/onthesea" class="tour-contact__social-btn tour-contact__social-btn--instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </a>
+                <a href="https://m.me/onthesea" class="tour-contact__social-btn tour-contact__social-btn--messenger">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.908 1.438 5.503 3.686 7.2V22l3.405-1.87c.91.252 1.873.387 2.909.387 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.065 12.439l-2.545-2.714-4.97 2.714 5.467-5.804 2.609 2.714 4.906-2.714-5.467 5.804z"/>
+                    </svg>
+                </a>
+            </div>
+            <a href="mailto:d.a.onthesea@hotmail.com" class="btn btn--orange btn--full" data-i18n="tour.writeEmail">WRITE E-MAIL</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer--tour">
+        <div class="footer__container">
+            <div class="footer__nav">
+                <a href="index.html" class="footer__nav-link" data-i18n="nav.home">Home</a>
+                <a href="index.html#about" class="footer__nav-link" data-i18n="nav.about">About</a>
+                <a href="catalog.html" class="footer__nav-link" data-i18n="nav.catalog">Yacht Catalog</a>
+                <a href="index.html#tours" class="footer__nav-link" data-i18n="nav.cruises">Cruises</a>
+                <a href="index.html#services" class="footer__nav-link" data-i18n="nav.services">Services</a>
+                <a href="#" class="footer__nav-link" data-i18n="nav.reviews">Reviews</a>
+                <a href="index.html#contact" class="footer__nav-link" data-i18n="nav.contact">Contacts</a>
+            </div>
+            <div class="footer__brand">
+                <svg class="footer__logo-icon" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="25" cy="25" r="23" stroke="white" stroke-width="2"/>
+                    <path d="M15 30 Q25 15 35 30" stroke="white" stroke-width="2" fill="none"/>
+                    <path d="M20 28 L25 18 L30 28" stroke="white" stroke-width="1.5" fill="none"/>
+                </svg>
+                <span class="footer__logo-text">ON THE SEA</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="https://wa.me/35796343679" class="bottom-nav__item bottom-nav__item--whatsapp">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            <span>WhatsApp</span>
+        </a>
+        <a href="https://t.me/onthesea" class="bottom-nav__item bottom-nav__item--telegram">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+            </svg>
+            <span>Telegram</span>
+        </a>
+        <a href="tel:+35796343679" class="bottom-nav__item bottom-nav__item--phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <span data-i18n="nav.call">Call</span>
+        </a>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

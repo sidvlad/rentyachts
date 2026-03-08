@@ -1595,3 +1595,733 @@ button {
     grid-template-columns: repeat(6, 1fr);
   }
 }
+
+/* ===== Tour Page ===== */
+.page-tour {
+  padding-bottom: 70px;
+}
+
+.page-tour .header {
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-tour .logo {
+  color: var(--primary);
+}
+
+.page-tour .logo__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.page-tour .menu-toggle__bar {
+  background: var(--dark);
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 80px 20px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: var(--text-light);
+  flex-wrap: wrap;
+}
+
+.breadcrumbs__link {
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.breadcrumbs__link:hover {
+  color: var(--primary);
+}
+
+.breadcrumbs__sep {
+  color: var(--gray-light);
+}
+
+.breadcrumbs__current {
+  color: var(--text);
+}
+
+/* Tour Hero */
+.tour-hero {
+  width: 100%;
+}
+
+.tour-hero__image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* Tour Description */
+.tour-description {
+  padding: 24px 20px 32px;
+}
+
+.tour-description__title {
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.tour-description__content {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.tour-description__content p {
+  margin-bottom: 16px;
+}
+
+/* Tour Section Title */
+.tour-section__title {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+.tour-section__title--teal {
+  color: var(--primary);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Tour Yachts */
+.tour-yachts {
+  padding: 20px;
+}
+
+.tour-yachts__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tour-yacht-card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tour-yacht-card__image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.tour-yacht-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-yacht-card__watermark {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--white);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.tour-yacht-card__watermark svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tour-yacht-card__content {
+  padding: 16px;
+}
+
+.tour-yacht-card__name {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+.tour-yacht-card__price {
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.tour-yacht-card__price span {
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.tour-yacht-card__specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tour-yacht-card__spec {
+  text-align: center;
+}
+
+.tour-yacht-card__spec-label {
+  font-size: 11px;
+  color: var(--text-light);
+  margin-bottom: 4px;
+}
+
+.tour-yacht-card__spec-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.tour-yacht-card__spec-value svg {
+  width: 16px;
+  height: 16px;
+  color: var(--text-light);
+}
+
+.tour-yacht-card__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.tour-yacht-card__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.tour-yacht-card__btn:hover {
+  background: #e09952;
+}
+
+.tour-yacht-card__location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-light);
+}
+
+.tour-yacht-card__location svg {
+  width: 16px;
+  height: 16px;
+}
+
+.tour-yachts__cta {
+  margin-top: 24px;
+}
+
+/* Tour Tips */
+.tour-tips {
+  padding: 32px 20px;
+  background: linear-gradient(135deg, rgba(46, 189, 182, 0.05) 0%, rgba(245, 169, 98, 0.05) 100%);
+}
+
+.tour-tips__intro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.tour-tips__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.tour-tips__item {
+  padding-left: 0;
+}
+
+.tour-tips__item-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 8px;
+}
+
+.tour-tips__item-text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.tour-tips__outro {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-top: 24px;
+}
+
+/* Tour Reviews */
+.tour-reviews {
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.tour-reviews__carousel {
+  position: relative;
+  padding: 20px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  margin-bottom: 16px;
+}
+
+.tour-reviews__slide {
+  display: none;
+}
+
+.tour-reviews__slide.active {
+  display: block;
+}
+
+.tour-reviews__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.tour-reviews__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.tour-reviews__meta {
+  text-align: left;
+}
+
+.tour-reviews__name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  letter-spacing: 0.5px;
+}
+
+.tour-reviews__date {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.tour-reviews__tag {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.tour-reviews__label {
+  font-size: 13px;
+  color: var(--text-light);
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.tour-reviews__text {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+  text-align: left;
+}
+
+.tour-reviews__nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 16px;
+}
+
+.tour-reviews__arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tour-reviews__arrow svg {
+  width: 20px;
+  height: 20px;
+  color: var(--primary);
+}
+
+.tour-reviews__arrow:hover {
+  background: var(--primary);
+}
+
+.tour-reviews__arrow:hover svg {
+  color: var(--white);
+}
+
+.tour-reviews__all {
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: underline;
+}
+
+/* Tour Similar */
+.tour-similar {
+  padding: 32px 20px;
+}
+
+.tour-similar__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tour-similar__card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tour-similar__image {
+  height: 180px;
+  overflow: hidden;
+}
+
+.tour-similar__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-similar__content {
+  padding: 16px;
+  text-align: center;
+}
+
+.tour-similar__name {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.tour-similar__text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.tour-similar__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 32px;
+  background: var(--orange);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  transition: background 0.3s;
+}
+
+.tour-similar__btn:hover {
+  background: #e09952;
+}
+
+/* Tour CTA */
+.tour-cta {
+  padding: 24px 20px;
+}
+
+/* Tour Benefits */
+.tour-benefits {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  padding: 32px 20px;
+}
+
+.tour-benefits__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.tour-benefits__item:last-child {
+  grid-column: 1 / -1;
+}
+
+.tour-benefits__icon {
+  width: 48px;
+  height: 48px;
+  color: var(--text-light);
+}
+
+.tour-benefits__text {
+  font-size: 13px;
+  color: var(--text);
+  line-height: 1.4;
+}
+
+/* Tour Booking */
+.tour-booking {
+  padding: 32px 20px;
+  background: linear-gradient(135deg, rgba(46, 189, 182, 0.08) 0%, rgba(46, 189, 182, 0.02) 100%);
+  text-align: center;
+}
+
+.tour-booking__text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* Tour Duration */
+.tour-duration {
+  padding: 32px 20px;
+  background: linear-gradient(135deg, rgba(46, 189, 182, 0.08) 0%, rgba(46, 189, 182, 0.02) 100%);
+  text-align: center;
+}
+
+.tour-duration__text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* Tour Payment */
+.tour-payment {
+  padding: 32px 20px;
+  text-align: center;
+}
+
+.tour-payment__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.tour-payment__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tour-payment__item svg {
+  width: 64px;
+  height: 40px;
+}
+
+/* Tour Contact */
+.tour-contact {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.tour-contact__title {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 24px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.tour-contact__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 24px;
+}
+
+.tour-contact__phone svg {
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+}
+
+.tour-contact__social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.tour-contact__social-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.tour-contact__social-btn:hover {
+  transform: scale(1.1);
+}
+
+.tour-contact__social-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+.tour-contact__social-btn--telegram {
+  background: #0088CC;
+  color: var(--white);
+}
+
+.tour-contact__social-btn--whatsapp {
+  background: #25D366;
+  color: var(--white);
+}
+
+.tour-contact__social-btn--instagram {
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  color: var(--white);
+}
+
+.tour-contact__social-btn--messenger {
+  background: linear-gradient(45deg, #00B2FF 0%, #006AFF 100%);
+  color: var(--white);
+}
+
+/* Orange Button */
+.btn--orange {
+  background: var(--orange);
+  color: var(--white);
+}
+
+.btn--orange:hover {
+  background: #e09952;
+}
+
+/* Footer Tour */
+.footer--tour {
+  background: var(--primary);
+  padding: 40px 20px;
+}
+
+.footer--tour .footer__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer--tour .footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer--tour .footer__nav-link {
+  font-size: 15px;
+  color: var(--white);
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.footer--tour .footer__nav-link:hover {
+  opacity: 1;
+}
+
+.footer--tour .footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer--tour .footer__logo-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.footer--tour .footer__logo-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+/* Tour Page Responsive */
+@media (min-width: 768px) {
+  .tour-yachts__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tour-similar__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tour-benefits {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tour-benefits__item:last-child {
+    grid-column: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tour-yachts__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .tour-similar__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
