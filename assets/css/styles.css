@@ -2239,3 +2239,69 @@ button {
   background: linear-gradient(45deg, #00B2FF, #006AFF);
   color: var(--white);
 }
+
+/* Teal Footer (Tour Page Style) */
+.footer--teal {
+  background: var(--primary);
+  padding: 30px 16px 90px;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer--teal .footer__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.footer--teal .footer__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer--teal .footer__nav a {
+  font-size: 14px;
+  color: var(--white);
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.footer--teal .footer__nav a:hover {
+  opacity: 1;
+}
+
+.footer--teal .footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer--teal .footer__brand-icon {
+  width: 56px;
+  height: 56px;
+}
+
+.footer--teal .footer__brand-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+
+.footer--teal .footer__decor {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 120px;
+  height: 80px;
+  opacity: 0.5;
+}
+
+.footer--teal .footer__decor svg {
+  width: 100%;
+  height: 100%;
+}
