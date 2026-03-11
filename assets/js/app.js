@@ -705,46 +705,40 @@
                 <div class="tour-yacht-card__image">
                     <img src="${yacht.images[0]}" alt="${yacht.name[state.currentLang]}">
                     <div class="tour-yacht-card__watermark">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                            <circle cx="12" cy="12" r="10"/>
-                            <path d="M8 14 Q12 8 16 14"/>
-                        </svg>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14 Q12 8 16 14"/></svg>
                         ON THE SEA
                     </div>
                 </div>
-                <div class="tour-yacht-card__content">
+                <div class="tour-yacht-card__body">
                     <h3 class="tour-yacht-card__name">${yacht.name[state.currentLang]}</h3>
                     <p class="tour-yacht-card__price">${getText('yacht.from')} <span>${formatPrice(yacht.price)} / ${getText('yacht.hour')}</span></p>
                     <div class="tour-yacht-card__specs">
                         <div class="tour-yacht-card__spec">
-                            <span class="tour-yacht-card__spec-label">${getText('yacht.size')}:</span>
-                            <span class="tour-yacht-card__spec-value">
+                            <p class="tour-yacht-card__spec-label">${getText('yacht.size')}:</p>
+                            <p class="tour-yacht-card__spec-value">
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 12l4-4m-4 4l4 4"/></svg>
                                 ${yacht.length} ${getText('yacht.metersShort')}
-                            </span>
+                            </p>
                         </div>
                         <div class="tour-yacht-card__spec">
-                            <span class="tour-yacht-card__spec-label">${getText('yacht.guestsLabel')}:</span>
-                            <span class="tour-yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            <p class="tour-yacht-card__spec-label">${getText('yacht.guestsLabel')}:</p>
+                            <p class="tour-yacht-card__spec-value">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
                                 ${yacht.guests}
-                            </span>
+                            </p>
                         </div>
                         <div class="tour-yacht-card__spec">
-                            <span class="tour-yacht-card__spec-label">${getText('yacht.yearLabel')}:</span>
-                            <span class="tour-yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22v-8m0 0l-4 4m4-4l4 4M12 14V2M8 6l4-4 4 4"/></svg>
+                            <p class="tour-yacht-card__spec-label">${getText('yacht.yearLabel')}:</p>
+                            <p class="tour-yacht-card__spec-value">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                                 ${yacht.year}
-                            </span>
+                            </p>
                         </div>
                     </div>
-                    <div class="tour-yacht-card__actions">
-                        <a href="https://wa.me/35796343679?text=${encodeURIComponent('I would like to book ' + yacht.name[state.currentLang])}" class="tour-yacht-card__btn">${getText('yacht.order')}</a>
+                    <div class="tour-yacht-card__footer">
+                        <a href="https://wa.me/35796343679?text=${encodeURIComponent('Хочу забронировать ' + yacht.name[state.currentLang])}" class="tour-yacht-card__order">${getText('yacht.order')}</a>
                         <div class="tour-yacht-card__location">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                             ${yacht.location ? yacht.location[state.currentLang] : getText('cities.limassol')}
                         </div>
                     </div>
@@ -852,7 +846,7 @@
                 <div class="tour-similar__image">
                     <img src="${tour.image ? tour.image.replace('.jpg', '.svg') : 'assets/img/tours/sunset.svg'}" alt="${tour.name[state.currentLang]}">
                 </div>
-                <div class="tour-similar__content">
+                <div class="tour-similar__body">
                     <h3 class="tour-similar__name">${tour.name[state.currentLang]}</h3>
                     <p class="tour-similar__text">${tour.shortDescription[state.currentLang]}</p>
                     <a href="tour.html?slug=${tour.slug}" class="tour-similar__btn">${getText('tour.details')}</a>
