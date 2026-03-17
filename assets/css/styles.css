@@ -1,12 +1,13 @@
 /* ===== CSS Variables ===== */
 :root {
-  --primary: #2EBDB6;
-  --primary-dark: #28A8A2;
+  --primary: #059AA3;
+  --primary-dark: #048a92;
   --orange: #F5A962;
   --dark: #2D3E50;
-  --text: #4A5568;
-  --text-light: #718096;
+  --text: #6F7980;
+  --text-light: #8a9199;
   --white: #FFFFFF;
+  --bg: #eef5f6;
   --gray-light: #E2E8F0;
   --whatsapp: #25D366;
   --telegram: #0088CC;
@@ -30,14 +31,20 @@ body {
   font-size: 16px;
   font-weight: 400;
   line-height: 1.6;
-  color: #eef5f6;
-  background: var(--white);
+  color: var(--text);
+  background: var(--bg);
   padding-bottom: 70px;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: color 0.3s;
+}
+
+a:hover,
+a:active {
+  color: var(--primary);
 }
 
 img {
@@ -56,7 +63,7 @@ button {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 200;
   font-size: 50px;
-  color: #eef5f6;
+  color: var(--dark);
 }
 
 /* ===== Header ===== */
@@ -377,7 +384,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero__title {
   font-size: 50px;
   font-weight: 200;
-  color: #eef5f6;
+  color: var(--white);
   line-height: 1.0;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -412,13 +419,13 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== About Section ===== */
 .about {
   padding: 50px 20px;
-  background: var(--white);
+  background: var(--bg);
 }
 
 .about__title {
   font-size: 50px;
   font-weight: 200;
-  color: #eef5f6;
+  color: var(--dark);
   text-align: center;
   margin-bottom: 24px;
   line-height: 1.4;
@@ -427,7 +434,7 @@ h1, h2, h3, h4, h5, h6 {
 .about__text {
   font-size: 16px;
   font-weight: 400;
-  color: #eef5f6;
+  color: var(--text);
   line-height: 1.8;
   margin-bottom: 16px;
   text-align: center;
@@ -486,7 +493,7 @@ h1, h2, h3, h4, h5, h6 {
 .section-title {
   font-size: 50px;
   font-weight: 200;
-  color: #eef5f6;
+  color: var(--dark);
   text-align: center;
   margin-bottom: 24px;
   padding: 0 20px;
@@ -495,12 +502,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Yachts Section ===== */
 .yachts {
   padding: 40px 0;
-  background: #F8FAFB;
+  background: var(--bg);
 }
 
 .yachts__grid {
-  display: grid;
-  gap: 20px;
   padding: 0 20px;
 }
 
@@ -622,13 +627,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Tours Section ===== */
 .tours {
   padding: 40px 0;
-  background: var(--white);
+  background: var(--bg);
 }
 
 .tours__grid {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   padding: 0 20px;
 }
 
@@ -679,12 +681,10 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Services Section (legacy) ===== */
 .services {
   padding: 40px 0;
-  background: var(--white);
+  background: var(--bg);
 }
 
 .services__grid {
-  display: grid;
-  gap: 20px;
   padding: 0 20px;
 }
 
@@ -761,7 +761,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Contact Section ===== */
 .contact {
   padding: 40px 0;
-  background: #F8FAFB;
+  background: var(--bg);
 }
 
 .contact__content {
@@ -1290,7 +1290,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 10px;
   padding: 14px;
-  background: #F8FAFB;
+  background: var(--bg);
   border-radius: 8px;
   font-size: 13px;
   color: var(--text);
@@ -1378,8 +1378,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .catalog__grid {
-  display: grid;
-  gap: 20px;
   padding: 0 20px;
 }
 
@@ -1539,15 +1537,35 @@ h1, h2, h3, h4, h5, h6 {
   flex-shrink: 0;
 }
 
+/* ===== Container ===== */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 /* ===== Responsive ===== */
-@media (min-width: 480px) {
+/* Mobile: 1 column */
+.yachts__grid,
+.services__grid,
+.catalog__grid,
+.tours__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Small tablets: 2 columns */
+@media (min-width: 540px) {
   .yachts__grid,
   .services__grid,
-  .catalog__grid {
+  .catalog__grid,
+  .tours__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
+/* Tablets: 3 columns */
 @media (min-width: 768px) {
   body {
     padding-bottom: 0;
@@ -1570,6 +1588,13 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 80px;
   }
 
+  .yachts__grid,
+  .services__grid,
+  .catalog__grid,
+  .tours__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .yacht-payment__methods {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -1578,29 +1603,45 @@ h1, h2, h3, h4, h5, h6 {
   .service-contact__info {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .section-title,
+  .about__title {
+    font-size: 42px;
+  }
 }
 
+/* Desktop: 4 columns */
 @media (min-width: 1024px) {
   .burger {
     display: none;
   }
 
   .yachts__grid,
-  .catalog__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .services__grid {
-    grid-template-columns: repeat(3, 1fr);
+  .services__grid,
+  .catalog__grid,
+  .tours__grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .yacht-options__grid,
   .service-includes__grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .yacht-payment__methods {
     grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* Large Desktop */
+@media (min-width: 1400px) {
+  .yachts,
+  .tours,
+  .services,
+  .about,
+  .contact {
+    padding-left: calc((100vw - 1400px) / 2 + 20px);
+    padding-right: calc((100vw - 1400px) / 2 + 20px);
   }
 }
 
@@ -1628,16 +1669,24 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  gap: 6px;
-  padding: 70px 16px 12px;
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: var(--text-light);
+  gap: 8px;
+  padding: 90px 20px 16px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  color: var(--text);
 }
 
 .breadcrumbs a {
-  color: var(--text-light);
+  color: var(--text);
+}
+
+.breadcrumbs a:hover {
+  color: var(--primary);
+}
+
+.breadcrumbs span {
+  color: var(--text);
 }
 
 .breadcrumbs span:last-child {
