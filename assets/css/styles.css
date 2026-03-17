@@ -1542,10 +1542,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
 }
 
 /* ===== Responsive ===== */
-/* Mobile: 1 column */
+/* Mobile: 1 column - full width */
 .yachts__grid,
 .services__grid,
 .catalog__grid,
@@ -1553,6 +1554,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  width: 100%;
 }
 
 /* Small tablets: 2 columns */
@@ -1566,7 +1568,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Tablets: 3 columns */
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   body {
     padding-bottom: 0;
   }
@@ -1611,7 +1613,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Desktop: 4 columns */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .burger {
     display: none;
   }
@@ -1633,15 +1635,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* Large Desktop */
-@media (min-width: 1400px) {
+/* Large Desktop - center content */
+@media (min-width: 1440px) {
   .yachts,
   .tours,
   .services,
   .about,
-  .contact {
-    padding-left: calc((100vw - 1400px) / 2 + 20px);
-    padding-right: calc((100vw - 1400px) / 2 + 20px);
+  .contact,
+  .catalog {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
