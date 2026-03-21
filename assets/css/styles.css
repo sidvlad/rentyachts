@@ -104,21 +104,12 @@ h1, h2, h3, h4, h5, h6 {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
   z-index: 1001;
-  color: var(--white);
 }
 
-.logo__icon {
-  width: 40px;
-  height: 40px;
-}
-
-.logo__text {
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--white);
-  letter-spacing: 2px;
+.logo img {
+  height: 32px;
+  width: auto;
 }
 
 /* Language Switcher - hidden in header, shown in mobile menu */
