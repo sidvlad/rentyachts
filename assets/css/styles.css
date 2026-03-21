@@ -1267,8 +1267,12 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
+  padding: 14px 16px;
   border-bottom: 1px solid var(--gray-light);
+}
+
+.yacht-prices__row:nth-child(even) {
+  background: rgba(0, 188, 212, 0.06);
 }
 
 .yacht-prices__row:last-child {
