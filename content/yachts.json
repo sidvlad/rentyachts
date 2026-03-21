@@ -10,10 +10,11 @@
       "guests": 12,
       "year": 2019,
       "images": [
-        "assets/img/yachts/azimut-55-1.svg",
-        "assets/img/yachts/azimut-55-2.svg",
-        "assets/img/yachts/azimut-55-3.svg",
-        "assets/img/yachts/azimut-55-4.svg"
+        "assets/img/yachts/azimut-55-1.PNG",
+        "assets/img/yachts/azimut-55-2.PNG",
+        "assets/img/yachts/azimut-55-3.PNG",
+        "assets/img/yachts/azimut-55-4.PNG",
+        "assets/img/yachts/azimut-55-5.PNG"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
@@ -47,10 +48,11 @@
       "guests": 14,
       "year": 2021,
       "images": [
-        "assets/img/yachts/sunseeker-68-1.svg",
-        "assets/img/yachts/sunseeker-68-2.svg",
-        "assets/img/yachts/sunseeker-68-3.svg",
-        "assets/img/yachts/sunseeker-68-4.svg"
+        "assets/img/yachts/sunseeker-68-1.PNG",
+        "assets/img/yachts/sunseeker-68-2.PNG",
+        "assets/img/yachts/sunseeker-68-3.PNG",
+        "assets/img/yachts/sunseeker-68-4.PNG",
+        "assets/img/yachts/sunseeker-68-5.PNG"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski"],
       "specs": {
@@ -84,10 +86,11 @@
       "guests": 10,
       "year": 2020,
       "images": [
-        "assets/img/yachts/princess-62-1.svg",
-        "assets/img/yachts/princess-62-2.svg",
-        "assets/img/yachts/princess-62-3.svg",
-        "assets/img/yachts/princess-62-4.svg"
+        "assets/img/yachts/princess-62-1.PNG",
+        "assets/img/yachts/princess-62-2.PNG",
+        "assets/img/yachts/princess-62-3.PNG",
+        "assets/img/yachts/princess-62-4.PNG",
+        "assets/img/yachts/princess-62-5.PNG"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
