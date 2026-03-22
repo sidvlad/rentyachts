@@ -29,32 +29,67 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
-        <div class="mobile-menu__header">
-            <a href="index.html" class="logo">
-                <img src="assets/img/logo.png" alt="ON THE SEA">
-            </a>
-            <div class="mobile-menu__header-actions">
-                <div class="lang-switcher">
-                    <button class="lang-switcher__btn" data-lang="en">EN</button>
-                    <button class="lang-switcher__btn active" data-lang="ru">RU</button>
-                    <button class="lang-switcher__btn" data-lang="el">EL</button>
-                </div>
-                <button class="mobile-menu__close" id="mobileMenuClose" aria-label="Close">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"/>
-                        <line x1="6" y1="6" x2="18" y2="18"/>
+        <div class="mobile-menu__content">
+            <nav class="mobile-menu__nav">
+                <a href="index.html" class="mobile-menu__link" data-i18n="nav.home">Главная</a>
+                <a href="index.html#about" class="mobile-menu__link" data-i18n="nav.about">О нас</a>
+                <a href="catalog.html" class="mobile-menu__link" data-i18n="nav.catalog">Каталог яхт</a>
+                <a href="index.html#tours" class="mobile-menu__link" data-i18n="nav.cruises">Круизы</a>
+                <a href="index.html#services" class="mobile-menu__link" data-i18n="nav.services">Услуги</a>
+                <a href="index.html#contact" class="mobile-menu__link" data-i18n="nav.contact">Контакты</a>
+            </nav>
+
+            <div class="mobile-menu__lang">
+                <button class="mobile-menu__lang-btn" data-lang="en">EN</button>
+                <button class="mobile-menu__lang-btn" data-lang="ru">RU</button>
+                <button class="mobile-menu__lang-btn" data-lang="el">EL</button>
+            </div>
+
+            <div class="mobile-menu__contact">
+                <p class="mobile-menu__contact-title" data-i18n="menu.contactUs">СВЯЗАТЬСЯ С НАМИ:</p>
+                <a href="tel:+35796343679" class="mobile-menu__contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
                     </svg>
-                </button>
+                    +357 96343679
+                </a>
+                <a href="mailto:d.a.onthesea@hotmail.com" class="mobile-menu__contact-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    d.a.onthesea@hotmail.com
+                </a>
+                <div class="mobile-menu__social">
+                    <a href="https://wa.me/35796343679" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+                        </svg>
+                    </a>
+                    <a href="https://t.me/onthesea" aria-label="Telegram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                        </svg>
+                    </a>
+                    <a href="https://instagram.com/onthesea" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="mobile-menu__yacht">
+                <svg viewBox="0 0 200 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 60 L50 60 L60 55 L140 55 L150 60 L190 60" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                    <path d="M70 55 L70 25 L130 45 L130 55" stroke="rgba(255,255,255,0.2)" stroke-width="2" fill="none"/>
+                    <path d="M70 25 L70 15" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+                    <path d="M65 55 L65 45 L75 45 L75 55" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+                </svg>
             </div>
         </div>
-        <nav class="mobile-menu__nav">
-            <a href="index.html" class="mobile-menu__link" data-i18n="nav.home">Главная</a>
-            <a href="index.html#about" class="mobile-menu__link" data-i18n="nav.about">О нас</a>
-            <a href="catalog.html" class="mobile-menu__link" data-i18n="nav.catalog">Каталог яхт</a>
-            <a href="index.html#tours" class="mobile-menu__link" data-i18n="nav.cruises">Круизы</a>
-            <a href="index.html#services" class="mobile-menu__link" data-i18n="nav.services">Услуги</a>
-            <a href="index.html#contact" class="mobile-menu__link" data-i18n="nav.contact">Контакты</a>
-        </nav>
     </div>
 
     <!-- Main -->
