@@ -87,6 +87,17 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
+.header--light {
+  background: var(--header-bg);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .header .logo {
   color: var(--primary);
 }
@@ -2000,10 +2011,28 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tour-yachts__list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
   margin-bottom: 20px;
+}
+
+@media (min-width: 540px) {
+  .tour-yachts__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .tour-yachts__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .tour-yachts__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 /* Yacht Card (Tour Page) */
