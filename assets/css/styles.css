@@ -87,6 +87,17 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
+.header--light {
+  background: var(--header-bg);
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .header .logo {
   color: var(--primary);
 }
