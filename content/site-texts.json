@@ -168,7 +168,18 @@
       "en": "Limassol Marina, Cyprus",
       "ru": "Марина Лимассол, Кипр",
       "el": "Μαρίνα Λεμεσού, Κύπρος"
-    }
+    },
+    "questionsTitle": {
+      "en": "Got any<br>questions?",
+      "ru": "Остались<br>вопросы?",
+      "el": "Έχετε<br>ερωτήσεις;"
+    },
+    "questionsSubtitle": {
+      "en": "OUR TOUR PLANNING MANAGERS ARE AVAILABLE FOR YOU SEVEN DAYS A WEEK.",
+      "ru": "НАШИ МЕНЕДЖЕРЫ ПО ПЛАНИРОВАНИЮ ТУРОВ РАБОТАЮТ ДЛЯ ВАС СЕМЬ ДНЕЙ В НЕДЕЛЮ.",
+      "el": "ΟΙ ΔΙΑΧΕΙΡΙΣΤΕΣ ΣΧΕΔΙΑΣΜΟΥ ΠΕΡΙΗΓΗΣΕΩΝ ΜΑΣ ΕΙΝΑΙ ΔΙΑΘΕΣΙΜΟΙ ΓΙΑ ΕΣΑΣ ΕΠΤΑ ΗΜΕΡΕΣ ΤΗΝ ΕΒΔΟΜΑΔΑ."
+    },
+    "writeEmail": { "en": "WRITE E-MAIL", "ru": "НАПИСАТЬ E-MAIL", "el": "ΓΡΑΨΤΕ E-MAIL" }
   },
   "booking": {
     "selectDate": { "en": "Select Date", "ru": "Выберите дату", "el": "Επιλέξτε ημερομηνία" },

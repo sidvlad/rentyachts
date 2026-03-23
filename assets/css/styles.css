@@ -1407,8 +1407,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact Section */
 .yacht-contact-section {
   text-align: center;
-  padding: 40px 20px;
-  background: var(--bg);
+  padding: 50px 20px 60px;
+  background: var(--header-bg);
 }
 
 .yacht-contact__title {
