@@ -1197,7 +1197,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Yacht Sections */
 .yacht-section {
-  padding: 24px 20px;
+  padding: 24px 10px;
   background: var(--white);
   margin-bottom: 8px;
 }
@@ -1205,7 +1205,7 @@ h1, h2, h3, h4, h5, h6 {
 .yacht-section__title {
   font-size: 16px;
   font-weight: 600;
-  color: var(--dark);
+  color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
@@ -1928,6 +1928,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .breadcrumbs span {
   color: var(--text);
+}
+
+.breadcrumbs span:not(:last-child) {
+  font-size: 10px;
+  color: var(--primary);
 }
 
 .breadcrumbs span:last-child {
