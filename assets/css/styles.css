@@ -14,6 +14,8 @@
   --telegram: #0088CC;
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --logo-accent: white;
+  --side-padding: 10px;
+  --section-gap: 40px;
 }
 
 /* ===== Reset ===== */
@@ -1197,9 +1199,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Yacht Sections */
 .yacht-section {
-  padding: 24px 10px;
+  padding: 24px var(--side-padding);
   background: var(--white);
-  margin-bottom: 8px;
+  margin-bottom: var(--section-gap);
 }
 
 .yacht-section__title {
@@ -1407,7 +1409,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Contact Section */
 .yacht-contact-section {
   text-align: center;
-  padding: 50px 20px 60px;
+  padding: 50px var(--side-padding) 60px;
   background: var(--header-bg);
 }
 
@@ -1911,7 +1913,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 90px 20px 16px;
+  padding: 90px var(--side-padding) 16px;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.3px;
@@ -1953,7 +1955,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tour Content */
 .tour-content {
-  padding: 20px 16px 24px;
+  padding: 20px var(--side-padding) 24px;
 }
 
 .tour-content__title {
@@ -2005,7 +2007,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tour Yachts */
 .tour-yachts {
-  padding: 24px 16px;
+  padding: 24px var(--side-padding);
+  margin-bottom: var(--section-gap);
 }
 
 .tour-yachts__title {
@@ -2165,7 +2168,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tour Tips */
 .tour-tips {
-  padding: 24px 16px;
+  padding: 24px var(--side-padding);
+  margin-bottom: var(--section-gap);
   background: linear-gradient(135deg, rgba(46,189,182,0.06) 0%, rgba(245,169,98,0.04) 100%);
 }
 
@@ -2207,7 +2211,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tour Reviews */
 .tour-reviews {
-  padding: 24px 16px;
+  padding: 24px var(--side-padding);
+  margin-bottom: var(--section-gap);
   text-align: center;
 }
 
@@ -2326,7 +2331,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tour Similar */
 .tour-similar {
-  padding: 24px 16px;
+  padding: 24px var(--side-padding);
+  margin-bottom: var(--section-gap);
 }
 
 .tour-similar__title {
@@ -2453,7 +2459,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tour Payment */
 .tour-payment {
-  padding: 24px 16px;
+  padding: 24px var(--side-padding);
+  margin-bottom: var(--section-gap);
   text-align: center;
 }
 
