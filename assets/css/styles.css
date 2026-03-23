@@ -2596,16 +2596,22 @@ h1, h2, h3, h4, h5, h6 {
   gap: 8px;
 }
 
+.footer--teal .footer__brand-logo {
+  width: 70px;
+  height: auto;
+  filter: brightness(0) invert(1);
+}
+
 .footer--teal .footer__brand-icon {
   width: 56px;
   height: 56px;
 }
 
 .footer--teal .footer__brand-name {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
   color: var(--white);
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .footer--teal .footer__decor {
