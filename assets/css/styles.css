@@ -417,7 +417,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== About Section ===== */
 .about {
   padding: 50px 20px;
-  background: var(--bg);
+  background: var(--white);
+  margin-bottom: var(--section-gap);
 }
 
 .about__title {
@@ -500,7 +501,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Yachts Section ===== */
 .yachts {
   padding: 40px 0;
-  background: var(--bg);
+  background: var(--white);
+  margin-bottom: var(--section-gap);
 }
 
 .yachts__grid {
@@ -642,7 +644,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Tours Section ===== */
 .tours {
   padding: 40px 0;
-  background: var(--bg);
+  background: var(--white);
+  margin-bottom: var(--section-gap);
 }
 
 .tours__grid {
@@ -776,7 +779,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Contact Section ===== */
 .contact {
   padding: 40px 0;
-  background: var(--bg);
+  background: var(--white);
+  margin-bottom: var(--section-gap);
 }
 
 .contact__content {
