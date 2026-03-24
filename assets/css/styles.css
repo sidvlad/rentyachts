@@ -511,6 +511,7 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   background: var(--white);
   overflow: hidden;
+  border-radius: 0 0 12px 12px;
 }
 
 .yacht-card__image {
@@ -527,7 +528,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .yacht-card__content {
-  padding: 16px var(--side-padding);
+  padding: 20px 16px 24px;
 }
 
 .yacht-card__name {
