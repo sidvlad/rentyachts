@@ -1594,7 +1594,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .catalog__header {
   text-align: center;
-  padding: 30px 20px;
+  padding: 30px var(--side-padding);
 }
 
 .catalog__title {
@@ -1633,7 +1633,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .catalog__grid {
-  padding: 0 20px;
+  padding: 0 var(--side-padding);
 }
 
 .catalog__no-results {
