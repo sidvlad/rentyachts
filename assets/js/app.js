@@ -354,21 +354,21 @@
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.size')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="8" width="20" height="8" rx="2"/><path d="M6 8V6a2 2 0 012-2h8a2 2 0 012 2v2"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h20"/><path d="M6 8v8"/><path d="M10 10v4"/><path d="M14 10v4"/><path d="M18 8v8"/></svg>
                                 ${yacht.length} ${getText('yacht.metersShort')}
                             </span>
                         </div>
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.guestsLabel')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="2"/><path d="M6 9v6"/><circle cx="12" cy="6" r="2"/><path d="M12 9v6"/><circle cx="18" cy="6" r="2"/><path d="M18 9v6"/></svg>
                                 ${yacht.guests}
                             </span>
                         </div>
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.yearLabel')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/><path d="M8 12l-2 6"/><path d="M16 12l2 6"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"/><path d="M12 8v10"/><path d="M8 18l4 4 4-4"/><path d="M5 12h14"/></svg>
                                 ${yacht.year}
                             </span>
                         </div>
@@ -508,21 +508,21 @@
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.size')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="8" width="20" height="8" rx="2"/><path d="M6 8V6a2 2 0 012-2h8a2 2 0 012 2v2"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h20"/><path d="M6 8v8"/><path d="M10 10v4"/><path d="M14 10v4"/><path d="M18 8v8"/></svg>
                                 ${yacht.length} ${getText('yacht.metersShort')}
                             </span>
                         </div>
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.guestsLabel')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="2"/><path d="M6 9v6"/><circle cx="12" cy="6" r="2"/><path d="M12 9v6"/><circle cx="18" cy="6" r="2"/><path d="M18 9v6"/></svg>
                                 ${yacht.guests}
                             </span>
                         </div>
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.yearLabel')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/><path d="M8 12l-2 6"/><path d="M16 12l2 6"/></svg>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"/><path d="M12 8v10"/><path d="M8 18l4 4 4-4"/><path d="M5 12h14"/></svg>
                                 ${yacht.year}
                             </span>
                         </div>
