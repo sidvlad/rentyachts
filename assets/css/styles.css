@@ -16,7 +16,7 @@
   --logo-accent: white;
   --side-padding: 10px;
   --section-gap: 10px;
-  --block-margin: 5px;
+  --block-margin: 10px;
   --block-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
@@ -425,8 +425,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__title {
-  font-size: 30px;
-  font-weight: 200;
+  font-size: 14px;
+  font-weight: 600;
   color: var(--dark);
   text-align: left;
   margin-bottom: 24px;
@@ -504,9 +504,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Yachts Section ===== */
 .yachts {
   padding: 40px 0;
-  background: var(--white);
+  background: var(--bg);
   margin: 0 var(--block-margin) var(--section-gap);
-  box-shadow: var(--block-shadow);
+  box-shadow: none;
 }
 
 .yachts__grid {
@@ -517,7 +517,8 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   background: var(--white);
   overflow: hidden;
-  border-radius: 0 0 12px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .yacht-card__image {
@@ -534,7 +535,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .yacht-card__content {
-  padding: 20px 16px 24px;
+  padding: 20px 5px;
 }
 
 .yacht-card__name {
@@ -542,6 +543,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
   color: var(--text);
   margin-bottom: 6px;
+  text-transform: uppercase;
 }
 
 .yacht-card__price {
@@ -559,7 +561,7 @@ h1, h2, h3, h4, h5, h6 {
 .yacht-card__price-value {
   font-size: 18px;
   font-weight: 500;
-  color: var(--orange);
+  color: #25D366;
 }
 
 .yacht-card__price-period {
@@ -571,8 +573,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--gray-light);
 }
 
 .yacht-card__spec {
@@ -660,7 +660,7 @@ h1, h2, h3, h4, h5, h6 {
 .tour-card {
   display: block;
   position: relative;
-  border-radius: 16px;
+  border-radius: 0;
   overflow: hidden;
   aspect-ratio: 16/9;
 }
@@ -695,9 +695,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .tour-card__name {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 400;
   color: var(--white);
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 1px;
 }
 
@@ -713,12 +714,18 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px;
 }
 
+.services__cta {
+  text-align: center;
+  margin-top: 30px;
+  padding: 0 20px;
+}
+
 .service-card {
   display: block;
   position: relative;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
-  aspect-ratio: 16/10;
+  aspect-ratio: 16/9;
 }
 
 .service-card__image {
@@ -740,6 +747,41 @@ h1, h2, h3, h4, h5, h6 {
   transform: scale(1.05);
 }
 
+.service-card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 20px 20px;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.service-card__name {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--white);
+  text-transform: uppercase;
+  text-align: center;
+  flex: 1;
+}
+
+.service-card__icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card__icon svg {
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 .service-card__content {
   position: absolute;
   bottom: 0;
@@ -750,9 +792,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--white);
 }
 
-.service-card__name {
-  font-size: 17px;
-  font-weight: 600;
+.service-card__content .service-card__name {
   margin-bottom: 4px;
 }
 
@@ -789,6 +829,38 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--white);
   margin: 0 var(--block-margin) var(--section-gap);
   box-shadow: var(--block-shadow);
+  border-top: 1px solid var(--gray-light);
+}
+
+.cities-section__label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.cities-section__label svg {
+  width: 20px;
+  height: 20px;
+}
+
+.cities-section__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.cities-section__list a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid var(--orange);
 }
 
 /* ===== FAQ Section ===== */
@@ -1121,10 +1193,10 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 32px;
-  font-size: 14px;
+  padding: 20px 50px;
+  font-size: 15px;
   font-weight: 600;
-  border-radius: 30px;
+  border-radius: 40px;
   transition: all 0.3s;
   cursor: pointer;
   border: none;
@@ -1133,6 +1205,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn--primary {
   background: var(--orange);
   color: var(--white);
+  box-shadow: 0 4px 12px rgba(245, 169, 98, 0.4);
 }
 
 .btn--primary:hover {
