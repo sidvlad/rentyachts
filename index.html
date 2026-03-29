@@ -125,20 +125,18 @@
 
     <!-- Cities Section -->
     <section class="cities-section">
-        <div class="cities">
-            <p class="cities__label">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                    <circle cx="12" cy="10" r="3"/>
-                </svg>
-                <span data-i18n="about.cities">CITIES</span>
-            </p>
-            <div class="cities__list">
-                <a href="catalog.html?city=limassol" data-i18n="cities.limassol">LIMASSOL</a>
-                <a href="catalog.html?city=ayia-napa" data-i18n="cities.ayiaNapa">AYIA NAPA</a>
-                <a href="catalog.html?city=protaras" data-i18n="cities.protaras">PROTARAS</a>
-                <a href="catalog.html?city=latchi" data-i18n="cities.latchi">LATCHI</a>
-            </div>
+        <p class="cities-section__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span data-i18n="about.cities">ГОРОДА</span>
+        </p>
+        <div class="cities-section__list">
+            <a href="catalog.html?city=limassol" data-i18n="cities.limassol">ЛИМАССОЛ</a>
+            <a href="catalog.html?city=ayia-napa" data-i18n="cities.ayiaNapa">АЙЯ НАПА</a>
+            <a href="catalog.html?city=protaras" data-i18n="cities.protaras">ПРОТАРАС</a>
+            <a href="catalog.html?city=latchi" data-i18n="cities.latchi">ЛАЧИ</a>
         </div>
     </section>
 
@@ -158,6 +156,61 @@
         <h2 class="section-title" data-i18n="sections.popularTours">Popular Tours</h2>
         <div class="tours__grid" id="toursGrid">
             <!-- Tours will be rendered by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Услуги и сервис</h2>
+        <div class="services__grid">
+            <a href="service.html?slug=photoshoot" class="service-card">
+                <div class="service-card__image">
+                    <img src="assets/img/services/photoshoot.jpg" alt="Фотосессия">
+                </div>
+                <div class="service-card__overlay">
+                    <span class="service-card__name">ФОТОСЕССИЯ</span>
+                    <span class="service-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="16"/>
+                            <line x1="8" y1="12" x2="16" y2="12"/>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+            <a href="service.html?slug=catering" class="service-card">
+                <div class="service-card__image">
+                    <img src="assets/img/services/catering.jpg" alt="Кейтеринг">
+                </div>
+                <div class="service-card__overlay">
+                    <span class="service-card__name">КЕЙТЕРИНГ</span>
+                    <span class="service-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="16"/>
+                            <line x1="8" y1="12" x2="16" y2="12"/>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+            <a href="service.html?slug=transfer" class="service-card">
+                <div class="service-card__image">
+                    <img src="assets/img/services/transfer.jpg" alt="Трансфер">
+                </div>
+                <div class="service-card__overlay">
+                    <span class="service-card__name">ТРАНСФЕР</span>
+                    <span class="service-card__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="8" x2="12" y2="16"/>
+                            <line x1="8" y1="12" x2="16" y2="12"/>
+                        </svg>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <div class="services__cta">
+            <a href="services.html" class="btn btn--primary">СМОТРЕТЬ ВСЕ УСЛУГИ</a>
         </div>
     </section>
 
