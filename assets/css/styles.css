@@ -15,7 +15,9 @@
   --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --logo-accent: white;
   --side-padding: 10px;
-  --section-gap: 40px;
+  --section-gap: 10px;
+  --block-margin: 5px;
+  --block-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 /* ===== Reset ===== */
@@ -418,7 +420,8 @@ h1, h2, h3, h4, h5, h6 {
 .about {
   padding: 50px 20px;
   background: var(--white);
-  margin-bottom: var(--section-gap);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .about__title {
@@ -502,7 +505,8 @@ h1, h2, h3, h4, h5, h6 {
 .yachts {
   padding: 40px 0;
   background: var(--white);
-  margin-bottom: var(--section-gap);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .yachts__grid {
@@ -645,7 +649,8 @@ h1, h2, h3, h4, h5, h6 {
 .tours {
   padding: 40px 0;
   background: var(--white);
-  margin-bottom: var(--section-gap);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .tours__grid {
@@ -699,7 +704,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Services Section (legacy) ===== */
 .services {
   padding: 40px 0;
-  background: var(--bg);
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .services__grid {
@@ -780,14 +787,16 @@ h1, h2, h3, h4, h5, h6 {
 .cities-section {
   padding: 30px var(--side-padding);
   background: var(--white);
-  margin-bottom: var(--section-gap);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 /* ===== FAQ Section ===== */
 .faq {
   padding: 40px var(--side-padding);
   background: var(--white);
-  margin-bottom: var(--section-gap);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .faq__title {
@@ -859,7 +868,8 @@ h1, h2, h3, h4, h5, h6 {
 .contact {
   padding: 40px 0;
   background: var(--white);
-  margin-bottom: var(--section-gap);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .contact__content {
@@ -898,6 +908,8 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   padding: 50px 20px 100px;
   background: var(--dark);
+  margin: 0 var(--block-margin);
+  box-shadow: var(--block-shadow);
 }
 
 .footer__container {
@@ -1172,6 +1184,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .yacht-detail {
   padding-top: 70px;
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 /* Yacht Title */
@@ -1301,7 +1316,8 @@ h1, h2, h3, h4, h5, h6 {
 .yacht-section {
   padding: 24px var(--side-padding);
   background: var(--white);
-  margin-bottom: var(--section-gap);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .yacht-section__title {
@@ -1511,6 +1527,8 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   padding: 50px var(--side-padding) 60px;
   background: var(--header-bg);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .yacht-contact__title {
@@ -1673,6 +1691,9 @@ h1, h2, h3, h4, h5, h6 {
 .catalog {
   padding-top: 70px;
   padding-bottom: 40px;
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .catalog__header {
@@ -1743,6 +1764,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-detail {
   padding-top: 70px;
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .service-hero__image-container {
@@ -2045,6 +2069,8 @@ h1, h2, h3, h4, h5, h6 {
 .tour-hero {
   width: 100%;
   line-height: 0;
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .tour-hero img {
@@ -2056,6 +2082,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Tour Content */
 .tour-content {
   padding: 20px var(--side-padding) 24px;
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .tour-content__title {
@@ -2108,7 +2137,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Tour Yachts */
 .tour-yachts {
   padding: 24px var(--side-padding);
-  margin-bottom: var(--section-gap);
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .tour-yachts__title {
@@ -2269,8 +2300,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Tour Tips */
 .tour-tips {
   padding: 24px var(--side-padding);
-  margin-bottom: var(--section-gap);
   background: linear-gradient(135deg, rgba(46,189,182,0.06) 0%, rgba(245,169,98,0.04) 100%);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .tour-tips__title {
@@ -2312,7 +2344,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Tour Reviews */
 .tour-reviews {
   padding: 24px var(--side-padding);
-  margin-bottom: var(--section-gap);
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
   text-align: center;
 }
 
@@ -2432,7 +2466,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Tour Similar */
 .tour-similar {
   padding: 24px var(--side-padding);
-  margin-bottom: var(--section-gap);
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .tour-similar__title {
@@ -2541,6 +2577,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 24px 16px;
   text-align: center;
   background: linear-gradient(135deg, rgba(46,189,182,0.08) 0%, rgba(46,189,182,0.02) 100%);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
 }
 
 .tour-info__title {
@@ -2560,7 +2598,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Tour Payment */
 .tour-payment {
   padding: 24px var(--side-padding);
-  margin-bottom: var(--section-gap);
+  background: var(--white);
+  margin: 0 var(--block-margin) var(--section-gap);
+  box-shadow: var(--block-shadow);
   text-align: center;
 }
 
@@ -2674,6 +2714,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px 16px 90px;
   position: relative;
   overflow: hidden;
+  margin: 0 var(--block-margin);
+  box-shadow: var(--block-shadow);
 }
 
 .footer--teal .footer__row {
