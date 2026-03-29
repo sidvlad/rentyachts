@@ -16,7 +16,7 @@
   --logo-accent: white;
   --side-padding: 10px;
   --section-gap: 10px;
-  --block-margin: 5px;
+  --block-margin: 10px;
   --block-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
@@ -534,7 +534,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .yacht-card__content {
-  padding: 20px 16px 24px;
+  padding: 20px 0 24px;
 }
 
 .yacht-card__name {
