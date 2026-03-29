@@ -510,15 +510,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .yachts__grid {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .yacht-card {
   display: block;
   background: var(--white);
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 5px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
 }
 
 .yacht-card__image {
@@ -660,8 +661,9 @@ h1, h2, h3, h4, h5, h6 {
 .tour-card {
   display: block;
   position: relative;
-  border-radius: 0;
+  border-radius: 5px;
   overflow: hidden;
+  margin-bottom: 20px;
   aspect-ratio: 16/9;
 }
 
@@ -723,9 +725,10 @@ h1, h2, h3, h4, h5, h6 {
 .service-card {
   display: block;
   position: relative;
-  border-radius: 0;
+  border-radius: 5px;
   overflow: hidden;
   aspect-ratio: 16/9;
+  margin-bottom: 20px;
 }
 
 .service-card__image {
@@ -766,20 +769,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   text-align: center;
   flex: 1;
-}
-
-.service-card__icon {
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.service-card__icon svg {
-  width: 32px;
-  height: 32px;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .service-card__content {
@@ -980,7 +969,7 @@ h1, h2, h3, h4, h5, h6 {
 .footer {
   padding: 50px 20px 100px;
   background: var(--dark);
-  margin: 0 var(--block-margin);
+  margin: 0;
   box-shadow: var(--block-shadow);
 }
 
@@ -2787,7 +2776,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 30px 16px 90px;
   position: relative;
   overflow: hidden;
-  margin: 0 var(--block-margin);
+  margin: 0;
   box-shadow: var(--block-shadow);
 }
 
