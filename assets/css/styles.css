@@ -776,6 +776,85 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--orange);
 }
 
+/* ===== Cities Section ===== */
+.cities-section {
+  padding: 30px var(--side-padding);
+  background: var(--white);
+  margin-bottom: var(--section-gap);
+}
+
+/* ===== FAQ Section ===== */
+.faq {
+  padding: 40px var(--side-padding);
+  background: var(--white);
+  margin-bottom: var(--section-gap);
+}
+
+.faq__title {
+  font-size: 28px;
+  font-weight: 200;
+  color: var(--dark);
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq__item {
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.faq__item:last-child {
+  border-bottom: none;
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  list-style: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::before {
+  content: '+';
+  font-size: 24px;
+  font-weight: 300;
+  color: var(--text-light);
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.faq__item[open] .faq__question::before {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  padding: 0 0 20px 40px;
+}
+
+.faq__answer p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
 /* ===== Contact Section ===== */
 .contact {
   padding: 40px 0;
