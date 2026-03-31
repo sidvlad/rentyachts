@@ -1104,7 +1104,70 @@
             renderTourPage();
         } else {
             renderHomePage();
+            initReviewsSlider();
         }
+    }
+
+    // Reviews Slider
+    function initReviewsSlider() {
+        const track = document.getElementById('reviewsTrack');
+        if (!track) return;
+
+        const slides = track.querySelectorAll('.reviews__slide');
+        const prevBtn = document.querySelector('.reviews__nav--prev');
+        const nextBtn = document.querySelector('.reviews__nav--next');
+
+        if (slides.length === 0) return;
+
+        let currentSlide = 0;
+        let startX = 0;
+        let isDragging = false;
+
+        // Show first slide
+        slides[0].classList.add('active');
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (index + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Button navigation
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+        // Touch/swipe support
+        track.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+        }, { passive: true });
+
+        track.addEventListener('touchmove', (e) => {
+            if (!isDragging) return;
+        }, { passive: true });
+
+        track.addEventListener('touchend', (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+            const endX = e.changedTouches[0].clientX;
+            const diff = startX - endX;
+
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        });
     }
 
     // Start app when DOM is ready
