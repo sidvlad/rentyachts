@@ -1078,6 +1078,45 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
 }
 
+/* ===== Yacht Types Section ===== */
+.yacht-types {
+  padding: 40px var(--side-padding);
+  background: var(--bg);
+  margin: 0 var(--block-margin) var(--section-gap);
+}
+
+.yacht-types__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.yacht-types__text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.yacht-types__images {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.yacht-types__image {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.yacht-types__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ===== Contact Section ===== */
 .contact {
   padding: 40px 0;
