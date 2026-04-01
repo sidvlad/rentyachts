@@ -1117,7 +1117,93 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-/* ===== Contact Section ===== */
+/* ===== Contact CTA Section ===== */
+.contact-cta {
+  margin: 0 var(--block-margin) var(--section-gap);
+}
+
+.contact-cta__title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.5;
+  padding: 40px 20px;
+  background: var(--bg);
+  letter-spacing: 1px;
+}
+
+.contact-cta__card {
+  background: var(--white);
+  padding: 30px 20px 40px;
+  text-align: center;
+  box-shadow: var(--block-shadow);
+}
+
+.contact-cta__phone {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.contact-cta__phone svg {
+  width: 28px;
+  height: 28px;
+  color: var(--primary);
+}
+
+.contact-cta__social {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.contact-cta__social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.contact-cta__social-btn:hover {
+  transform: scale(1.1);
+}
+
+.contact-cta__social-btn svg {
+  width: 36px;
+  height: 36px;
+}
+
+.contact-cta__social-btn--tg {
+  color: #0088CC;
+}
+
+.contact-cta__social-btn--wa {
+  color: #25D366;
+}
+
+.contact-cta__social-btn--ig svg {
+  width: 36px;
+  height: 36px;
+}
+
+.contact-cta__social-btn--fb {
+  color: #0084FF;
+}
+
+.contact-cta__email {
+  display: inline-block;
+}
+
+/* Old Contact Section (keep for other pages) */
 .contact {
   padding: 40px 0;
   background: var(--white);
