@@ -984,9 +984,11 @@ h1, h2, h3, h4, h5, h6 {
   flex-shrink: 0;
 }
 
-.reviews__avatar svg {
+.reviews__avatar svg,
+.reviews__avatar img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
 
 .reviews__meta {
