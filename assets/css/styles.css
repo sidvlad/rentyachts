@@ -596,7 +596,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
 }
 
-.yacht-card__spec-value svg {
+.yacht-card__spec-value svg,
+.yacht-card__spec-value img,
+.yacht-card__spec-icon {
   width: 20px;
   height: 20px;
   color: var(--text-light);
@@ -2600,7 +2602,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text);
 }
 
-.tour-yacht-card__spec-value svg {
+.tour-yacht-card__spec-value svg,
+.tour-yacht-card__spec-value img,
+.tour-yacht-card__spec-icon {
   width: 14px;
   height: 14px;
   color: var(--text-light);

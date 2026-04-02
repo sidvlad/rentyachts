@@ -354,21 +354,21 @@
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.size')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h20"/><path d="M6 8v8"/><path d="M10 10v4"/><path d="M14 10v4"/><path d="M18 8v8"/></svg>
+                                <img src="assets/img/icons/ruler.svg" alt="" class="yacht-card__spec-icon">
                                 ${yacht.length} ${getText('yacht.metersShort')}
                             </span>
                         </div>
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.guestsLabel')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="2"/><path d="M6 9v6"/><circle cx="12" cy="6" r="2"/><path d="M12 9v6"/><circle cx="18" cy="6" r="2"/><path d="M18 9v6"/></svg>
+                                <img src="assets/img/icons/people.svg" alt="" class="yacht-card__spec-icon">
                                 ${yacht.guests}
                             </span>
                         </div>
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.yearLabel')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"/><path d="M12 8v10"/><path d="M8 18l4 4 4-4"/><path d="M5 12h14"/></svg>
+                                <img src="assets/img/icons/ancor.png" alt="" class="yacht-card__spec-icon">
                                 ${yacht.year}
                             </span>
                         </div>
@@ -508,21 +508,21 @@
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.size')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12h20"/><path d="M6 8v8"/><path d="M10 10v4"/><path d="M14 10v4"/><path d="M18 8v8"/></svg>
+                                <img src="assets/img/icons/ruler.svg" alt="" class="yacht-card__spec-icon">
                                 ${yacht.length} ${getText('yacht.metersShort')}
                             </span>
                         </div>
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.guestsLabel')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="6" cy="6" r="2"/><path d="M6 9v6"/><circle cx="12" cy="6" r="2"/><path d="M12 9v6"/><circle cx="18" cy="6" r="2"/><path d="M18 9v6"/></svg>
+                                <img src="assets/img/icons/people.svg" alt="" class="yacht-card__spec-icon">
                                 ${yacht.guests}
                             </span>
                         </div>
                         <div class="yacht-card__spec">
                             <span class="yacht-card__spec-label">${getText('yacht.yearLabel')}:</span>
                             <span class="yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="5" r="3"/><path d="M12 8v10"/><path d="M8 18l4 4 4-4"/><path d="M5 12h14"/></svg>
+                                <img src="assets/img/icons/ancor.png" alt="" class="yacht-card__spec-icon">
                                 ${yacht.year}
                             </span>
                         </div>
@@ -738,21 +738,21 @@
                         <div class="tour-yacht-card__spec">
                             <p class="tour-yacht-card__spec-label">${getText('yacht.size')}:</p>
                             <p class="tour-yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 12l4-4m-4 4l4 4"/></svg>
+                                <img src="assets/img/icons/ruler.svg" alt="" class="tour-yacht-card__spec-icon">
                                 ${yacht.length} ${getText('yacht.metersShort')}
                             </p>
                         </div>
                         <div class="tour-yacht-card__spec">
                             <p class="tour-yacht-card__spec-label">${getText('yacht.guestsLabel')}:</p>
                             <p class="tour-yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                                <img src="assets/img/icons/people.svg" alt="" class="tour-yacht-card__spec-icon">
                                 ${yacht.guests}
                             </p>
                         </div>
                         <div class="tour-yacht-card__spec">
                             <p class="tour-yacht-card__spec-label">${getText('yacht.yearLabel')}:</p>
                             <p class="tour-yacht-card__spec-value">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                                <img src="assets/img/icons/ancor.png" alt="" class="tour-yacht-card__spec-icon">
                                 ${yacht.year}
                             </p>
                         </div>
