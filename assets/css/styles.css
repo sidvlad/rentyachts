@@ -1033,10 +1033,11 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 40px;
-  height: 60px;
-  background: none;
-  border: none;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1046,28 +1047,27 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviews__nav:hover {
-  opacity: 1;
+  background: var(--primary);
 }
 
 .reviews__nav svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   color: var(--primary);
-  opacity: 0.4;
   stroke-width: 2;
-  transition: opacity 0.3s;
+  transition: color 0.3s;
 }
 
 .reviews__nav:hover svg {
-  opacity: 0.8;
+  color: var(--white);
 }
 
 .reviews__nav--prev {
-  left: 0;
+  left: 5px;
 }
 
 .reviews__nav--next {
-  right: 0;
+  right: 5px;
 }
 
 .reviews__footer {
