@@ -1047,7 +1047,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviews__nav:hover {
-  background: var(--primary);
+  opacity: 0.8;
 }
 
 .reviews__nav svg {
@@ -1063,11 +1063,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .reviews__nav--prev {
-  left: 5px;
+  left: -10px;
 }
 
 .reviews__nav--next {
-  right: 5px;
+  right: -10px;
 }
 
 .reviews__footer {
@@ -1723,7 +1723,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-light);
 }
 
-.yacht-important__item svg {
+.yacht-important__item svg,
+.yacht-important__item img,
+.yacht-important__icon {
   width: 18px;
   height: 18px;
   color: var(--text-light);
