@@ -420,9 +420,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== About Section ===== */
 .about {
   padding: 50px 20px;
-  background: var(--white);
   margin: 0 var(--block-margin) var(--section-gap);
-  box-shadow: var(--block-shadow);
 }
 
 .about__title {
@@ -656,9 +654,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Tours Section ===== */
 .tours {
   padding: 40px 0;
-  background: var(--white);
   margin: 0 var(--block-margin) var(--section-gap);
-  box-shadow: var(--block-shadow);
 }
 
 .tours__grid {
@@ -822,9 +818,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Cities Section ===== */
 .cities-section {
   padding: 30px var(--side-padding);
-  background: var(--white);
   margin: 0 var(--block-margin) var(--section-gap);
-  box-shadow: var(--block-shadow);
   border-top: 1px solid var(--gray-light);
 }
 
@@ -862,9 +856,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== FAQ Section ===== */
 .faq {
   padding: 40px var(--side-padding);
-  background: var(--white);
   margin: 0 var(--block-margin) var(--section-gap);
-  box-shadow: var(--block-shadow);
 }
 
 .faq__title {
@@ -1032,7 +1024,6 @@ h1, h2, h3, h4, h5, h6 {
 .reviews__nav {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 50px;
   height: 50px;
   background: transparent;
@@ -1143,10 +1134,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-cta__card {
-  background: var(--white);
   padding: 30px 20px 40px;
   text-align: center;
-  box-shadow: var(--block-shadow);
 }
 
 .contact-cta__phone {
