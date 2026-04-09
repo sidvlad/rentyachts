@@ -715,9 +715,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Services Section (legacy) ===== */
 .services {
   padding: 40px 0;
-  background: var(--white);
   margin: 0 var(--block-margin) var(--section-gap);
-  box-shadow: var(--block-shadow);
 }
 
 .services__grid {
