@@ -1,117 +1,251 @@
 {
   "yachts": [
     {
-      "id": "azimut-55",
-      "slug": "azimut-55",
+      "id": "lagoon-42",
+      "slug": "lagoon-42",
       "featured": true,
-      "price": 2500,
+      "price": 400,
       "currency": "EUR",
-      "length": 17,
-      "guests": 12,
-      "year": 2019,
+      "length": 13,
+      "guests": 24,
+      "year": 2018,
+      "location": "Лимассол",
       "images": [
-        "assets/img/yachts/azimut-55-1.png",
-        "assets/img/yachts/azimut-55-2.png",
-        "assets/img/yachts/azimut-55-3.png",
-        "assets/img/yachts/azimut-55-4.png",
-        "assets/img/yachts/azimut-55-5.png"
+        "assets/img/yachts/lagoon-42-1.jpg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
-        "length": "16.97 m",
-        "beam": "4.54 m",
-        "draft": "1.32 m",
-        "engines": "2 x MAN V8 900",
-        "fuel": "1800 L",
-        "water": "500 L",
-        "cabins": 3,
-        "bathrooms": 2
+        "length": "13 m",
+        "beam": "7.7 m",
+        "cabins": 4,
+        "bathrooms": 4
       },
       "name": {
-        "en": "Azimut 55",
-        "ru": "Azimut 55",
-        "el": "Azimut 55"
+        "en": "Lagoon 42",
+        "ru": "LAGOON 42",
+        "el": "Lagoon 42"
       },
       "description": {
-        "en": "Luxurious Azimut 55 is the perfect choice for an unforgettable sea adventure. This elegant yacht combines Italian design with exceptional comfort, offering spacious decks for relaxation and entertainment.",
-        "ru": "Роскошная Azimut 55 — идеальный выбор для незабываемого морского приключения. Эта элегантная яхта сочетает итальянский дизайн с исключительным комфортом, предлагая просторные палубы для отдыха и развлечений.",
-        "el": "Το πολυτελές Azimut 55 είναι η ιδανική επιλογή για μια αξέχαστη θαλάσσια περιπέτεια. Αυτό το κομψό σκάφος συνδυάζει τον ιταλικό σχεδιασμό με εξαιρετική άνεση."
+        "en": "Lagoon 42 is a modern catamaran perfect for large groups and family trips.",
+        "ru": "Lagoon 42 — современный катамаран, идеальный для больших групп и семейного отдыха.",
+        "el": "Lagoon 42 είναι ένα μοντέρνο καταμαράν ιδανικό για μεγάλες ομάδες."
       }
     },
     {
-      "id": "sunseeker-68",
-      "slug": "sunseeker-68",
+      "id": "princess-82",
+      "slug": "princess-82",
       "featured": true,
-      "price": 3500,
+      "price": 1415,
       "currency": "EUR",
-      "length": 21,
-      "guests": 14,
-      "year": 2021,
+      "length": 25,
+      "guests": 16,
+      "year": 2014,
+      "location": "Лимассол",
       "images": [
-        "assets/img/yachts/sunseeker-68-1.png",
-        "assets/img/yachts/sunseeker-68-2.png",
-        "assets/img/yachts/sunseeker-68-3.png",
-        "assets/img/yachts/sunseeker-68-4.png",
-        "assets/img/yachts/sunseeker-68-5.png"
+        "assets/img/yachts/princess-82-1.jpg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski"],
       "specs": {
-        "length": "20.73 m",
-        "beam": "5.18 m",
-        "draft": "1.55 m",
-        "engines": "2 x MAN V12 1400",
-        "fuel": "3200 L",
-        "water": "750 L",
+        "length": "25 m",
+        "beam": "5.6 m",
         "cabins": 4,
-        "bathrooms": 3
+        "bathrooms": 4
       },
       "name": {
-        "en": "Sunseeker 68",
-        "ru": "Sunseeker 68",
-        "el": "Sunseeker 68"
+        "en": "Princess 82",
+        "ru": "PRINCESS 82",
+        "el": "Princess 82"
       },
       "description": {
-        "en": "The Sunseeker 68 Sport Yacht represents the pinnacle of British yacht engineering. With its sleek lines and powerful performance, this vessel offers an unmatched cruising experience along the Cyprus coast.",
-        "ru": "Sunseeker 68 Sport Yacht представляет собой вершину британского яхтенного инженерного искусства. Благодаря изящным линиям и мощным характеристикам это судно предлагает непревзойденный опыт круизов вдоль побережья Кипра.",
-        "el": "Το Sunseeker 68 Sport Yacht αντιπροσωπεύει την κορυφή της βρετανικής ναυπηγικής μηχανικής. Με τις κομψές γραμμές και τις ισχυρές επιδόσεις του, αυτό το σκάφος προσφέρει μια απαράμιλλη εμπειρία κρουαζιέρας."
+        "en": "Princess 82 is a luxury motor yacht offering exceptional comfort and style.",
+        "ru": "Princess 82 — роскошная моторная яхта с исключительным комфортом и стилем.",
+        "el": "Princess 82 είναι ένα πολυτελές μηχανοκίνητο σκάφος."
       }
     },
     {
-      "id": "princess-62",
-      "slug": "princess-62",
+      "id": "princess-61",
+      "slug": "princess-61",
       "featured": true,
-      "price": 2800,
+      "price": 500,
       "currency": "EUR",
-      "length": 19,
-      "guests": 10,
-      "year": 2020,
+      "length": 18.6,
+      "guests": 26,
+      "year": 2011,
+      "location": "Лимассол",
       "images": [
-        "assets/img/yachts/princess-62-1.png",
-        "assets/img/yachts/princess-62-2.png",
-        "assets/img/yachts/princess-62-3.png",
-        "assets/img/yachts/princess-62-4.png",
-        "assets/img/yachts/princess-62-5.png"
+        "assets/img/yachts/princess-61-1.jpg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
-        "length": "19.05 m",
-        "beam": "4.98 m",
-        "draft": "1.45 m",
-        "engines": "2 x CAT C18 1150",
-        "fuel": "2800 L",
-        "water": "600 L",
+        "length": "18.6 m",
+        "beam": "4.9 m",
         "cabins": 3,
         "bathrooms": 2
       },
       "name": {
-        "en": "Princess 62",
-        "ru": "Princess 62",
-        "el": "Princess 62"
+        "en": "Princess 61",
+        "ru": "PRINCESS 61",
+        "el": "Princess 61"
       },
       "description": {
-        "en": "Princess 62 embodies sophistication and style. Perfect for day trips or overnight adventures, featuring exquisite interiors and a flybridge that offers panoramic views of the Mediterranean.",
-        "ru": "Princess 62 воплощает изысканность и стиль. Идеально подходит для дневных поездок или ночных приключений, с изысканными интерьерами и флайбриджем с панорамным видом на Средиземное море.",
-        "el": "Το Princess 62 ενσαρκώνει την κομψότητα και το στυλ. Ιδανικό για ημερήσιες εκδρομές ή νυχτερινές περιπέτειες, με εξαιρετικά εσωτερικά και flybridge που προσφέρει πανοραμική θέα στη Μεσόγειο."
+        "en": "Princess 61 combines elegance with performance for unforgettable sea adventures.",
+        "ru": "Princess 61 сочетает элегантность и производительность для незабываемых морских приключений.",
+        "el": "Princess 61 συνδυάζει κομψότητα και απόδοση."
+      }
+    },
+    {
+      "id": "princess-88",
+      "slug": "princess-88",
+      "featured": true,
+      "price": 1466,
+      "currency": "EUR",
+      "length": 27,
+      "guests": 12,
+      "year": 2016,
+      "location": "Лимассол",
+      "images": [
+        "assets/img/yachts/princess-88-1.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski"],
+      "specs": {
+        "length": "27 m",
+        "beam": "5.9 m",
+        "cabins": 4,
+        "bathrooms": 4
+      },
+      "name": {
+        "en": "Princess 88",
+        "ru": "PRINCESS 88",
+        "el": "Princess 88"
+      },
+      "description": {
+        "en": "Princess 88 is a flagship motor yacht with exceptional luxury and space.",
+        "ru": "Princess 88 — флагманская моторная яхта с исключительной роскошью и пространством.",
+        "el": "Princess 88 είναι ένα ναυαρχίδα μηχανοκίνητο σκάφος."
+      }
+    },
+    {
+      "id": "azimut-46",
+      "slug": "azimut-46",
+      "featured": true,
+      "price": 330,
+      "currency": "EUR",
+      "length": 15,
+      "guests": 20,
+      "year": 2009,
+      "location": "Лимассол",
+      "images": [
+        "assets/img/yachts/azimut-46-1.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
+      "specs": {
+        "length": "15 m",
+        "beam": "4.3 m",
+        "cabins": 2,
+        "bathrooms": 2
+      },
+      "name": {
+        "en": "Azimut 46",
+        "ru": "AZIMUT 46",
+        "el": "Azimut 46"
+      },
+      "description": {
+        "en": "Azimut 46 offers Italian design and comfort for memorable cruises.",
+        "ru": "Azimut 46 предлагает итальянский дизайн и комфорт для незабываемых круизов.",
+        "el": "Azimut 46 προσφέρει ιταλικό σχεδιασμό και άνεση."
+      }
+    },
+    {
+      "id": "sea-ray-455",
+      "slug": "sea-ray-455",
+      "featured": true,
+      "price": 260,
+      "currency": "EUR",
+      "length": 14,
+      "guests": 15,
+      "year": 2013,
+      "location": "Лимассол",
+      "images": [
+        "assets/img/yachts/sea-ray-455-1.jpg"
+      ],
+      "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
+      "specs": {
+        "length": "14 m",
+        "beam": "4.3 m",
+        "cabins": 2,
+        "bathrooms": 1
+      },
+      "name": {
+        "en": "Sea Ray 455",
+        "ru": "SEA RAY 455",
+        "el": "Sea Ray 455"
+      },
+      "description": {
+        "en": "Sea Ray 455 is a sport cruiser perfect for day trips and entertainment.",
+        "ru": "Sea Ray 455 — спортивный круизер, идеальный для дневных поездок и развлечений.",
+        "el": "Sea Ray 455 είναι ένα σπορ κρουαζιερόπλοιο."
+      }
+    },
+    {
+      "id": "beneteau-oceanis-473",
+      "slug": "beneteau-oceanis-473",
+      "featured": true,
+      "price": 150,
+      "currency": "EUR",
+      "length": 14,
+      "guests": 10,
+      "year": null,
+      "location": "Лимассол",
+      "images": [
+        "assets/img/yachts/beneteau-oceanis-473-1.jpg"
+      ],
+      "options": ["wifi", "kitchen", "audio", "sunbathing", "swimming"],
+      "specs": {
+        "length": "14 m",
+        "beam": "4.3 m",
+        "cabins": 3,
+        "bathrooms": 2
+      },
+      "name": {
+        "en": "Beneteau Oceanis 473",
+        "ru": "BENETEAU OCEANIS 473",
+        "el": "Beneteau Oceanis 473"
+      },
+      "description": {
+        "en": "Beneteau Oceanis 473 is an elegant sailing yacht for relaxing voyages.",
+        "ru": "Beneteau Oceanis 473 — элегантная парусная яхта для спокойных путешествий.",
+        "el": "Beneteau Oceanis 473 είναι ένα κομψό ιστιοπλοϊκό σκάφος."
+      }
+    },
+    {
+      "id": "atlantic-49",
+      "slug": "atlantic-49",
+      "featured": true,
+      "price": 135,
+      "currency": "EUR",
+      "length": 15,
+      "guests": 15,
+      "year": 1999,
+      "location": "Лимассол",
+      "images": [
+        "assets/img/yachts/atlantic-49-1.jpg"
+      ],
+      "options": ["wifi", "kitchen", "audio", "sunbathing", "swimming"],
+      "specs": {
+        "length": "15 m",
+        "beam": "4.5 m",
+        "cabins": 3,
+        "bathrooms": 2
+      },
+      "name": {
+        "en": "Atlantic 49",
+        "ru": "ATLANTIC 49",
+        "el": "Atlantic 49"
+      },
+      "description": {
+        "en": "Atlantic 49 is a classic sailing yacht offering authentic seafaring experience.",
+        "ru": "Atlantic 49 — классическая парусная яхта для настоящего морского приключения.",
+        "el": "Atlantic 49 είναι ένα κλασικό ιστιοπλοϊκό σκάφος."
       }
     }
   ],
