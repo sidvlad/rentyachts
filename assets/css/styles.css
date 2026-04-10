@@ -1022,6 +1022,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 15px;
   line-height: 1.7;
   color: var(--text);
+  padding: 0 25px;
 }
 
 .reviews__nav {
@@ -3129,4 +3130,70 @@ h1, h2, h3, h4, h5, h6 {
 .footer--teal .footer__decor svg {
   width: 100%;
   height: 100%;
+}
+
+/* Footer Contact Section */
+.footer--teal .footer__contact-section {
+  margin-top: 30px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer--teal .footer__contact-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white);
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+}
+
+.footer--teal .footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: var(--white);
+  font-size: 14px;
+  text-decoration: none;
+  opacity: 0.9;
+  transition: opacity 0.3s;
+}
+
+.footer--teal .footer__contact-item:hover {
+  opacity: 1;
+}
+
+.footer--teal .footer__contact-item svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.footer--teal .footer__social-icons {
+  display: flex;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.footer--teal .footer__social-icon {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  opacity: 0.9;
+  transition: opacity 0.3s, border-color 0.3s;
+}
+
+.footer--teal .footer__social-icon:hover {
+  opacity: 1;
+  border-color: var(--white);
+}
+
+.footer--teal .footer__social-icon svg {
+  width: 20px;
+  height: 20px;
 }
