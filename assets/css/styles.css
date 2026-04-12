@@ -424,7 +424,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== About Section ===== */
 .about {
-  padding: 50px 20px;
+  padding: 30px 5px;
   margin: 0 var(--block-margin) var(--section-gap);
 }
 
@@ -448,7 +448,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about__text--bold {
   font-weight: 600;
-  color: var(--dark);
+  color: #6F7980;
 }
 
 /* Cities */
@@ -507,7 +507,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Yachts Section ===== */
 .yachts {
-  padding: 40px 0;
+  padding: 30px 5px;
   background: var(--bg);
   margin: 0 var(--block-margin) var(--section-gap);
   box-shadow: none;
@@ -657,7 +657,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Tours Section ===== */
 .tours {
-  padding: 40px 0;
+  padding: 30px 5px;
   margin: 0 var(--block-margin) var(--section-gap);
 }
 
@@ -713,7 +713,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Services Section (legacy) ===== */
 .services {
-  padding: 40px 0;
+  padding: 30px 5px;
   margin: 0 var(--block-margin) var(--section-gap);
 }
 
@@ -819,7 +819,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Cities Section ===== */
 .cities-section {
-  padding: 30px var(--side-padding);
+  padding: 30px 5px;
   margin: 0 var(--block-margin) var(--section-gap);
   border-top: 1px solid var(--gray-light);
 }
@@ -842,22 +842,22 @@ h1, h2, h3, h4, h5, h6 {
 .cities-section__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 24px;
+  gap: 10px 20px;
 }
 
 .cities-section__list a {
   font-size: 14px;
   font-weight: 600;
-  color: var(--dark);
+  color: #6F7980;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding-bottom: 4px;
-  border-bottom: 2px solid var(--orange);
+  border-bottom: 2px solid #6F7980;
 }
 
 /* ===== FAQ Section ===== */
 .faq {
-  padding: 40px var(--side-padding);
+  padding: 30px 5px;
   margin: 0 var(--block-margin) var(--section-gap);
 }
 
@@ -1206,7 +1206,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Old Contact Section (keep for other pages) */
 .contact {
-  padding: 40px 0;
+  padding: 30px 5px;
   background: var(--white);
   margin: 0 var(--block-margin) var(--section-gap);
   box-shadow: var(--block-shadow);
