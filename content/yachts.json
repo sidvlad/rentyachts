@@ -9,7 +9,7 @@
       "length": 13,
       "guests": 24,
       "year": 2018,
-      "location": "Лимассол",
+      "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
         "assets/img/yachts/lagoon-42-1.jpg"
       ],
@@ -40,7 +40,7 @@
       "length": 25,
       "guests": 16,
       "year": 2014,
-      "location": "Лимассол",
+      "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
         "assets/img/yachts/princess-82-1.jpg"
       ],
@@ -71,7 +71,7 @@
       "length": 18.6,
       "guests": 26,
       "year": 2011,
-      "location": "Айя Напа",
+      "location": { "en": "Ayia Napa", "ru": "Айя Напа", "el": "Αγία Νάπα" },
       "images": [
         "assets/img/yachts/princess-61-1.jpg"
       ],
@@ -102,7 +102,7 @@
       "length": 27,
       "guests": 12,
       "year": 2016,
-      "location": "Лимассол",
+      "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
         "assets/img/yachts/princess-88-1.jpg"
       ],
@@ -133,7 +133,7 @@
       "length": 15,
       "guests": 20,
       "year": 2009,
-      "location": "Айя Напа",
+      "location": { "en": "Ayia Napa", "ru": "Айя Напа", "el": "Αγία Νάπα" },
       "images": [
         "assets/img/yachts/azimut-46-1.jpg"
       ],
@@ -164,7 +164,7 @@
       "length": 14,
       "guests": 15,
       "year": 2013,
-      "location": "Лимассол",
+      "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
         "assets/img/yachts/sea-ray-455-1.jpg"
       ],
@@ -195,7 +195,7 @@
       "length": 14,
       "guests": 10,
       "year": null,
-      "location": "Лимассол",
+      "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
         "assets/img/yachts/beneteau-oceanis-473-1.jpg"
       ],
@@ -226,7 +226,7 @@
       "length": 15,
       "guests": 15,
       "year": 1999,
-      "location": "Лимассол",
+      "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
         "assets/img/yachts/atlantic-49-1.jpg"
       ],
