@@ -11,7 +11,7 @@
       "year": 2009,
       "location": { "en": "Ayia Napa", "ru": "Айя Напа", "el": "Αγία Νάπα" },
       "images": [
-        "assets/img/yachts/azimut-46-1.jpg"
+        "assets/img/yachts/azimut-46.jpeg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
@@ -42,7 +42,7 @@
       "year": 2016,
       "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
-        "assets/img/yachts/princess-88-1.jpg"
+        "assets/img/yachts/princess-88.jpeg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski"],
       "specs": {
@@ -73,7 +73,7 @@
       "year": 2011,
       "location": { "en": "Ayia Napa", "ru": "Айя Напа", "el": "Αγία Νάπα" },
       "images": [
-        "assets/img/yachts/princess-61-1.jpg"
+        "assets/img/yachts/princess-61.jpeg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
@@ -104,7 +104,7 @@
       "year": 2014,
       "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
-        "assets/img/yachts/princess-82-1.jpg"
+        "assets/img/yachts/princess-82.jpeg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming", "jetski"],
       "specs": {
@@ -135,7 +135,7 @@
       "year": 2018,
       "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
-        "assets/img/yachts/lagoon-42-1.jpg"
+        "assets/img/yachts/lagoon-42.jpeg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
@@ -166,7 +166,7 @@
       "year": 1999,
       "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
-        "assets/img/yachts/atlantic-49-1.jpg"
+        "assets/img/yachts/atlantic-49.jpeg"
       ],
       "options": ["wifi", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
@@ -197,7 +197,7 @@
       "year": null,
       "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
-        "assets/img/yachts/beneteau-oceanis-473-1.jpg"
+        "assets/img/yachts/oceanis-473.jpeg"
       ],
       "options": ["wifi", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
@@ -228,7 +228,7 @@
       "year": 2013,
       "location": { "en": "Limassol", "ru": "Лимассол", "el": "Λεμεσός" },
       "images": [
-        "assets/img/yachts/sea-ray-455-1.jpg"
+        "assets/img/yachts/sea-ray-455.jpeg"
       ],
       "options": ["wifi", "ac", "kitchen", "audio", "sunbathing", "swimming"],
       "specs": {
