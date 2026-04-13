@@ -88,8 +88,40 @@ h1, h2, h3, h4, h5, h6 {
   --logo-accent: var(--primary);
 }
 
+.header .logo img {
+  transition: filter 0.3s;
+}
+
+.header .burger span {
+  background: var(--dark);
+  transition: background 0.3s;
+}
+
+/* Home page - transparent header initial state with white elements */
+.page-home .header {
+  background: transparent;
+}
+
+.page-home .header .logo img {
+  filter: brightness(0) invert(1);
+}
+
+.page-home .header .burger span {
+  background: var(--white);
+}
+
+/* Scrolled header - solid background with dark elements */
 .header.header--scrolled {
+  background: var(--header-bg);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.page-home .header.header--scrolled .logo img {
+  filter: none;
+}
+
+.page-home .header.header--scrolled .burger span {
+  background: var(--dark);
 }
 
 .header--light {
@@ -109,10 +141,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header .logo__text {
   color: var(--primary);
-}
-
-.header .burger span {
-  background: var(--dark);
 }
 
 .header__right {
