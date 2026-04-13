@@ -431,7 +431,7 @@ h1, h2, h3, h4, h5, h6 {
 .about__title {
   font-size: 14px;
   font-weight: 600;
-  color: var(--dark);
+  color: var(--text);
   text-align: left;
   margin-bottom: 24px;
   line-height: 1.4;
@@ -447,7 +447,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__text--bold {
-  font-weight: 600;
+  font-weight: 400;
   color: #6F7980;
 }
 
@@ -670,7 +670,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   border-radius: 5px;
   overflow: hidden;
-  margin-bottom: 20px;
+  margin-bottom: 0;
   aspect-ratio: 16/9;
 }
 
@@ -733,7 +733,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 5px;
   overflow: hidden;
   aspect-ratio: 16/9;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 }
 
 .service-card__image {
@@ -847,7 +847,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .cities-section__list a {
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 400;
   color: #6F7980;
   text-transform: uppercase;
   letter-spacing: 1px;
