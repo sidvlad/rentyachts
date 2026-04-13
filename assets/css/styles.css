@@ -502,7 +502,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--dark);
   text-align: left;
   margin-bottom: 24px;
-  padding: 0 20px;
+  padding: 0;
 }
 
 /* ===== Yachts Section ===== */
@@ -662,7 +662,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tours__grid {
-  padding: 0 20px;
+  padding: 0;
 }
 
 .tour-card {
@@ -718,7 +718,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services__grid {
-  padding: 0 20px;
+  padding: 0;
 }
 
 .services__cta {
@@ -846,7 +846,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cities-section__list a {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: #6F7980;
   text-transform: uppercase;
