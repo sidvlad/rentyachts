@@ -415,15 +415,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__title {
-  font-family: var(--font-display);
+  font-family: 'Bebas Neue', sans-serif;
   font-size: 72px;
   font-weight: 400;
-  color: var(--white);
+  color: #FFFFFF;
   line-height: 0.95;
   margin-bottom: 24px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero__subtitle {
@@ -440,9 +440,11 @@ h1, h2, h3, h4, h5, h6 {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
-  color: var(--white);
-  opacity: 0.85;
+  font-weight: 600;
+  font-style: italic;
+  color: #D4A843;
 }
 
 .hero__duration svg {
