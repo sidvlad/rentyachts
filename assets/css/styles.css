@@ -527,7 +527,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Section Titles ===== */
 .section-title {
-  font-size: 30px;
+  font-size: 38px;
   font-weight: 200;
   color: var(--dark);
   text-align: left;
