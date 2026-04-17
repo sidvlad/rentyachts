@@ -2,7 +2,7 @@
 :root {
   --primary: #059AA3;
   --primary-dark: #048a92;
-  --orange: #F5A962;
+  --orange: #f2912a;
   --dark: #2D3E50;
   --text: #6F7980;
   --text-light: #8a9199;
@@ -661,7 +661,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .yacht-card__order:hover {
-  background: #e09952;
+  background: #d97e22;
   color: var(--white);
 }
 
@@ -1483,7 +1483,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sticky-booking__btn:hover {
-  background: #E89B55;
+  background: #d97e22;
 }
 
 /* ===== Buttons ===== */
@@ -1507,7 +1507,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn--primary:hover {
-  background: #E89B55;
+  background: #d97e22;
   transform: translateY(-2px);
 }
 
@@ -1986,7 +1986,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .yacht-contact__email:hover {
-  background: #e09952;
+  background: #d97e22;
   color: var(--white);
 }
 
@@ -2052,7 +2052,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sticky-booking__btn:hover {
-  background: #e09952;
+  background: #d97e22;
   color: var(--white);
 }
 
@@ -2495,7 +2495,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tour-btn:hover {
-  background: #e09952;
+  background: #d97e22;
 }
 
 .tour-btn--full {
