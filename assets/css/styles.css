@@ -370,8 +370,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding-top: 70px;
   padding-bottom: 80px;
   margin-bottom: 10px;
@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__content {
-  text-align: left;
+  text-align: center;
   padding: 20px;
   max-width: 100%;
   width: 100%;
