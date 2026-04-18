@@ -735,7 +735,7 @@ h1, h2, h3, h4, h5, h6 {
 .tour-card__name {
   font-size: 18px;
   font-weight: 500;
-  color: var(--dark);
+  color: var(--white);
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
@@ -800,7 +800,7 @@ h1, h2, h3, h4, h5, h6 {
 .service-card__name {
   font-size: 18px;
   font-weight: 500;
-  color: var(--dark);
+  color: var(--white);
   text-transform: uppercase;
   text-align: center;
   flex: 1;
