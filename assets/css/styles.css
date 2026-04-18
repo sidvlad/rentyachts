@@ -742,6 +742,55 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
 }
 
+/* ===== Advantages Section ===== */
+.advantages {
+  padding: 30px 15px;
+  margin: 0 var(--block-margin) var(--section-gap);
+}
+
+.advantages__list {
+  margin-bottom: 30px;
+}
+
+.advantages__item {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.advantages__item:last-child {
+  border-bottom: none;
+}
+
+.advantages__number {
+  font-size: 36px;
+  font-weight: 200;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+.advantages__number--accent {
+  color: var(--primary);
+}
+
+.advantages__text {
+  font-size: 16px;
+  color: var(--text);
+}
+
+.advantages__image {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.advantages__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* ===== Services Section (legacy) ===== */
 .services {
   padding: 30px 5px;
