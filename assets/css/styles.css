@@ -730,7 +730,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   padding: 30px 20px 20px;
-  background: linear-gradient(transparent, rgba(255, 255, 255, 0.85));
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
 }
 
 .tour-card__name {
