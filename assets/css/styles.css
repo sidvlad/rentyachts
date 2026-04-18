@@ -370,8 +370,8 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding-top: 70px;
   padding-bottom: 80px;
   margin-bottom: 10px;
@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__content {
-  text-align: left;
+  text-align: center;
   padding: 20px;
   max-width: 100%;
   width: 100%;
@@ -729,13 +729,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   padding: 30px 20px 20px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.85));
 }
 
 .tour-card__name {
   font-size: 18px;
-  font-weight: 400;
-  color: var(--white);
+  font-weight: 500;
+  color: var(--dark);
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
@@ -791,7 +791,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   padding: 30px 20px 20px;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.85));
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -799,8 +799,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-card__name {
   font-size: 18px;
-  font-weight: 400;
-  color: var(--white);
+  font-weight: 500;
+  color: var(--dark);
   text-transform: uppercase;
   text-align: center;
   flex: 1;
