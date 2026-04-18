@@ -408,7 +408,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__content {
-  text-align: center;
+  text-align: left;
   padding: 20px;
   max-width: 100%;
   width: 100%;
@@ -443,12 +443,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 600;
-  color: #D4A843;
+  color: #f0daa7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero__duration svg {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   stroke: #FFFFFF;
 }
 
