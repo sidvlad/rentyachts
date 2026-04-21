@@ -744,7 +744,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== Advantages Section ===== */
 .advantages {
-  padding: 30px 15px;
+  padding: 30px 5px;
   margin: 0 var(--block-margin) var(--section-gap);
 }
 
@@ -755,8 +755,8 @@ h1, h2, h3, h4, h5, h6 {
 .advantages__item {
   display: flex;
   align-items: baseline;
-  gap: 15px;
-  padding: 15px 0;
+  gap: 20px;
+  padding: 20px 0;
   border-bottom: 1px solid var(--gray-light);
 }
 
@@ -765,7 +765,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .advantages__number {
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 200;
   color: var(--dark);
   white-space: nowrap;
