@@ -1,24 +1,693 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Content Manager - ON THE SEA</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <title>Админ-панель - ON THE SEA</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background: #f5f5f5; min-height: 100vh; }
+        .admin { display: flex; min-height: 100vh; }
+        .sidebar { width: 250px; background: #2D3E50; color: #fff; padding: 20px; }
+        .sidebar h1 { font-size: 18px; margin-bottom: 30px; color: #059AA3; }
+        .sidebar nav a { display: block; padding: 12px 15px; color: #fff; text-decoration: none; border-radius: 5px; margin-bottom: 5px; }
+        .sidebar nav a:hover, .sidebar nav a.active { background: #059AA3; }
+        .main { flex: 1; padding: 30px; overflow-y: auto; }
+        .main h2 { margin-bottom: 20px; color: #2D3E50; }
+        .card { background: #fff; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; color: #333; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; }
+        .form-group textarea { min-height: 100px; resize: vertical; }
+        .form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .btn { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; }
+        .btn-primary { background: #059AA3; color: #fff; }
+        .btn-primary:hover { background: #048a92; }
+        .btn-danger { background: #e74c3c; color: #fff; }
+        .btn-danger:hover { background: #c0392b; }
+        .btn-success { background: #27ae60; color: #fff; }
+        .table { width: 100%; border-collapse: collapse; }
+        .table th, .table td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
+        .table th { background: #f8f9fa; font-weight: 600; }
+        .table tr:hover { background: #f8f9fa; }
+        .actions { display: flex; gap: 10px; }
+        .checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; }
+        .checkbox-group label { display: flex; align-items: center; gap: 5px; font-weight: normal; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
+        .tab { padding: 10px 20px; background: #e0e0e0; border: none; border-radius: 5px; cursor: pointer; }
+        .tab.active { background: #059AA3; color: #fff; }
+        .hidden { display: none !important; }
+        .alert { padding: 15px; border-radius: 5px; margin-bottom: 20px; }
+        .alert-success { background: #d4edda; color: #155724; }
+        .alert-error { background: #f8d7da; color: #721c24; }
+        .img-preview { max-width: 150px; max-height: 100px; object-fit: cover; border-radius: 5px; }
+        .lang-tabs { display: flex; gap: 5px; margin-bottom: 10px; }
+        .lang-tab { padding: 5px 15px; background: #e0e0e0; border: none; border-radius: 3px; cursor: pointer; font-size: 12px; }
+        .lang-tab.active { background: #059AA3; color: #fff; }
+    </style>
 </head>
 <body>
-    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <div class="admin">
+        <aside class="sidebar">
+            <h1>ON THE SEA</h1>
+            <nav>
+                <a href="#" data-section="yachts" class="active">Яхты</a>
+                <a href="#" data-section="services">Услуги / Туры</a>
+                <a href="#" data-section="texts">Тексты сайта</a>
+                <a href="#" data-section="export">Экспорт данных</a>
+            </nav>
+        </aside>
+        <main class="main">
+            <!-- Yachts Section -->
+            <section id="yachts-section">
+                <h2>Управление яхтами</h2>
+                <button class="btn btn-primary" onclick="showYachtForm()">+ Добавить яхту</button>
+                <div id="yacht-form" class="card hidden" style="margin-top:20px;">
+                    <h3 id="yacht-form-title">Добавить яхту</h3>
+                    <input type="hidden" id="yacht-edit-id">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>ID (slug)</label>
+                            <input type="text" id="yacht-id" placeholder="azimut-55">
+                        </div>
+                        <div class="form-group">
+                            <label>Цена (EUR/час)</label>
+                            <input type="number" id="yacht-price">
+                        </div>
+                        <div class="form-group">
+                            <label>Год</label>
+                            <input type="number" id="yacht-year">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Длина (м)</label>
+                            <input type="number" id="yacht-length" step="0.1">
+                        </div>
+                        <div class="form-group">
+                            <label>Ширина (м)</label>
+                            <input type="text" id="yacht-beam" placeholder="4.5 m">
+                        </div>
+                        <div class="form-group">
+                            <label>Гостей</label>
+                            <input type="number" id="yacht-guests">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Каюты</label>
+                            <input type="number" id="yacht-cabins">
+                        </div>
+                        <div class="form-group">
+                            <label>Ванные</label>
+                            <input type="number" id="yacht-bathrooms">
+                        </div>
+                        <div class="form-group">
+                            <label>Популярная</label>
+                            <select id="yacht-featured">
+                                <option value="true">Да</option>
+                                <option value="false">Нет</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="lang-tabs">
+                        <button class="lang-tab active" data-lang="ru">RU</button>
+                        <button class="lang-tab" data-lang="en">EN</button>
+                        <button class="lang-tab" data-lang="el">EL</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Название</label>
+                        <input type="text" id="yacht-name-ru" placeholder="Название (RU)" data-lang="ru">
+                        <input type="text" id="yacht-name-en" placeholder="Name (EN)" data-lang="en" class="hidden">
+                        <input type="text" id="yacht-name-el" placeholder="Όνομα (EL)" data-lang="el" class="hidden">
+                    </div>
+                    <div class="form-group">
+                        <label>Локация</label>
+                        <input type="text" id="yacht-location-ru" placeholder="Лимассол" data-lang="ru">
+                        <input type="text" id="yacht-location-en" placeholder="Limassol" data-lang="en" class="hidden">
+                        <input type="text" id="yacht-location-el" placeholder="Λεμεσός" data-lang="el" class="hidden">
+                    </div>
+                    <div class="form-group">
+                        <label>Описание</label>
+                        <textarea id="yacht-desc-ru" placeholder="Описание (RU)" data-lang="ru"></textarea>
+                        <textarea id="yacht-desc-en" placeholder="Description (EN)" data-lang="en" class="hidden"></textarea>
+                        <textarea id="yacht-desc-el" placeholder="Περιγραφή (EL)" data-lang="el" class="hidden"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Изображение (путь)</label>
+                        <input type="text" id="yacht-image" placeholder="assets/img/yachts/yacht-name.jpg">
+                    </div>
+                    <div class="form-group">
+                        <label>Опции</label>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" value="wifi"> Wi-Fi</label>
+                            <label><input type="checkbox" value="ac"> Кондиционер</label>
+                            <label><input type="checkbox" value="kitchen"> Кухня</label>
+                            <label><input type="checkbox" value="audio"> Аудио</label>
+                            <label><input type="checkbox" value="sunbathing"> Зона загара</label>
+                            <label><input type="checkbox" value="swimming"> Платформа</label>
+                            <label><input type="checkbox" value="jetski"> Гидроцикл</label>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-success" onclick="saveYacht()">Сохранить</button>
+                        <button class="btn" onclick="hideYachtForm()">Отмена</button>
+                    </div>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Фото</th>
+                                <th>Название</th>
+                                <th>Цена</th>
+                                <th>Гостей</th>
+                                <th>Год</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody id="yachts-table"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services-section" class="hidden">
+                <h2>Управление услугами и турами</h2>
+                <button class="btn btn-primary" onclick="showServiceForm()">+ Добавить услугу</button>
+                <div id="service-form" class="card hidden" style="margin-top:20px;">
+                    <h3 id="service-form-title">Добавить услугу</h3>
+                    <input type="hidden" id="service-edit-id">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>ID (slug)</label>
+                            <input type="text" id="service-id" placeholder="sunset-cruise">
+                        </div>
+                        <div class="form-group">
+                            <label>Цена (EUR)</label>
+                            <input type="number" id="service-price">
+                        </div>
+                        <div class="form-group">
+                            <label>Длительность (ч)</label>
+                            <input type="text" id="service-duration" placeholder="4">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Популярная</label>
+                        <select id="service-featured">
+                            <option value="true">Да</option>
+                            <option value="false">Нет</option>
+                        </select>
+                    </div>
+                    <div class="lang-tabs">
+                        <button class="lang-tab active" data-lang="ru">RU</button>
+                        <button class="lang-tab" data-lang="en">EN</button>
+                        <button class="lang-tab" data-lang="el">EL</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Название</label>
+                        <input type="text" id="service-name-ru" placeholder="Название (RU)" data-lang="ru">
+                        <input type="text" id="service-name-en" placeholder="Name (EN)" data-lang="en" class="hidden">
+                        <input type="text" id="service-name-el" placeholder="Όνομα (EL)" data-lang="el" class="hidden">
+                    </div>
+                    <div class="form-group">
+                        <label>Краткое описание</label>
+                        <textarea id="service-short-ru" placeholder="Краткое описание (RU)" data-lang="ru"></textarea>
+                        <textarea id="service-short-en" placeholder="Short description (EN)" data-lang="en" class="hidden"></textarea>
+                        <textarea id="service-short-el" placeholder="Σύντομη περιγραφή (EL)" data-lang="el" class="hidden"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Полное описание</label>
+                        <textarea id="service-desc-ru" placeholder="Полное описание (RU)" data-lang="ru" style="min-height:150px;"></textarea>
+                        <textarea id="service-desc-en" placeholder="Full description (EN)" data-lang="en" class="hidden" style="min-height:150px;"></textarea>
+                        <textarea id="service-desc-el" placeholder="Πλήρης περιγραφή (EL)" data-lang="el" class="hidden" style="min-height:150px;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Изображение (путь)</label>
+                        <input type="text" id="service-image" placeholder="assets/img/tours/tour-name.jpg">
+                    </div>
+                    <div class="actions">
+                        <button class="btn btn-success" onclick="saveService()">Сохранить</button>
+                        <button class="btn" onclick="hideServiceForm()">Отмена</button>
+                    </div>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Фото</th>
+                                <th>Название</th>
+                                <th>Цена</th>
+                                <th>Длительность</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody id="services-table"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Texts Section -->
+            <section id="texts-section" class="hidden">
+                <h2>Тексты сайта</h2>
+                <div class="card">
+                    <div class="lang-tabs">
+                        <button class="lang-tab active" data-lang="ru">RU</button>
+                        <button class="lang-tab" data-lang="en">EN</button>
+                        <button class="lang-tab" data-lang="el">EL</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Заголовок Hero</label>
+                        <input type="text" id="text-hero-title-ru" data-lang="ru">
+                        <input type="text" id="text-hero-title-en" data-lang="en" class="hidden">
+                        <input type="text" id="text-hero-title-el" data-lang="el" class="hidden">
+                    </div>
+                    <div class="form-group">
+                        <label>Подзаголовок Hero</label>
+                        <input type="text" id="text-hero-subtitle-ru" data-lang="ru">
+                        <input type="text" id="text-hero-subtitle-en" data-lang="en" class="hidden">
+                        <input type="text" id="text-hero-subtitle-el" data-lang="el" class="hidden">
+                    </div>
+                    <div class="form-group">
+                        <label>О нас - заголовок</label>
+                        <input type="text" id="text-about-title-ru" data-lang="ru">
+                        <input type="text" id="text-about-title-en" data-lang="en" class="hidden">
+                        <input type="text" id="text-about-title-el" data-lang="el" class="hidden">
+                    </div>
+                    <div class="form-group">
+                        <label>О нас - текст 1</label>
+                        <textarea id="text-about-text1-ru" data-lang="ru"></textarea>
+                        <textarea id="text-about-text1-en" data-lang="en" class="hidden"></textarea>
+                        <textarea id="text-about-text1-el" data-lang="el" class="hidden"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>О нас - текст 2</label>
+                        <textarea id="text-about-text2-ru" data-lang="ru"></textarea>
+                        <textarea id="text-about-text2-en" data-lang="en" class="hidden"></textarea>
+                        <textarea id="text-about-text2-el" data-lang="el" class="hidden"></textarea>
+                    </div>
+                    <button class="btn btn-success" onclick="saveTexts()">Сохранить тексты</button>
+                </div>
+            </section>
+
+            <!-- Export Section -->
+            <section id="export-section" class="hidden">
+                <h2>Экспорт данных</h2>
+                <div class="card">
+                    <p style="margin-bottom:15px;">Скачайте JSON файлы с данными для загрузки на сервер:</p>
+                    <div class="actions">
+                        <button class="btn btn-primary" onclick="downloadYachts()">Скачать yachts.json</button>
+                        <button class="btn btn-primary" onclick="downloadServices()">Скачать services.json</button>
+                        <button class="btn btn-primary" onclick="downloadTexts()">Скачать site-texts.json</button>
+                    </div>
+                </div>
+                <div class="card" style="margin-top:20px;">
+                    <h3>Импорт данных</h3>
+                    <p style="margin-bottom:15px;">Загрузите JSON файл для импорта:</p>
+                    <input type="file" id="import-file" accept=".json">
+                    <button class="btn btn-success" onclick="importData()" style="margin-top:10px;">Импортировать</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
     <script>
-        // Initialize the CMS
-        if (window.netlifyIdentity) {
-            window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                    window.netlifyIdentity.on("login", () => {
-                        document.location.href = "/admin/";
-                    });
-                }
+        let yachtsData = { yachts: [], options: {} };
+        let servicesData = { services: [], includes: {} };
+        let textsData = {};
+
+        // Load data on start
+        async function loadData() {
+            try {
+                const [yachtsRes, servicesRes, textsRes] = await Promise.all([
+                    fetch('../content/yachts.json'),
+                    fetch('../content/services.json'),
+                    fetch('../content/site-texts.json')
+                ]);
+                yachtsData = await yachtsRes.json();
+                servicesData = await servicesRes.json();
+                textsData = await textsRes.json();
+
+                // Save to localStorage
+                localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
+                localStorage.setItem('servicesData', JSON.stringify(servicesData));
+                localStorage.setItem('textsData', JSON.stringify(textsData));
+            } catch (e) {
+                // Try localStorage
+                const savedYachts = localStorage.getItem('yachtsData');
+                const savedServices = localStorage.getItem('servicesData');
+                const savedTexts = localStorage.getItem('textsData');
+                if (savedYachts) yachtsData = JSON.parse(savedYachts);
+                if (savedServices) servicesData = JSON.parse(savedServices);
+                if (savedTexts) textsData = JSON.parse(savedTexts);
+            }
+            renderYachts();
+            renderServices();
+            loadTexts();
+        }
+
+        // Navigation
+        document.querySelectorAll('.sidebar nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.sidebar nav a').forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+                const section = link.dataset.section;
+                document.querySelectorAll('.main > section').forEach(s => s.classList.add('hidden'));
+                document.getElementById(section + '-section').classList.remove('hidden');
+            });
+        });
+
+        // Language tabs
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('lang-tab')) {
+                const parent = e.target.closest('.card') || e.target.closest('section');
+                parent.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+                e.target.classList.add('active');
+                const lang = e.target.dataset.lang;
+                parent.querySelectorAll('[data-lang]').forEach(el => {
+                    if (el.classList.contains('lang-tab')) return;
+                    el.classList.toggle('hidden', el.dataset.lang !== lang);
+                });
+            }
+        });
+
+        // Yachts
+        function renderYachts() {
+            const tbody = document.getElementById('yachts-table');
+            tbody.innerHTML = yachtsData.yachts.map(y => `
+                <tr>
+                    <td><img src="../${y.images[0]}" class="img-preview" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%2260%22><rect fill=%22%23ddd%22 width=%22100%22 height=%2260%22/></svg>'"></td>
+                    <td>${y.name.ru || y.name.en}</td>
+                    <td>${y.price} EUR</td>
+                    <td>${y.guests}</td>
+                    <td>${y.year || '-'}</td>
+                    <td class="actions">
+                        <button class="btn btn-primary" onclick="editYacht('${y.id}')">Редакт.</button>
+                        <button class="btn btn-danger" onclick="deleteYacht('${y.id}')">Удалить</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function showYachtForm() {
+            document.getElementById('yacht-form').classList.remove('hidden');
+            document.getElementById('yacht-form-title').textContent = 'Добавить яхту';
+            document.getElementById('yacht-edit-id').value = '';
+            clearYachtForm();
+        }
+
+        function hideYachtForm() {
+            document.getElementById('yacht-form').classList.add('hidden');
+        }
+
+        function clearYachtForm() {
+            ['id','price','year','length','beam','guests','cabins','bathrooms','image',
+             'name-ru','name-en','name-el','location-ru','location-en','location-el',
+             'desc-ru','desc-en','desc-el'].forEach(f => {
+                const el = document.getElementById('yacht-' + f);
+                if (el) el.value = '';
+            });
+            document.querySelectorAll('#yacht-form .checkbox-group input').forEach(c => c.checked = false);
+        }
+
+        function editYacht(id) {
+            const yacht = yachtsData.yachts.find(y => y.id === id);
+            if (!yacht) return;
+
+            document.getElementById('yacht-form').classList.remove('hidden');
+            document.getElementById('yacht-form-title').textContent = 'Редактировать яхту';
+            document.getElementById('yacht-edit-id').value = id;
+
+            document.getElementById('yacht-id').value = yacht.id;
+            document.getElementById('yacht-price').value = yacht.price;
+            document.getElementById('yacht-year').value = yacht.year || '';
+            document.getElementById('yacht-length').value = yacht.length;
+            document.getElementById('yacht-beam').value = yacht.specs?.beam || '';
+            document.getElementById('yacht-guests').value = yacht.guests;
+            document.getElementById('yacht-cabins').value = yacht.specs?.cabins || '';
+            document.getElementById('yacht-bathrooms').value = yacht.specs?.bathrooms || '';
+            document.getElementById('yacht-featured').value = String(yacht.featured);
+            document.getElementById('yacht-image').value = yacht.images[0] || '';
+
+            ['ru','en','el'].forEach(lang => {
+                document.getElementById('yacht-name-' + lang).value = yacht.name[lang] || '';
+                document.getElementById('yacht-location-' + lang).value = yacht.location[lang] || '';
+                document.getElementById('yacht-desc-' + lang).value = yacht.description[lang] || '';
+            });
+
+            document.querySelectorAll('#yacht-form .checkbox-group input').forEach(c => {
+                c.checked = yacht.options.includes(c.value);
             });
         }
+
+        function saveYacht() {
+            const editId = document.getElementById('yacht-edit-id').value;
+            const id = document.getElementById('yacht-id').value;
+
+            const options = [];
+            document.querySelectorAll('#yacht-form .checkbox-group input:checked').forEach(c => options.push(c.value));
+
+            const yacht = {
+                id: id,
+                slug: id,
+                featured: document.getElementById('yacht-featured').value === 'true',
+                price: parseInt(document.getElementById('yacht-price').value) || 0,
+                currency: 'EUR',
+                length: parseFloat(document.getElementById('yacht-length').value) || 0,
+                guests: parseInt(document.getElementById('yacht-guests').value) || 0,
+                year: parseInt(document.getElementById('yacht-year').value) || null,
+                location: {
+                    en: document.getElementById('yacht-location-en').value,
+                    ru: document.getElementById('yacht-location-ru').value,
+                    el: document.getElementById('yacht-location-el').value
+                },
+                images: [document.getElementById('yacht-image').value],
+                options: options,
+                specs: {
+                    length: document.getElementById('yacht-length').value + ' m',
+                    beam: document.getElementById('yacht-beam').value,
+                    cabins: parseInt(document.getElementById('yacht-cabins').value) || 0,
+                    bathrooms: parseInt(document.getElementById('yacht-bathrooms').value) || 0
+                },
+                name: {
+                    en: document.getElementById('yacht-name-en').value,
+                    ru: document.getElementById('yacht-name-ru').value,
+                    el: document.getElementById('yacht-name-el').value
+                },
+                description: {
+                    en: document.getElementById('yacht-desc-en').value,
+                    ru: document.getElementById('yacht-desc-ru').value,
+                    el: document.getElementById('yacht-desc-el').value
+                }
+            };
+
+            if (editId) {
+                const idx = yachtsData.yachts.findIndex(y => y.id === editId);
+                if (idx !== -1) yachtsData.yachts[idx] = yacht;
+            } else {
+                yachtsData.yachts.push(yacht);
+            }
+
+            localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
+            renderYachts();
+            hideYachtForm();
+            alert('Яхта сохранена! Скачайте JSON в разделе "Экспорт данных".');
+        }
+
+        function deleteYacht(id) {
+            if (!confirm('Удалить яхту?')) return;
+            yachtsData.yachts = yachtsData.yachts.filter(y => y.id !== id);
+            localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
+            renderYachts();
+        }
+
+        // Services
+        function renderServices() {
+            const tbody = document.getElementById('services-table');
+            tbody.innerHTML = servicesData.services.map(s => `
+                <tr>
+                    <td><img src="../${s.image}" class="img-preview" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%2260%22><rect fill=%22%23ddd%22 width=%22100%22 height=%2260%22/></svg>'"></td>
+                    <td>${s.name.ru || s.name.en}</td>
+                    <td>${s.price} EUR</td>
+                    <td>${s.duration}ч</td>
+                    <td class="actions">
+                        <button class="btn btn-primary" onclick="editService('${s.id}')">Редакт.</button>
+                        <button class="btn btn-danger" onclick="deleteService('${s.id}')">Удалить</button>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function showServiceForm() {
+            document.getElementById('service-form').classList.remove('hidden');
+            document.getElementById('service-form-title').textContent = 'Добавить услугу';
+            document.getElementById('service-edit-id').value = '';
+            clearServiceForm();
+        }
+
+        function hideServiceForm() {
+            document.getElementById('service-form').classList.add('hidden');
+        }
+
+        function clearServiceForm() {
+            ['id','price','duration','image','name-ru','name-en','name-el',
+             'short-ru','short-en','short-el','desc-ru','desc-en','desc-el'].forEach(f => {
+                const el = document.getElementById('service-' + f);
+                if (el) el.value = '';
+            });
+        }
+
+        function editService(id) {
+            const service = servicesData.services.find(s => s.id === id);
+            if (!service) return;
+
+            document.getElementById('service-form').classList.remove('hidden');
+            document.getElementById('service-form-title').textContent = 'Редактировать услугу';
+            document.getElementById('service-edit-id').value = id;
+
+            document.getElementById('service-id').value = service.id;
+            document.getElementById('service-price').value = service.price;
+            document.getElementById('service-duration').value = service.duration;
+            document.getElementById('service-featured').value = String(service.featured);
+            document.getElementById('service-image').value = service.image || '';
+
+            ['ru','en','el'].forEach(lang => {
+                document.getElementById('service-name-' + lang).value = service.name[lang] || '';
+                document.getElementById('service-short-' + lang).value = service.shortDescription?.[lang] || '';
+                document.getElementById('service-desc-' + lang).value = service.description[lang] || '';
+            });
+        }
+
+        function saveService() {
+            const editId = document.getElementById('service-edit-id').value;
+            const id = document.getElementById('service-id').value;
+
+            const service = {
+                id: id,
+                slug: id,
+                featured: document.getElementById('service-featured').value === 'true',
+                price: parseInt(document.getElementById('service-price').value) || 0,
+                currency: 'EUR',
+                duration: document.getElementById('service-duration').value,
+                image: document.getElementById('service-image').value,
+                name: {
+                    en: document.getElementById('service-name-en').value,
+                    ru: document.getElementById('service-name-ru').value,
+                    el: document.getElementById('service-name-el').value
+                },
+                shortDescription: {
+                    en: document.getElementById('service-short-en').value,
+                    ru: document.getElementById('service-short-ru').value,
+                    el: document.getElementById('service-short-el').value
+                },
+                description: {
+                    en: document.getElementById('service-desc-en').value,
+                    ru: document.getElementById('service-desc-ru').value,
+                    el: document.getElementById('service-desc-el').value
+                },
+                includes: []
+            };
+
+            if (editId) {
+                const idx = servicesData.services.findIndex(s => s.id === editId);
+                if (idx !== -1) servicesData.services[idx] = service;
+            } else {
+                servicesData.services.push(service);
+            }
+
+            localStorage.setItem('servicesData', JSON.stringify(servicesData));
+            renderServices();
+            hideServiceForm();
+            alert('Услуга сохранена! Скачайте JSON в разделе "Экспорт данных".');
+        }
+
+        function deleteService(id) {
+            if (!confirm('Удалить услугу?')) return;
+            servicesData.services = servicesData.services.filter(s => s.id !== id);
+            localStorage.setItem('servicesData', JSON.stringify(servicesData));
+            renderServices();
+        }
+
+        // Texts
+        function loadTexts() {
+            if (!textsData.hero) return;
+            ['ru','en','el'].forEach(lang => {
+                const h = textsData.hero?.[lang] || {};
+                const a = textsData.about?.[lang] || {};
+                document.getElementById('text-hero-title-' + lang).value = h.title || '';
+                document.getElementById('text-hero-subtitle-' + lang).value = h.subtitle || '';
+                document.getElementById('text-about-title-' + lang).value = a.title || '';
+                document.getElementById('text-about-text1-' + lang).value = a.text1 || '';
+                document.getElementById('text-about-text2-' + lang).value = a.text2 || '';
+            });
+        }
+
+        function saveTexts() {
+            ['ru','en','el'].forEach(lang => {
+                if (!textsData.hero) textsData.hero = {};
+                if (!textsData.hero[lang]) textsData.hero[lang] = {};
+                if (!textsData.about) textsData.about = {};
+                if (!textsData.about[lang]) textsData.about[lang] = {};
+
+                textsData.hero[lang].title = document.getElementById('text-hero-title-' + lang).value;
+                textsData.hero[lang].subtitle = document.getElementById('text-hero-subtitle-' + lang).value;
+                textsData.about[lang].title = document.getElementById('text-about-title-' + lang).value;
+                textsData.about[lang].text1 = document.getElementById('text-about-text1-' + lang).value;
+                textsData.about[lang].text2 = document.getElementById('text-about-text2-' + lang).value;
+            });
+            localStorage.setItem('textsData', JSON.stringify(textsData));
+            alert('Тексты сохранены! Скачайте JSON в разделе "Экспорт данных".');
+        }
+
+        // Export
+        function downloadJSON(data, filename) {
+            const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function downloadYachts() { downloadJSON(yachtsData, 'yachts.json'); }
+        function downloadServices() { downloadJSON(servicesData, 'services.json'); }
+        function downloadTexts() { downloadJSON(textsData, 'site-texts.json'); }
+
+        function importData() {
+            const file = document.getElementById('import-file').files[0];
+            if (!file) return alert('Выберите файл');
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    if (data.yachts) {
+                        yachtsData = data;
+                        localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
+                        renderYachts();
+                        alert('Яхты импортированы!');
+                    } else if (data.services) {
+                        servicesData = data;
+                        localStorage.setItem('servicesData', JSON.stringify(servicesData));
+                        renderServices();
+                        alert('Услуги импортированы!');
+                    } else if (data.hero) {
+                        textsData = data;
+                        localStorage.setItem('textsData', JSON.stringify(textsData));
+                        loadTexts();
+                        alert('Тексты импортированы!');
+                    }
+                } catch (err) {
+                    alert('Ошибка чтения файла');
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        // Init
+        loadData();
     </script>
 </body>
 </html>
