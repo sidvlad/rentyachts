@@ -31,8 +31,8 @@
         .table th { background: #f8f9fa; font-weight: 600; }
         .table tr:hover { background: #f8f9fa; }
         .actions { display: flex; gap: 10px; }
-        .checkbox-group { display: flex; flex-wrap: wrap; gap: 10px; }
-        .checkbox-group label { display: flex; align-items: center; gap: 5px; font-weight: normal; }
+        .checkbox-group { display: flex; flex-wrap: wrap; gap: 15px; }
+        .checkbox-group label { display: flex; align-items: center; gap: 5px; font-weight: normal; white-space: nowrap; }
         .tabs { display: flex; gap: 10px; margin-bottom: 20px; }
         .tab { padding: 10px 20px; background: #e0e0e0; border: none; border-radius: 5px; cursor: pointer; }
         .tab.active { background: #059AA3; color: #fff; }
@@ -143,7 +143,7 @@
                         <div id="yacht-images-list" class="images-list"></div>
                         <div style="display:flex;gap:10px;margin-top:10px;">
                             <input type="text" id="yacht-image-new" placeholder="assets/img/yachts/photo.jpg" style="flex:1;">
-                            <button type="button" class="btn btn-primary" onclick="addYachtImage()">+ Добавить</button>
+                            <button type="button" class="btn btn-primary" id="btn-add-yacht-img">+ Добавить</button>
                         </div>
                     </div>
                     <div class="form-group">
@@ -236,7 +236,7 @@
                         <div id="service-images-list" class="images-list"></div>
                         <div style="display:flex;gap:10px;margin-top:10px;">
                             <input type="text" id="service-image-new" placeholder="assets/img/tours/photo.jpg" style="flex:1;">
-                            <button type="button" class="btn btn-primary" onclick="addServiceImage()">+ Добавить</button>
+                            <button type="button" class="btn btn-primary" id="btn-add-service-img">+ Добавить</button>
                         </div>
                     </div>
                     <div class="actions">
@@ -535,7 +535,7 @@
             localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
             renderYachts();
             hideYachtForm();
-            alert('Яхта сохранена! Скачайте JSON в разделе "Экспорт данных".');
+            alert('Яхта сохранена!');
         }
 
         function deleteYacht(id) {
@@ -671,7 +671,7 @@
             localStorage.setItem('servicesData', JSON.stringify(servicesData));
             renderServices();
             hideServiceForm();
-            alert('Услуга сохранена! Скачайте JSON в разделе "Экспорт данных".');
+            alert('Услуга сохранена!');
         }
 
         function deleteService(id) {
@@ -709,7 +709,7 @@
                 textsData.about[lang].text2 = document.getElementById('text-about-text2-' + lang).value;
             });
             localStorage.setItem('textsData', JSON.stringify(textsData));
-            alert('Тексты сохранены! Скачайте JSON в разделе "Экспорт данных".');
+            alert('Тексты сохранены!');
         }
 
         // Export
@@ -757,6 +757,16 @@
             };
             reader.readAsText(file);
         }
+
+        // Event listeners for image buttons
+        document.getElementById('btn-add-yacht-img').addEventListener('click', function(e) {
+            e.preventDefault();
+            addYachtImage();
+        });
+        document.getElementById('btn-add-service-img').addEventListener('click', function(e) {
+            e.preventDefault();
+            addServiceImage();
+        });
 
         // Init
         loadData();
