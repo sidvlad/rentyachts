@@ -59,7 +59,7 @@
                 <a href="#" data-section="yachts" class="active">Яхты</a>
                 <a href="#" data-section="services">Услуги / Туры</a>
                 <a href="#" data-section="texts">Тексты сайта</a>
-                <a href="#" data-section="export">Экспорт данных</a>
+                <a href="#" data-section="settings">Настройки</a>
             </nav>
         </aside>
         <main class="main">
@@ -303,22 +303,31 @@
                 </div>
             </section>
 
-            <!-- Export Section -->
-            <section id="export-section" class="hidden">
-                <h2>Экспорт данных</h2>
+            <!-- Settings Section -->
+            <section id="settings-section" class="hidden">
+                <h2>Настройки GitHub</h2>
                 <div class="card">
-                    <p style="margin-bottom:15px;">Скачайте JSON файлы с данными для загрузки на сервер:</p>
-                    <div class="actions">
-                        <button class="btn btn-primary" onclick="downloadYachts()">Скачать yachts.json</button>
-                        <button class="btn btn-primary" onclick="downloadServices()">Скачать services.json</button>
-                        <button class="btn btn-primary" onclick="downloadTexts()">Скачать site-texts.json</button>
+                    <p style="margin-bottom:15px;">Для автоматической публикации изменений введите данные GitHub:</p>
+                    <div class="form-group">
+                        <label>GitHub Token</label>
+                        <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxx">
+                        <small style="color:#666;">Создать: GitHub → Settings → Developer settings → Personal access tokens</small>
                     </div>
+                    <div class="form-group">
+                        <label>Репозиторий (owner/repo)</label>
+                        <input type="text" id="github-repo" placeholder="sidvlad/rentyachts" value="sidvlad/rentyachts">
+                    </div>
+                    <div class="form-group">
+                        <label>Ветка</label>
+                        <input type="text" id="github-branch" placeholder="main" value="main">
+                    </div>
+                    <button class="btn btn-success" onclick="saveGitHubSettings()">Сохранить настройки</button>
+                    <span id="github-status" style="margin-left:15px;"></span>
                 </div>
                 <div class="card" style="margin-top:20px;">
-                    <h3>Импорт данных</h3>
-                    <p style="margin-bottom:15px;">Загрузите JSON файл для импорта:</p>
-                    <input type="file" id="import-file" accept=".json">
-                    <button class="btn btn-success" onclick="importData()" style="margin-top:10px;">Импортировать</button>
+                    <h3>Статус подключения</h3>
+                    <p id="connection-status">Не подключено</p>
+                    <button class="btn btn-primary" onclick="testGitHubConnection()" style="margin-top:10px;">Проверить подключение</button>
                 </div>
             </section>
         </main>
@@ -484,7 +493,7 @@
             });
         }
 
-        function saveYacht() {
+        async function saveYacht() {
             const editId = document.getElementById('yacht-edit-id').value;
             const id = document.getElementById('yacht-id').value;
 
@@ -535,7 +544,14 @@
             localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
             renderYachts();
             hideYachtForm();
-            alert('Яхта сохранена!');
+
+            // Auto-publish to GitHub
+            const published = await publishChanges('yachts');
+            if (published) {
+                alert('Яхта сохранена и опубликована!');
+            } else {
+                alert('Яхта сохранена локально. Настройте GitHub для публикации.');
+            }
         }
 
         function deleteYacht(id) {
@@ -630,7 +646,7 @@
             });
         }
 
-        function saveService() {
+        async function saveService() {
             const editId = document.getElementById('service-edit-id').value;
             const id = document.getElementById('service-id').value;
 
@@ -671,7 +687,14 @@
             localStorage.setItem('servicesData', JSON.stringify(servicesData));
             renderServices();
             hideServiceForm();
-            alert('Услуга сохранена!');
+
+            // Auto-publish to GitHub
+            const published = await publishChanges('services');
+            if (published) {
+                alert('Услуга сохранена и опубликована!');
+            } else {
+                alert('Услуга сохранена локально. Настройте GitHub для публикации.');
+            }
         }
 
         function deleteService(id) {
@@ -695,7 +718,7 @@
             });
         }
 
-        function saveTexts() {
+        async function saveTexts() {
             ['ru','en','el'].forEach(lang => {
                 if (!textsData.hero) textsData.hero = {};
                 if (!textsData.hero[lang]) textsData.hero[lang] = {};
@@ -709,53 +732,116 @@
                 textsData.about[lang].text2 = document.getElementById('text-about-text2-' + lang).value;
             });
             localStorage.setItem('textsData', JSON.stringify(textsData));
-            alert('Тексты сохранены!');
+
+            // Auto-publish to GitHub
+            const published = await publishChanges('texts');
+            if (published) {
+                alert('Тексты сохранены и опубликованы!');
+            } else {
+                alert('Тексты сохранены локально. Настройте GitHub для публикации.');
+            }
         }
 
-        // Export
-        function downloadJSON(data, filename) {
-            const blob = new Blob([JSON.stringify(data, null, 2)], {type: 'application/json'});
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = filename;
-            a.click();
-            URL.revokeObjectURL(url);
-        }
-
-        function downloadYachts() { downloadJSON(yachtsData, 'yachts.json'); }
-        function downloadServices() { downloadJSON(servicesData, 'services.json'); }
-        function downloadTexts() { downloadJSON(textsData, 'site-texts.json'); }
-
-        function importData() {
-            const file = document.getElementById('import-file').files[0];
-            if (!file) return alert('Выберите файл');
-
-            const reader = new FileReader();
-            reader.onload = (e) => {
-                try {
-                    const data = JSON.parse(e.target.result);
-                    if (data.yachts) {
-                        yachtsData = data;
-                        localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
-                        renderYachts();
-                        alert('Яхты импортированы!');
-                    } else if (data.services) {
-                        servicesData = data;
-                        localStorage.setItem('servicesData', JSON.stringify(servicesData));
-                        renderServices();
-                        alert('Услуги импортированы!');
-                    } else if (data.hero) {
-                        textsData = data;
-                        localStorage.setItem('textsData', JSON.stringify(textsData));
-                        loadTexts();
-                        alert('Тексты импортированы!');
-                    }
-                } catch (err) {
-                    alert('Ошибка чтения файла');
-                }
+        // GitHub API
+        function getGitHubSettings() {
+            return {
+                token: localStorage.getItem('github_token') || '',
+                repo: localStorage.getItem('github_repo') || 'sidvlad/rentyachts',
+                branch: localStorage.getItem('github_branch') || 'main'
             };
-            reader.readAsText(file);
+        }
+
+        function saveGitHubSettings() {
+            const token = document.getElementById('github-token').value;
+            const repo = document.getElementById('github-repo').value;
+            const branch = document.getElementById('github-branch').value;
+
+            localStorage.setItem('github_token', token);
+            localStorage.setItem('github_repo', repo);
+            localStorage.setItem('github_branch', branch);
+
+            document.getElementById('github-status').textContent = 'Сохранено!';
+            setTimeout(() => document.getElementById('github-status').textContent = '', 2000);
+        }
+
+        function loadGitHubSettings() {
+            const settings = getGitHubSettings();
+            document.getElementById('github-token').value = settings.token;
+            document.getElementById('github-repo').value = settings.repo;
+            document.getElementById('github-branch').value = settings.branch;
+        }
+
+        async function testGitHubConnection() {
+            const settings = getGitHubSettings();
+            if (!settings.token) {
+                document.getElementById('connection-status').innerHTML = '<span style="color:red;">Введите GitHub Token</span>';
+                return;
+            }
+            try {
+                const res = await fetch(`https://api.github.com/repos/${settings.repo}`, {
+                    headers: { 'Authorization': `token ${settings.token}` }
+                });
+                if (res.ok) {
+                    document.getElementById('connection-status').innerHTML = '<span style="color:green;">Подключено успешно!</span>';
+                } else {
+                    document.getElementById('connection-status').innerHTML = '<span style="color:red;">Ошибка: ' + res.status + '</span>';
+                }
+            } catch (e) {
+                document.getElementById('connection-status').innerHTML = '<span style="color:red;">Ошибка подключения</span>';
+            }
+        }
+
+        async function commitToGitHub(filePath, content, message) {
+            const settings = getGitHubSettings();
+            if (!settings.token) return false;
+
+            try {
+                // Get current file SHA
+                const getRes = await fetch(`https://api.github.com/repos/${settings.repo}/contents/${filePath}?ref=${settings.branch}`, {
+                    headers: { 'Authorization': `token ${settings.token}` }
+                });
+
+                let sha = null;
+                if (getRes.ok) {
+                    const fileData = await getRes.json();
+                    sha = fileData.sha;
+                }
+
+                // Update/create file
+                const body = {
+                    message: message,
+                    content: btoa(unescape(encodeURIComponent(content))),
+                    branch: settings.branch
+                };
+                if (sha) body.sha = sha;
+
+                const updateRes = await fetch(`https://api.github.com/repos/${settings.repo}/contents/${filePath}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Authorization': `token ${settings.token}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(body)
+                });
+
+                return updateRes.ok;
+            } catch (e) {
+                console.error('GitHub commit error:', e);
+                return false;
+            }
+        }
+
+        async function publishChanges(type) {
+            let success = false;
+            const content = type === 'yachts' ? JSON.stringify(yachtsData, null, 2) :
+                           type === 'services' ? JSON.stringify(servicesData, null, 2) :
+                           JSON.stringify(textsData, null, 2);
+            const filePath = type === 'yachts' ? 'content/yachts.json' :
+                            type === 'services' ? 'content/services.json' :
+                            'content/site-texts.json';
+
+            success = await commitToGitHub(filePath, content, `Update ${type} from admin panel`);
+            return success;
         }
 
         // Event listeners for image buttons
@@ -770,6 +856,7 @@
 
         // Init
         loadData();
+        loadGitHubSettings();
     </script>
 </body>
 </html>
