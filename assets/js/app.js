@@ -56,6 +56,32 @@
     // ============================================
     async function loadData() {
         try {
+            // Check localStorage first (from admin panel)
+            const localYachts = localStorage.getItem('yachtsData');
+            const localServices = localStorage.getItem('servicesData');
+            const localTexts = localStorage.getItem('textsData');
+
+            if (localYachts && localServices) {
+                // Use localStorage data
+                const yachtsData = JSON.parse(localYachts);
+                const servicesData = JSON.parse(localServices);
+
+                state.yachts = yachtsData.yachts;
+                state.yachtOptions = yachtsData.options;
+                state.services = servicesData.services;
+                state.serviceIncludes = servicesData.includes;
+
+                // Load texts from localStorage or fetch
+                if (localTexts) {
+                    state.texts = JSON.parse(localTexts);
+                } else {
+                    const textsRes = await fetch('content/site-texts.json');
+                    state.texts = await textsRes.json();
+                }
+                return true;
+            }
+
+            // Fallback to JSON files
             const [textsRes, yachtsRes, servicesRes] = await Promise.all([
                 fetch('content/site-texts.json'),
                 fetch('content/yachts.json'),
