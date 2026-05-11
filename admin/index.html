@@ -342,28 +342,33 @@
 
         // Load data on start
         async function loadData() {
-            try {
-                const [yachtsRes, servicesRes, textsRes] = await Promise.all([
-                    fetch('../content/yachts.json'),
-                    fetch('../content/services.json'),
-                    fetch('../content/site-texts.json')
-                ]);
-                yachtsData = await yachtsRes.json();
-                servicesData = await servicesRes.json();
-                textsData = await textsRes.json();
+            // Check localStorage first (priority)
+            const savedYachts = localStorage.getItem('yachtsData');
+            const savedServices = localStorage.getItem('servicesData');
+            const savedTexts = localStorage.getItem('textsData');
 
-                // Save to localStorage
-                localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
-                localStorage.setItem('servicesData', JSON.stringify(servicesData));
-                localStorage.setItem('textsData', JSON.stringify(textsData));
-            } catch (e) {
-                // Try localStorage
-                const savedYachts = localStorage.getItem('yachtsData');
-                const savedServices = localStorage.getItem('servicesData');
-                const savedTexts = localStorage.getItem('textsData');
-                if (savedYachts) yachtsData = JSON.parse(savedYachts);
-                if (savedServices) servicesData = JSON.parse(savedServices);
+            if (savedYachts && savedServices) {
+                yachtsData = JSON.parse(savedYachts);
+                servicesData = JSON.parse(savedServices);
                 if (savedTexts) textsData = JSON.parse(savedTexts);
+            } else {
+                // Fallback to JSON files
+                try {
+                    const [yachtsRes, servicesRes, textsRes] = await Promise.all([
+                        fetch('../content/yachts.json'),
+                        fetch('../content/services.json'),
+                        fetch('../content/site-texts.json')
+                    ]);
+                    yachtsData = await yachtsRes.json();
+                    servicesData = await servicesRes.json();
+                    textsData = await textsRes.json();
+
+                    localStorage.setItem('yachtsData', JSON.stringify(yachtsData));
+                    localStorage.setItem('servicesData', JSON.stringify(servicesData));
+                    localStorage.setItem('textsData', JSON.stringify(textsData));
+                } catch (e) {
+                    console.error('Error loading data:', e);
+                }
             }
             renderYachts();
             renderServices();
