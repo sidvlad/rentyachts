@@ -2399,6 +2399,17 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Desktop: from 1024px */
+@media (min-width: 1024px) {
+  .cities-section {
+    display: flex;
+  }
+
+  .cities-section__label {
+    margin-right: 30px;
+  }
+}
+
 /* Desktop: 4 columns */
 @media (min-width: 1200px) {
   .burger {
