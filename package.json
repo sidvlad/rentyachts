@@ -1,0 +1,9 @@
+{
+  "name": "rentyachts",
+  "version": "1.0.0",
+  "description": "ON THE SEA - Yacht Charter in Cyprus",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "serve": "npx http-server -p 8080"
+  }
+}
